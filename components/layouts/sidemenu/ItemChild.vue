@@ -27,22 +27,22 @@ function openMenu(event) {
   emit("openMenu", event);
 }
 
-// Active menu
+// Active menu — MYDS style: quiet translucent highlight, no motion
 function activeMenu(routePath) {
   return route.path == routePath
-    ? ` shadow-lg
-            shadow-primary/50
-            dark:shadow-primary/10
-            text-white
-            bg-gradient-to-r
-            from-primary
-            to-primary/90
+    ? ` text-white
+            font-medium
+            bg-[rgba(255,255,255,0.15)]
             active-menu`
-    : `transition-all	duration-300 hover:ml-4`;
+    : ` text-[rgba(255,255,255,0.85)]
+            transition-colors
+            duration-200
+            hover:bg-[rgba(255,255,255,0.1)]
+            hover:text-white`;
 }
 
 const indentStyle = computed(() => {
-  return { "background-color": `rgba(var(--bg-1), ${indent.value})` };
+  return { "background-color": `rgba(0, 0, 0, ${indent.value})` };
 });
 </script>
 

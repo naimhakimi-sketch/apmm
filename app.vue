@@ -1,7 +1,8 @@
 <script setup>
 useHead({
-  title: "AIDevX -APMM Prototype",
-  description: "Home page",
+  title: "e-JUTRA | APMM",
+  description:
+    "Sistem Pengurusan dan Pemantauan Aset Kejuruteraan Marin APMM (e-JUTRA)",
   htmlAttrs: {
     lang: "en",
   },
@@ -15,8 +16,9 @@ onMounted(() => {
     loading.value = false;
   }, 1000);
 
-  // Get theme from localStorage
-  let theme = localStorage.getItem("theme") || "default";
+  // Get theme from localStorage (retired themes fall back to default)
+  let theme = localStorage.getItem("theme");
+  if (!["default", "dark"].includes(theme)) theme = "default";
   document.documentElement.setAttribute("data-theme", theme);
 });
 </script>

@@ -34,6 +34,7 @@
     "@fullcalendar/scrollgrid": "^5.11.3",
     "@fullcalendar/timegrid": "^5.11.3",
     "@fullcalendar/vue3": "^5.11.2",
+    "@govtechmy/myds-style": "^1.0.0",
     "@pinia/nuxt": "^0.4.11",
     "@popperjs/core": "^2.11.8",
     "@shimyshack/uid": "^0.1.7",
@@ -65,5 +66,11 @@
     "vue3-click-away": "^1.2.4",
     "vue3-dropzone": "^2.0.1",
     "vuedraggable": "^4.1.0"
+  },
+  "overrides": {
+    "@parcel/watcher": "2.5.1"
+  },
+  "resolutions": {
+    "@parcel/watcher": "2.5.1"
   }
 }

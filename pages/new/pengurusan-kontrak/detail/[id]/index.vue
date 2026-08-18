@@ -100,16 +100,28 @@ const series = ref([
     
 ]);
 
+// Performance rating scale — MYDS diverging ramp (success -> warning -> danger)
+const performanceScale = {
+    Cemerlang: '#15803D', // success-700
+    Baik: '#16A34A', // success-600
+    Sederhana: '#CA8A04', // warning-600
+    'Kurang Memuaskan': '#A16207', // warning-700
+    'Tidak Memuaskan': '#DC2626', // danger-600
+    Tiada: '#52525B', // gray-600
+};
+
 const performanceMarkers = ref([
-    { year: 2022, value: 314340.11, label: 'Cemerlang', color: '#82CD47' },
-    { year: 2022, value: 55026.08, label: 'Sederhana', color: '#FF69B4' },
-    { year: 2021, value: 252681.08, label: 'Tidak Memuaskan', color: '#0000FF' },
-    { year: 2023, value: 254545.23, label: 'Baik', color: '#FFD700' }
+    { year: 2022, value: 314340.11, label: 'Cemerlang', color: performanceScale['Cemerlang'] },
+    { year: 2022, value: 55026.08, label: 'Sederhana', color: performanceScale['Sederhana'] },
+    { year: 2021, value: 252681.08, label: 'Tidak Memuaskan', color: performanceScale['Tidak Memuaskan'] },
+    { year: 2023, value: 254545.23, label: 'Baik', color: performanceScale['Baik'] }
 ]);
 
 const chartOptions = computed(() => ({
     chart: {
         id: 'contractChart',
+        fontFamily: "'Inter', ui-sans-serif, system-ui, sans-serif",
+        foreColor: mydsChartColors.axisLabel,
         toolbar: {
             show: true
         },
@@ -117,11 +129,11 @@ const chartOptions = computed(() => ({
             enabled: true
         }
     },
-    colors: ['#8B4513', '#228B22', '#FFA500', '#FF1493'],
+    colors: [mydsChartColors.primary, mydsChartColors.warning],
     stroke: {
-        width: [2, 2, 2, 2],
+        width: [2, 2],
         curve: 'straight',
-        dashArray: [0, 0, 4, 4]
+        dashArray: [0, 0]
     },
     legend: {
         position: 'bottom',
@@ -175,7 +187,7 @@ const chartOptions = computed(() => ({
         tickAmount: 7
     },
     grid: {
-        borderColor: '#f1f1f1',
+        borderColor: mydsChartColors.grid,
         xaxis: {
             lines: {
                 show: true
@@ -224,12 +236,12 @@ const chartOptions = computed(() => ({
         show: true,
         position: 'bottom',
         items: [
-            { label: 'Cemerlang', color: '#82CD47' },
-            { label: 'Baik', color: '#FFD700' },
-            { label: 'Sederhana', color: '#FF69B4' },
-            { label: 'Kurang Memuaskan', color: '#A52A2A' },
-            { label: 'Tidak Memuaskan', color: '#0000FF' },
-            { label: 'Tiada', color: '#000000' }
+            { label: 'Cemerlang', color: performanceScale['Cemerlang'] },
+            { label: 'Baik', color: performanceScale['Baik'] },
+            { label: 'Sederhana', color: performanceScale['Sederhana'] },
+            { label: 'Kurang Memuaskan', color: performanceScale['Kurang Memuaskan'] },
+            { label: 'Tidak Memuaskan', color: performanceScale['Tidak Memuaskan'] },
+            { label: 'Tiada', color: performanceScale['Tiada'] }
         ]
     }
 }));

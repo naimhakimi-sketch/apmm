@@ -1,6 +1,8 @@
-/* Table Component */
+/* Table Component — MYDS styling: outlined, rounded container */
 .table-wrapper {
-  @apply w-full border-0 rounded-md border-gray-200 dark:border-slate-700;
+  @apply w-full border rounded-lg;
+  border-color: rgb(var(--border-color));
+  background-color: rgb(var(--bg-2));
 }
 
 .table-header {

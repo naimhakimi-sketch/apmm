@@ -1,9 +1,9 @@
-.formkit-inner-box {
+﻿.formkit-inner-box {
   @apply relative;
 }
 
 .formkit-fieldset-box {
-  @apply max-w-md border border-[rgb(var(--fk-border-color))]  rounded-lg px-4 py-2;
+  @apply max-w-md border border-[rgb(var(--fk-border-color))]  rounded-md px-4 py-2;
 }
 
 .formkit-legend-box {
@@ -55,5 +55,5 @@
 }
 
 .formkit-message-box {
-  @apply formkit-invalid:text-red-500;
+  @apply formkit-invalid:text-danger-600;
 }

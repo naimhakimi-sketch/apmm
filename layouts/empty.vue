@@ -2,6 +2,7 @@
 
 <template>
   <div>
+    <LayoutsMasthead />
     <slot />
   </div>
 </template>

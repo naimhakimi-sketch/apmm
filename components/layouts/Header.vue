@@ -65,14 +65,17 @@ onMounted(() => {
 
 <template>
   <div class="w-header">
-    <div class="flex items-stretch justify-between">
+    <LayoutsMasthead />
+    <div class="w-header-main flex items-stretch justify-between">
       <div v-if="isVertical" class="flex">
         <span class="flex items-center justify-center">
           <button class="icon-btn h-10 w-10 rounded-full" @click="toggleMenu">
             <Icon name="ic:round-menu" class="" /></button
         ></span>
-        <span class="flex items-center justify-center text-xl font-semibold">
-          SISTEM PENGURUSAN DAN PEMANTAUAN ASET  KEJURUTERAAN MARIN APMM (e-JUTRA)
+        <span
+          class="flex items-center justify-center text-base lg:text-lg font-heading font-semibold"
+        >
+          SISTEM PENGURUSAN DAN PEMANTAUAN ASET KEJURUTERAAN MARIN APMM (e-JUTRA)
         </span>
       </div>
       <div class="flex" v-else>
@@ -129,22 +132,3 @@ onMounted(() => {
   </div>
 </template>
 
-<style scoped>
-:deep(.popper) {
-  background: #e92791;
-  padding: 20px;
-  border-radius: 20px;
-  color: #fff;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-:deep(.popper #arrow::before) {
-  background: #e92791;
-}
-
-:deep(.popper:hover),
-:deep(.popper:hover > #arrow::before) {
-  background: #e92791;
-}
-</style>

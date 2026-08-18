@@ -1,28 +1,28 @@
-/* RS Badge Component */
+/* RS Badge — MYDS styling: soft tint background + strong text */
 .badge {
-  @apply inline-flex items-center justify-center px-2 py-1 rounded-full text-xs font-semibold leading-none;
+  @apply inline-flex items-center justify-center px-2.5 py-0.5 rounded-full text-xs font-medium leading-none;
 }
 
 .badge.badge-primary {
-  @apply bg-primary text-white;
+  @apply bg-primary-50 text-primary-600;
 }
 
 .badge.badge-secondary {
-  @apply bg-secondary text-white;
+  @apply bg-gray-100 text-gray-600;
 }
 
 .badge.badge-success {
-  @apply bg-success text-white;
+  @apply bg-success-50 text-success-700;
 }
 
 .badge.badge-info {
-  @apply bg-info text-white;
+  @apply bg-primary-50 text-primary-600;
 }
 
 .badge.badge-warning {
-  @apply bg-warning text-white;
+  @apply bg-warning-50 text-warning-700;
 }
 
 .badge.badge-danger {
-  @apply bg-danger text-white;
+  @apply bg-danger-50 text-danger-700;
 }

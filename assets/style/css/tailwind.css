@@ -1,5 +1,13 @@
 /*  Base Import Tailwind CSS */
 @import "tailwindcss/base";
+
+/* MYDS (Malaysia Government Design System) design tokens.
+   NOTE: import the three files separately — the package's full.css export
+   is an empty build artifact in v1.0.0. */
+@import "@govtechmy/myds-style/color.css";
+@import "@govtechmy/myds-style/light.css";
+@import "@govtechmy/myds-style/dark.css";
+
 @import "./base/theme";
 
 /*  Components Import Tailwind CSS */

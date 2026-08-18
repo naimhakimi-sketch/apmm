@@ -4,9 +4,14 @@ body {
 }
 
 .w-header {
-  @apply z-20 fixed top-0 right-0 px-5 py-3 duration-300 shadow-md;
+  @apply z-20 fixed top-0 right-0 duration-300 border-b;
   background-color: rgb(var(--bg-2));
+  border-color: rgb(var(--border-color));
   box-shadow: var(--box-shadow);
+}
+
+.w-header .w-header-main {
+  @apply px-5 py-3;
 }
 
 .w-header-search {

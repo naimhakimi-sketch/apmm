@@ -545,7 +545,7 @@ watch(
             class="text-left border-[rgb(var(--border-color))]"
             :class="{
               'border-y': !options.borderless,
-              'border-[rgb(var(--border-color))] bg-[rgb(var(--bg-2))]':
+              'border-[rgb(var(--border-color))] bg-[rgb(var(--bg-1))]':
                 options.variant === 'default',
               'border-primary/50 bg-primary text-white':
                 options.variant === 'primary',
@@ -562,7 +562,7 @@ watch(
           >
             <tr>
               <th
-                class="relative py-3 pl-5 pr-8 whitespace-nowrap"
+                class="relative py-3 pl-5 pr-8 whitespace-nowrap font-semibold"
                 :class="{
                   'border-r last:border-l last:border-r-0':
                     options.bordered && !options.borderless,
@@ -631,7 +631,7 @@ watch(
                   options.variant === 'warning' && options.striped,
                 'border-danger/20 odd:bg-white even:bg-danger/5':
                   options.variant === 'danger' && options.striped,
-                'cursor-pointer hover:bg-slate-300':
+                'cursor-pointer hover:bg-[rgb(var(--bg-1))]':
                   options.hover && options.variant === 'default',
                 'cursor-pointer hover:bg-primary/5':
                   options.hover && options.variant === 'primary',

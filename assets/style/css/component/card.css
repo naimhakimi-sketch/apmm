@@ -1,13 +1,14 @@
-/* RS Card Component */
+/* RS Card — MYDS styling: white surface, subtle outline, card shadow */
 .card {
-  @apply mb-6;
+  @apply mb-6 border;
   background-color: rgb(var(--bg-2));
+  border-color: rgb(var(--border-color));
   border-radius: var(--rounded-box);
   box-shadow: var(--box-shadow);
 }
 
 .card .card-header {
-  @apply text-xl p-5 font-medium;
+  @apply text-lg p-5 font-heading font-semibold;
 }
 
 .card .card-body {

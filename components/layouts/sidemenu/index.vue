@@ -60,8 +60,9 @@ onMounted(() => {
 </template>
 
 <style scoped>
+/* MYDS sidebar surface: primary-700 (raw MYDS palette variable) */
 .vertical-menu {
-  background-color: #1b233a !important;
+  background-color: rgb(var(--_primary-700)) !important;
   color: white !important;
 }
 </style>

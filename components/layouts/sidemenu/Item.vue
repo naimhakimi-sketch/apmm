@@ -25,18 +25,18 @@ function openMenu(event) {
   }
 }
 
-// Active menu
+// Active menu — MYDS style: quiet translucent highlight, no motion
 function activeMenu(routePath) {
   return route.path == routePath
-    ? ` shadow-lg
-            shadow-primary/50
-            dark:shadow-primary/10
-            text-white
-            bg-gradient-to-r
-            from-primary
-            to-primary/90
+    ? ` text-white
+            font-medium
+            bg-[rgba(255,255,255,0.15)]
             active-menu`
-    : `transition-all	duration-300 hover:ml-4`;
+    : ` text-[rgba(255,255,255,0.85)]
+            transition-colors
+            duration-200
+            hover:bg-[rgba(255,255,255,0.1)]
+            hover:text-white`;
 }
 </script>
 
@@ -46,10 +46,10 @@ function activeMenu(routePath) {
       v-if="item.header"
       class="text-left font-normal text-xs mx-6 mt-5 mb-2"
     >
-      <span class="uppercase text-white">
+      <span class="uppercase tracking-wide text-[rgba(255,255,255,0.6)]">
         {{ item.header ? item.header : "" }}
       </span>
-      <p class="text-gray-500 dark:text-secondary">
+      <p class="text-[rgba(255,255,255,0.45)]">
         {{ item.description ? item.description : "" }}
       </p>
     </div>

@@ -1,30 +1,36 @@
+/* Legacy corradUI theme tokens, remapped to MYDS (Malaysia Government
+   Design System) values. The raw MYDS palette (--_primary-*, --_gray-*, ...)
+   is supplied by @govtechmy/myds-style (imported in tailwind.css) and is the
+   single source of truth — values here mirror that palette so the legacy
+   `bg-primary` / `text-danger` utilities render the MYDS colors. */
+
 html[data-theme="default"] {
-  --color-primary: 13, 27, 42;
-  --color-secondary: 97, 176, 183;
-  --color-accent: 243, 244, 246;
-  --color-success: 79, 192, 103;
-  --color-info: 65, 133, 242;
-  --color-warning: 246, 141, 32;
-  --color-danger: 229, 83, 69;
-  --text-color: 9, 9, 11;
-  --border-color: 228, 228, 231;
-  --bg-1: 243, 244, 246;
+  --color-primary: 37, 99, 235; /* MYDS primary-600 */
+  --color-secondary: 82, 82, 91; /* MYDS gray-600 */
+  --color-accent: 244, 244, 245; /* MYDS gray-100 */
+  --color-success: 22, 163, 74; /* MYDS success-600 */
+  --color-info: 58, 117, 246; /* MYDS primary-500 */
+  --color-warning: 202, 138, 4; /* MYDS warning-600 */
+  --color-danger: 220, 38, 38; /* MYDS danger-600 */
+  --text-color: 24, 24, 27; /* MYDS gray-900 */
+  --border-color: 228, 228, 231; /* MYDS gray-200 */
+  --bg-1: 244, 244, 245; /* MYDS washed (gray-100) */
   --bg-2: 255, 255, 255;
-  --scroll-color: 170, 170, 170;
-  --scroll-hover-color: 155, 155, 155;
-  --fk-border-color: 228, 228, 231;
-  --fk-placeholder-color: 146, 146, 153;
-  --box-shadow: rgba(36, 35, 71, 0.05) 0px 1px 1px,
-    rgba(36, 35, 71, 0.05) 0px 0px 1px 1px;
+  --scroll-color: 161, 161, 170;
+  --scroll-hover-color: 107, 107, 116;
+  --fk-border-color: 212, 212, 216; /* MYDS gray-300 */
+  --fk-placeholder-color: 161, 161, 170; /* MYDS gray-400 */
+  --box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.05),
+    0px 6px 24px 0px rgba(0, 0, 0, 0.05); /* MYDS shadow-card */
   --cp-bg: 255, 255, 255;
-  --rounded-box: 0.2rem;
-  --rounded-btn: 0.2rem;
+  --rounded-box: 0.75rem; /* MYDS radius lg (12px) */
+  --rounded-btn: 0.5rem; /* MYDS radius md (8px) */
   --rounded-badge: 1.9rem;
   --animation-btn: 0.25s;
   --animation-input: 0.2s;
-  --btn-text-case: uppercase;
-  --btn-focus-scale: 0.95;
-  --padding-btn: 0.5rem;
+  --btn-text-case: none;
+  --btn-focus-scale: 0.98;
+  --padding-btn: 0.5rem 1rem;
   --border-btn: 1px;
   --tab-border: 1px;
   --tab-radius: 0.5rem;
@@ -32,95 +38,33 @@ html[data-theme="default"] {
 }
 
 html[data-theme="dark"] {
-  --color-primary: 97, 176, 183;
-  --color-secondary: 13, 27, 42;
-  --color-accent: 15, 23, 42;
-  --color-success: 79, 192, 103;
-  --color-info: 65, 133, 242;
-  --color-warning: 246, 141, 32;
-  --color-danger: 229, 83, 69;
-  --text-color: 209, 213, 219;
-  --border-color: 30, 41, 59;
-  --bg-1: 15, 23, 42;
-  --bg-2: 30, 41, 59;
-  --scroll-color: 170, 170, 170;
-  --scroll-hover-color: 155, 155, 155;
-  --fk-border-color: 71, 85, 105;
-  --fk-placeholder-color: 71, 85, 105;
-  --box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --color-primary: 99, 148, 255; /* MYDS primary-400 */
+  --color-secondary: 161, 161, 170; /* MYDS gray-400 */
+  --color-accent: 29, 29, 33; /* MYDS gray-850 */
+  --color-success: 74, 222, 128; /* MYDS success-400 */
+  --color-info: 99, 148, 255; /* MYDS primary-400 */
+  --color-warning: 250, 204, 21; /* MYDS warning-400 */
+  --color-danger: 248, 113, 113; /* MYDS danger-400 */
+  --text-color: 212, 212, 216; /* MYDS gray-300 */
+  --border-color: 39, 39, 42; /* MYDS gray-800 */
+  --bg-1: 22, 22, 25; /* MYDS gray-930 */
+  --bg-2: 24, 24, 27; /* MYDS gray-900 */
+  --scroll-color: 107, 107, 116;
+  --scroll-hover-color: 161, 161, 170;
+  --fk-border-color: 63, 63, 70; /* MYDS gray-700 */
+  --fk-placeholder-color: 82, 82, 91; /* MYDS gray-600 */
+  --box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.3);
   --cp-bg: 255, 255, 255;
-  --rounded-box: 0.5rem;
+  --rounded-box: 0.75rem;
   --rounded-btn: 0.5rem;
   --rounded-badge: 1.9rem;
   --animation-btn: 0.25s;
   --animation-input: 0.2s;
-  --btn-text-case: uppercase;
-  --btn-focus-scale: 0.95;
-  --padding-btn: 0.625rem 1.5rem;
+  --btn-text-case: none;
+  --btn-focus-scale: 0.98;
+  --padding-btn: 0.5rem 1rem;
   --border-btn: 1px;
   --tab-border: 1px;
   --tab-radius: 0.5rem;
-  --tw-shadow: #e5eaf2;
-}
-
-html[data-theme="nier"] {
-  --color-primary: 99, 95, 84;
-  --color-secondary: 207, 107, 83;
-  --color-accent: 243, 88, 106;
-  --color-success: 79, 192, 103;
-  --color-info: 65, 133, 242;
-  --color-warning: 246, 141, 32;
-  --color-danger: 229, 83, 69;
-  --text-color: 78, 75, 66;
-  --border-color: 153, 152, 131;
-  --bg-1: 205, 200, 176;
-  --bg-2: 218, 212, 187;
-  --scroll-color: 99, 95, 84;
-  --scroll-hover-color: 99, 95, 84;
-  --fk-border-color: 99, 95, 84;
-  --fk-placeholder-color: 188, 175, 145;
-  --box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --cp-bg: 255, 255, 255;
-  --rounded-box: 0.5rem;
-  --rounded-btn: 0.5rem;
-  --rounded-badge: 1.9rem;
-  --animation-btn: 0.25s;
-  --animation-input: 0.2s;
-  --btn-text-case: uppercase;
-  --btn-focus-scale: 0.95;
-  --padding-btn: 0.625rem 0.875rem;
-  --border-btn: 1px;
-  --tab-border: 1px;
-  --tab-radius: 0.5rem;
-  --tw-shadow: #e5eaf2;
-}
-
-html[data-theme="custom1"] {
-  --color-primary: 9, 76, 90;
-  --color-secondary: 62, 72, 83;
-  --color-accent: 0, 103, 236;
-  --color-success: 11, 152, 76;
-  --color-info: 208, 89, 41;
-  --color-warning: 229, 197, 13;
-  --color-danger: 238, 5, 34;
-  --text-color: 15, 15, 14;
-  --border-color: 153, 152, 131;
-  --bg-1: 214, 215, 206;
-  --bg-2: 235, 232, 217;
-  --scroll-color: 9, 76, 90;
-  --scroll-hover-color: 9, 76, 90;
-  --box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --cp-bg: 255, 255, 255;
-  --rounded-box: 0.5rem;
-  --rounded-btn: 0.5rem;
-  --rounded-badge: 1.9rem;
-  --animation-btn: 0.25s;
-  --animation-input: 0.2s;
-  --btn-text-case: uppercase;
-  --btn-focus-scale: 0.95;
-  --padding-btn: 0.625rem 1.5rem;
-  --border-btn: 1px;
-  --tab-border: 1px;
-  --tab-radius: 0.5rem;
-  --tw-shadow: #e5eaf2;
+  --tw-shadow: #1d1d21;
 }

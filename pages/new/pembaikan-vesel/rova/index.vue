@@ -41,7 +41,7 @@
               <template v-slot:peratus="row">
                 <div class="flex items-center">
                   <div class="w-full bg-gray-200 rounded-full h-2.5 mr-2">
-                    <div class="bg-blue-600 h-2.5 rounded-full" :style="{ width: row.value.peratus + '%' }"></div>
+                    <div class="bg-primary-600 h-2.5 rounded-full" :style="{ width: row.value.peratus + '%' }"></div>
                   </div>
                   <span>{{ row.value.peratus }}%</span>
                 </div>
@@ -100,7 +100,7 @@
                   <h4 class="font-medium text-gray-700">Peratus Ketersediaan:</h4>
                   <div class="flex items-center mt-1">
                     <div class="w-full bg-gray-200 rounded-full h-2.5 mr-2">
-                      <div class="bg-blue-600 h-2.5 rounded-full" :style="{ width: rovaForm.peratus + '%' }"></div>
+                      <div class="bg-primary-600 h-2.5 rounded-full" :style="{ width: rovaForm.peratus + '%' }"></div>
                     </div>
                     <span>{{ rovaForm.peratus }}%</span>
                   </div>

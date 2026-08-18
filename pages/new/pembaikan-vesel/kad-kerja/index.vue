@@ -760,7 +760,7 @@
             >
                 <template v-slot:tindakan="row">
                 <div class="flex gap-2">
-                    <button variant="primary" size="sm" @click="openViewJobCardModal(row.value)" class="text-blue-600 hover:text-blue-800">
+                    <button variant="primary" size="sm" @click="openViewJobCardModal(row.value)" class="text-primary-600 hover:text-primary-800">
                       <Icon class="text-primary" name="weui:eyes-on-outlined"></Icon>
                       <!-- Lihat -->
                     </button>

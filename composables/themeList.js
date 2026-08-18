@@ -5,15 +5,15 @@ export default function () {
       colors: [
         {
           name: "primary",
-          value: "243, 88, 106",
+          value: "37, 99, 235",
         },
         {
           name: "secondary",
-          value: "240, 122, 37",
+          value: "82, 82, 91",
         },
         {
           name: "accent",
-          value: "243, 244, 246",
+          value: "244, 244, 245",
         },
       ],
     },
@@ -22,49 +22,15 @@ export default function () {
       colors: [
         {
           name: "primary",
-          value: "243, 88, 106",
+          value: "99, 148, 255",
         },
         {
           name: "secondary",
-          value: "240, 122, 37",
+          value: "161, 161, 170",
         },
         {
           name: "accent",
-          value: "15, 23, 42",
-        },
-      ],
-    },
-    {
-      theme: "nier",
-      colors: [
-        {
-          name: "primary",
-          value: "99, 95, 84",
-        },
-        {
-          name: "secondary",
-          value: "207, 107, 83",
-        },
-        {
-          name: "accent",
-          value: "243, 88, 106",
-        },
-      ],
-    },
-    {
-      theme: "custom1",
-      colors: [
-        {
-          name: "primary",
-          value: "9, 76, 90",
-        },
-        {
-          name: "secondary",
-          value: "62, 72, 83",
-        },
-        {
-          name: "accent",
-          value: "0, 103, 236",
+          value: "29, 29, 33",
         },
       ],
     },

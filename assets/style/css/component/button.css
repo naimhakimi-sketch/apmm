@@ -1,158 +1,153 @@
-/* RS Button  */
+/* RS Button — MYDS styling (class API unchanged) */
 .button {
-  @apply w-fit rounded-lg flex justify-center items-center h-fit;
-}
-
-.button[class*="button-"]:hover {
-  background-image: linear-gradient(rgb(0 0 0/10%) 0 0);
+  @apply w-fit h-fit rounded-md flex justify-center items-center font-medium
+    transition-colors duration-150 focus:outline-none focus-visible:ring-2
+    focus-visible:ring-fr-primary focus-visible:ring-offset-2;
 }
 
 .button[class*="button-"]:disabled {
-  opacity: 0.3;
+  opacity: 0.4;
   cursor: not-allowed;
 }
 
 .button.button-primary {
-  @apply bg-primary text-white;
+  @apply bg-primary-600 text-white border border-primary-600 shadow-button hover:bg-primary-700 hover:border-primary-700;
 }
 
 .button.button-secondary {
-  @apply bg-secondary text-white;
+  @apply bg-white text-gray-900 border border-gray-300 shadow-button hover:bg-gray-50;
 }
 
 .button.button-success {
-  @apply bg-success text-white;
+  @apply bg-success-600 text-white border border-success-600 shadow-button hover:bg-success-700 hover:border-success-700;
 }
 
 .button.button-info {
-  @apply bg-info text-white;
+  @apply bg-primary-500 text-white border border-primary-500 shadow-button hover:bg-primary-600 hover:border-primary-600;
 }
 
 .button.button-warning {
-  @apply bg-warning text-white;
+  @apply bg-warning-600 text-white border border-warning-600 shadow-button hover:bg-warning-700 hover:border-warning-700;
 }
 
 .button.button-danger {
-  @apply bg-danger text-white;
+  @apply bg-danger-600 text-white border border-danger-600 shadow-button hover:bg-danger-700 hover:border-danger-700 focus-visible:ring-fr-danger;
 }
 
 .button[class*="outline-"]:disabled {
-  opacity: 0.3;
+  opacity: 0.4;
   cursor: not-allowed;
 }
 
 .button.outline-primary {
-  @apply border border-primary text-primary;
+  @apply border border-primary-600 text-primary-600 bg-transparent;
 }
 
 .button.outline-primary:hover {
-  @apply bg-primary/5;
+  @apply bg-primary-50;
 }
 
 .button.outline-secondary {
-  @apply border border-secondary text-secondary;
+  @apply border border-gray-300 text-gray-700 bg-transparent;
 }
 
 .button.outline-secondary:hover {
-  @apply bg-secondary/5;
+  @apply bg-gray-100;
 }
 
 .button.outline-success {
-  @apply border border-success text-success;
+  @apply border border-success-600 text-success-700 bg-transparent;
 }
 
 .button.outline-success:hover {
-  @apply bg-success/5;
+  @apply bg-success-50;
 }
 
 .button.outline-info {
-  @apply border border-info text-info;
+  @apply border border-primary-500 text-primary-500 bg-transparent;
 }
 
 .button.outline-info:hover {
-  @apply bg-info/5;
+  @apply bg-primary-50;
 }
 
 .button.outline-warning {
-  @apply border border-warning text-warning;
+  @apply border border-warning-600 text-warning-700 bg-transparent;
 }
 
 .button.outline-warning:hover {
-  @apply bg-warning/5;
+  @apply bg-warning-50;
 }
 
 .button.outline-danger {
-  @apply border border-danger text-danger;
+  @apply border border-danger-600 text-danger-700 bg-transparent focus-visible:ring-fr-danger;
 }
 
 .button.outline-danger:hover {
-  @apply bg-danger/5;
+  @apply bg-danger-50;
 }
 
 .button[class*="text-"]:disabled {
-  opacity: 0.3;
+  opacity: 0.4;
   cursor: not-allowed;
 }
 
 .button.texts-primary {
-  @apply text-primary;
+  @apply text-primary-600;
 }
 
 .button.texts-primary:hover {
-  @apply bg-primary/10;
+  @apply bg-primary-50;
 }
 
 .button.texts-secondary {
-  @apply text-secondary;
+  @apply text-gray-700;
 }
 
 .button.texts-secondary:hover {
-  @apply bg-secondary/10;
+  @apply bg-gray-100;
 }
 
 .button.texts-success {
-  @apply text-success;
+  @apply text-success-700;
 }
 
 .button.texts-success:hover {
-  @apply bg-success/10;
+  @apply bg-success-50;
 }
 
 .button.texts-info {
-  @apply text-info;
+  @apply text-primary-500;
 }
 
 .button.texts-info:hover {
-  @apply bg-info/10;
+  @apply bg-primary-50;
 }
 
 .button.texts-warning {
-  @apply text-warning;
+  @apply text-warning-700;
 }
 
 .button.texts-warning:hover {
-  @apply bg-warning/10;
+  @apply bg-warning-50;
 }
 
 .button.texts-danger {
-  @apply text-danger;
+  @apply text-danger-700 focus-visible:ring-fr-danger;
 }
 
 .button.texts-danger:hover {
-  @apply bg-danger/10;
+  @apply bg-danger-50;
 }
 
 .button-sm {
-  @apply text-xs;
-  padding: var(--padding-btn);
+  @apply text-xs px-3 py-1.5 gap-1.5;
 }
 
 .button-md {
-  @apply text-sm;
-  padding: var(--padding-btn);
+  @apply text-sm px-4 py-2 gap-2;
 }
 
 .button-lg {
-  @apply text-base;
-  padding: var(--padding-btn);
+  @apply text-base px-5 py-2.5 gap-2;
 }

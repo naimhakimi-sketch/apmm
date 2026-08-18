@@ -1,28 +1,28 @@
-/* RS Alert Component */
+/* RS Alert — MYDS styling: tinted background + matching outline */
 .alert {
-  @apply visible flex items-center justify-between py-3 px-3 rounded-lg;
+  @apply visible flex items-center justify-between py-3 px-4 rounded-md border text-sm;
 }
 
 .alert.alert-primary {
-  @apply bg-primary/20  text-primary;
+  @apply bg-primary-50 border-primary-200 text-primary-600;
 }
 
 .alert.alert-secondary {
-  @apply bg-secondary/20 text-secondary;
+  @apply bg-gray-50 border-gray-200 text-gray-600;
 }
 
 .alert.alert-success {
-  @apply bg-success/20 text-success;
+  @apply bg-success-50 border-success-200 text-success-700;
 }
 
 .alert.alert-info {
-  @apply bg-info/20 text-info;
+  @apply bg-primary-50 border-primary-200 text-primary-600;
 }
 
 .alert.alert-warning {
-  @apply bg-warning/20 text-warning;
+  @apply bg-warning-50 border-warning-200 text-warning-700;
 }
 
 .alert.alert-danger {
-  @apply bg-danger/20 text-danger;
+  @apply bg-danger-50 border-danger-200 text-danger-700;
 }

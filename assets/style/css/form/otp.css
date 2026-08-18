@@ -1,5 +1,5 @@
-.formkit-label-otp {
-  @apply block mb-2 font-semibold text-sm formkit-invalid:text-red-500 dark:formkit-invalid:text-danger;
+﻿.formkit-label-otp {
+  @apply block mb-2 font-semibold text-sm formkit-invalid:text-danger-600 dark:formkit-invalid:text-danger;
 }
 
 .formkit-inner-otp {
@@ -7,14 +7,14 @@
     items-center
     justify-start
     align-middle
-    rounded-lg mb-1
+    rounded-md mb-1
     overflow-hidden;
 }
 
 .formkit-digit-otp {
   @apply w-10 h-10 mr-2
     text-center
-    rounded-lg
+    rounded-md
     border
     border-[rgb(var(--fk-border-color))]
     text-sm 
@@ -25,5 +25,5 @@
 }
 
 .formkit-message-otp {
-  @apply formkit-invalid:text-red-500 dark:formkit-invalid:text-danger;
+  @apply formkit-invalid:text-danger-600 dark:formkit-invalid:text-danger;
 }

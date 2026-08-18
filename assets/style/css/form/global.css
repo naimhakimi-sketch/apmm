@@ -1,4 +1,4 @@
-.formkit-label-global {
+﻿.formkit-label-global {
   @apply text-[rgb(var(--text-color))];
 }
 
@@ -15,7 +15,7 @@
 }
 
 .formkit-message-global {
-  @apply text-red-500 mb-1 text-xs;
+  @apply text-danger-600 mb-1 text-xs;
 }
 
 .formkit-wrapper-global {

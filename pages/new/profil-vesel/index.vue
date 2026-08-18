@@ -11,8 +11,8 @@
                     <p class="text-sm text-gray-500">Jumlah Kapal</p>
                     <h3 class="text-2xl font-bold">3</h3>
                 </div>
-                <div class="p-3 bg-blue-100 rounded-full">
-                    <Icon class="text-primary" name="fluent:vehicle-ship-20-filled"></Icon>
+                <div class="p-3 bg-primary-50 rounded-full">
+                    <Icon class="text-primary-600" name="fluent:vehicle-ship-20-filled"></Icon>
                 </div>
                 </div>
             </div>
@@ -24,8 +24,8 @@
                     <p class="text-sm text-gray-500">Jumlah Bot</p>
                     <h3 class="text-2xl font-bold">7</h3>
                 </div>
-                <div class="p-3 bg-green-100 rounded-full">
-                    <Icon class="text-primary" name="fluent:vehicle-ship-20-filled"></Icon>
+                <div class="p-3 bg-warning-50 rounded-full">
+                    <Icon class="text-warning-700" name="fluent:vehicle-ship-20-filled"></Icon>
                 </div>
                 </div>
             </div>
@@ -37,8 +37,8 @@
                     <p class="text-sm text-gray-500">OPS</p>
                     <h3 class="text-2xl font-bold"> Kapal 0 | Bot 0 </h3>
                 </div>
-                <div class="p-3 bg-yellow-100 rounded-full">
-                    <Icon class="text-primary" name="fluent:vehicle-ship-20-filled"></Icon>
+                <div class="p-3 bg-success-50 rounded-full">
+                    <Icon class="text-success-700" name="fluent:vehicle-ship-20-filled"></Icon>
                 </div>
                 </div>
             </div>
@@ -50,8 +50,8 @@
                     <p class="text-sm text-gray-500">Non OPS</p>
                     <h3 class="text-2xl font-bold"> Kapal 3 | Bot 7</h3>
                 </div>
-                <div class="p-3 bg-red-100 rounded-full">
-                    <Icon class="text-primary" name="fluent:vehicle-ship-20-filled"></Icon>
+                <div class="p-3 bg-danger-50 rounded-full">
+                    <Icon class="text-danger-700" name="fluent:vehicle-ship-20-filled"></Icon>
                 </div>
                 </div>
             </div>
@@ -87,8 +87,8 @@
                 <template v-slot:categoriAset="row">
                     <span :class="{
                         'px-2 py-1 rounded-full text-xs': true,
-                        'bg-green-100 text-green-800': row.text  === 'OPS',
-                        'bg-red-100 text-red-800': row.text === 'Non OPS'
+                        'bg-success-50 text-success-700': row.text  === 'OPS',
+                        'bg-danger-50 text-danger-700': row.text === 'Non OPS'
                     }">
                         {{ row.text }}
                     </span>
@@ -96,7 +96,7 @@
                 
                 <template v-slot:tindakan="row">
                     <div class="flex gap-2">
-                        <button @click="$router.push(`/new/lihatVesel/${row.text}`)" class="text-blue-600 hover:text-blue-800">
+                        <button @click="$router.push(`/new/lihatVesel/${row.text}`)" class="text-primary-600 hover:text-primary-800">
                             <Icon class="text-primary" name="weui:eyes-on-outlined"></Icon>
                         </button>
                     </div>

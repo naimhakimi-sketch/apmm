@@ -15,14 +15,15 @@ export default defineNuxtConfig({
     pageTransition: { name: "page", mode: "out-in" },
   },
   head: {
-    title: "corradUI - NuxtJS Admin Dashboard Template",
+    title: "e-JUTRA | APMM",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
         hid: "description",
         name: "description",
-        content: "corradUI - NuxtJS Admin Dashboard Template",
+        content:
+          "Sistem Pengurusan dan Pemantauan Aset Kejuruteraan Marin APMM (e-JUTRA)",
       },
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],

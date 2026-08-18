@@ -1,9 +1,9 @@
-.formkit-label-color {
+﻿.formkit-label-color {
   @apply block mb-1 font-bold text-sm;
 }
 
 .formkit-input-color {
-  @apply w-16 h-10 cursor-pointer rounded-lg mb-2 border-none appearance-none bg-transparent;
+  @apply w-16 h-10 cursor-pointer rounded-md mb-2 border-none appearance-none bg-transparent;
 }
 
 .formkit-input-color::-webkit-color-swatch {

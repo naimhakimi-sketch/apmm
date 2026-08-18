@@ -2029,16 +2029,16 @@
                 <div class="md:w-2/3 p-6 text-white">
                   <div class="flex items-center space-x-3">
                     <h1 class="text-3xl font-bold">{{ vesselProfile.generalInfo.nama }}</h1>
-                    <span class="bg-blue-600 px-3 py-1 rounded-full text-sm font-semibold">{{ vesselProfile.generalInfo.pennantNumber }}</span>
+                    <span class="bg-primary-600 px-3 py-1 rounded-full text-sm font-semibold">{{ vesselProfile.generalInfo.pennantNumber }}</span>
                   </div>
                   <p class="text-xl mt-2">{{ vesselProfile.generalInfo.class }} - {{ vesselProfile.generalInfo.type }}</p>
                   <div class="mt-4 grid grid-cols-2 gap-4">
                     <div>
-                      <p class="text-blue-200 text-sm">DITUGASKAN PADA</p>
+                      <p class="text-primary-200 text-sm">DITUGASKAN PADA</p>
                       <p>{{ vesselProfile.generalInfo.commissioned }}</p>
                     </div>
                     <div>
-                      <p class="text-blue-200 text-sm">Maritim Negeri / Zon Maritim</p>
+                      <p class="text-primary-200 text-sm">Maritim Negeri / Zon Maritim</p>
                       <p>{{ vesselProfile.generalInfo.homePort }}</p>
                     </div>
                   </div>
@@ -2048,15 +2048,15 @@
 
     <!-- Status Overview -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-      <div class="bg-white rounded-lg shadow p-4 border-l-4 border-green-500">
+      <div class="bg-white rounded-lg shadow p-4 border-l-4 border-success-500">
         <p class="text-sm text-gray-500">STATUS KAPAL</p>
         <p class="text-xl font-semibold">{{ statusKapal }}</p>
       </div>
-      <div class="bg-white rounded-lg shadow p-4 border-l-4 border-blue-500">
+      <div class="bg-white rounded-lg shadow p-4 border-l-4 border-primary-500">
         <p class="text-sm text-gray-500">NEXT AD DATE</p>
         <p class="text-xl font-semibold">{{ nextAdDate }}</p>
       </div>
-      <div class="bg-white rounded-lg shadow p-4 border-l-4 border-purple-500">
+      <div class="bg-white rounded-lg shadow p-4 border-l-4 border-gray-500">
         <p class="text-sm text-gray-500">NEXT PREFIT DATE</p>
         <p class="text-xl font-semibold">{{ nextPrefitDate }}</p>
       </div>
@@ -2071,7 +2071,7 @@
           @click="activeTab = tab.key"
           :class="[
             'px-4 py-2 font-semibold',
-            activeTab === tab.key ? 'border-b-2 border-blue-500 text-blue-500' : 'text-gray-600'
+            activeTab === tab.key ? 'border-b-2 border-primary-500 text-primary-500' : 'text-gray-600'
           ]"
         >
           {{ tab.nama }}
@@ -2140,7 +2140,7 @@
               <div v-if="isViewingCrew" class="space-y-6">
                 <!-- Crew Profile Section -->
                 <div class="bg-white rounded-lg shadow-md p-6">
-                  <h3 class="text-xl font-semibold text-blue-700 mb-4">Profil Krew</h3>
+                  <h3 class="text-xl font-semibold text-primary-700 mb-4">Profil Krew</h3>
                   
                   <div class="flex items-center mb-6">
                     <div class="bg-gray-200 rounded-full w-24 h-24 flex items-center justify-center mr-6">
@@ -2200,7 +2200,7 @@
                 <!-- Service Record Section -->
                 <div class="bg-white rounded-lg shadow-md p-6">
                   <div class="flex justify-between items-center mb-4">
-                    <h3 class="text-xl font-semibold text-blue-700">Rekod Perkhidmatan</h3>
+                    <h3 class="text-xl font-semibold text-primary-700">Rekod Perkhidmatan</h3>
                   </div>
                   
                   <div v-if="crewForm.serviceRecord && crewForm.serviceRecord.length > 0">
@@ -2234,7 +2234,7 @@
                 <!-- Education Section -->
                 <div class="bg-white rounded-lg shadow-md p-6">
                   <div class="flex justify-between items-center mb-4">
-                    <h3 class="text-xl font-semibold text-blue-700">Rekod Pendidikan</h3>
+                    <h3 class="text-xl font-semibold text-primary-700">Rekod Pendidikan</h3>
                   </div>
                   
                   <div v-if="crewForm.education && crewForm.education.length > 0">
@@ -2266,7 +2266,7 @@
                 <!-- Training List Section -->
                 <div class="bg-white rounded-lg shadow-md p-6">
                   <div class="flex justify-between items-center mb-4">
-                    <h3 class="text-xl font-semibold text-blue-700">Senarai Latihan</h3>
+                    <h3 class="text-xl font-semibold text-primary-700">Senarai Latihan</h3>
                     <!-- <rs-button variant="primary" size="sm">Tambah Latihan</rs-button> -->
                   </div>
                   
@@ -2721,7 +2721,7 @@
               <template v-slot:peratus="row">
                 <div class="flex items-center">
                   <div class="w-full bg-gray-200 rounded-full h-2.5 mr-2">
-                    <div class="bg-blue-600 h-2.5 rounded-full" :style="{ width: row.value.peratus + '%' }"></div>
+                    <div class="bg-primary-600 h-2.5 rounded-full" :style="{ width: row.value.peratus + '%' }"></div>
                   </div>
                   <span>{{ row.value.peratus }}%</span>
                 </div>
@@ -2780,7 +2780,7 @@
                   <h4 class="font-medium text-gray-700">Peratus Ketersediaan:</h4>
                   <div class="flex items-center mt-1">
                     <div class="w-full bg-gray-200 rounded-full h-2.5 mr-2">
-                      <div class="bg-blue-600 h-2.5 rounded-full" :style="{ width: rovaForm.peratus + '%' }"></div>
+                      <div class="bg-primary-600 h-2.5 rounded-full" :style="{ width: rovaForm.peratus + '%' }"></div>
                     </div>
                     <span>{{ rovaForm.peratus }}%</span>
                   </div>
@@ -3537,15 +3537,15 @@
                 
                 <div class="flex items-center space-x-2">
                   <div class="flex items-center mr-4">
-                    <div class="w-4 h-4 bg-blue-500 rounded-sm mr-2"></div>
+                    <div class="w-4 h-4 bg-primary-500 rounded-sm mr-2"></div>
                     <span class="text-sm">AD</span>
                   </div>
                   <div class="flex items-center mr-4">
-                    <div class="w-4 h-4 bg-green-500 rounded-sm mr-2"></div>
+                    <div class="w-4 h-4 bg-success-500 rounded-sm mr-2"></div>
                     <span class="text-sm">Refit</span>
                   </div>
                   <div class="flex items-center">
-                    <div class="w-4 h-4 bg-purple-500 rounded-sm mr-2"></div>
+                    <div class="w-4 h-4 bg-gray-500 rounded-sm mr-2"></div>
                     <span class="text-sm">AMP</span>
                   </div>
                 </div>
@@ -3571,9 +3571,9 @@
                           :key="item.id"
                           class="px-3 py-1 rounded text-white cursor-pointer"
                           :class="{
-                            'bg-blue-500': item.type === 'AD',
-                            'bg-green-500': item.type === 'Refit',
-                            'bg-purple-500': item.type === 'AMP'
+                            'bg-primary-500': item.type === 'AD',
+                            'bg-success-500': item.type === 'Refit',
+                            'bg-gray-500': item.type === 'AMP'
                           }"
                           @click="viewMaintenanceItem(item)"
                         >
@@ -3696,14 +3696,14 @@
               <div class="bg-white rounded-lg shadow p-4 hover:shadow-md transition-shadow">
                 <div class="text-center">
                   <h3 class="font-bold">JUMLAH KAD KERJA</h3>
-                  <p class="text-3xl font-bold text-blue-600 mt-2">24</p>
+                  <p class="text-3xl font-bold text-primary-600 mt-2">24</p>
                 </div>
               </div>
               
               <div class="bg-white rounded-lg shadow p-4 hover:shadow-md transition-shadow">
                 <div class="text-center">
                   <h3 class="font-bold">JUMLAH BAJET</h3>
-                  <p class="text-3xl font-bold text-green-600 mt-2">RM 125,000</p>
+                  <p class="text-3xl font-bold text-success-600 mt-2">RM 125,000</p>
                 </div>
               </div>
               
@@ -3717,7 +3717,7 @@
               <div class="bg-white rounded-lg shadow p-4 hover:shadow-md transition-shadow">
                 <div class="text-center">
                   <h3 class="font-bold">JUMLAH KAD KERJA TERTUNGGAK</h3>
-                  <p class="text-3xl font-bold text-orange-600 mt-2">9</p>
+                  <p class="text-3xl font-bold text-warning-700 mt-2">9</p>
                 </div>
               </div>
             </div>
@@ -3727,21 +3727,21 @@
               <div class="bg-white rounded-lg shadow p-4 hover:shadow-md transition-shadow">
                 <div class="text-center">
                   <h3 class="font-bold">MENUNGGU KELULUSAN DARI MN/ZM</h3>
-                  <p class="text-3xl font-bold text-yellow-600 mt-2">3</p>
+                  <p class="text-3xl font-bold text-warning-600 mt-2">3</p>
                 </div>
               </div>
               
               <div class="bg-white rounded-lg shadow p-4 hover:shadow-md transition-shadow">
                 <div class="text-center">
                   <h3 class="font-bold">MENUNGGU KELULUSAN DARI KJPKP</h3>
-                  <p class="text-3xl font-bold text-yellow-600 mt-2">4</p>
+                  <p class="text-3xl font-bold text-warning-600 mt-2">4</p>
                 </div>
               </div>
               
               <div class="bg-white rounded-lg shadow p-4 hover:shadow-md transition-shadow">
                 <div class="text-center">
                   <h3 class="font-bold">MENUNGGU PEMBAYARAN</h3>
-                  <p class="text-3xl font-bold text-red-600 mt-2">2</p>
+                  <p class="text-3xl font-bold text-danger-600 mt-2">2</p>
                 </div>
               </div>
             </div>
@@ -3956,27 +3956,27 @@
             
             <!-- HSE Statistics Cards -->
             <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
-              <rs-card class="bg-blue-50">
+              <rs-card class="bg-primary-50">
                 <div class="text-center">
-                  <h3 class="text-2xl font-bold text-blue-600">{{ hseData.length }}</h3>
+                  <h3 class="text-2xl font-bold text-primary-600">{{ hseData.length }}</h3>
                   <p class="text-sm text-gray-600">Jumlah Insiden</p>
                 </div>
               </rs-card>
-              <rs-card class="bg-green-50">
+              <rs-card class="bg-success-50">
                 <div class="text-center">
-                  <h3 class="text-2xl font-bold text-green-600">RM {{ hseData.reduce((sum, item) => sum + item.kosPembaikan, 0).toLocaleString() }}</h3>
+                  <h3 class="text-2xl font-bold text-success-600">RM {{ hseData.reduce((sum, item) => sum + item.kosPembaikan, 0).toLocaleString() }}</h3>
                   <p class="text-sm text-gray-600">Jumlah Kos Pembaikan</p>
                 </div>
               </rs-card>
-              <rs-card class="bg-yellow-50">
+              <rs-card class="bg-warning-50">
                 <div class="text-center">
-                  <h3 class="text-2xl font-bold text-yellow-600">{{ hseData.filter(item => item.status === 'Dalam Proses').length }}</h3>
+                  <h3 class="text-2xl font-bold text-warning-600">{{ hseData.filter(item => item.status === 'Dalam Proses').length }}</h3>
                   <p class="text-sm text-gray-600">Insiden Dalam Proses</p>
                 </div>
               </rs-card>
-              <rs-card class="bg-purple-50">
+              <rs-card class="bg-gray-100">
                 <div class="text-center">
-                  <h3 class="text-2xl font-bold text-purple-600">{{ hseData.filter(item => item.status === 'Selesai').length }}</h3>
+                  <h3 class="text-2xl font-bold text-gray-700">{{ hseData.filter(item => item.status === 'Selesai').length }}</h3>
                   <p class="text-sm text-gray-600">Insiden Selesai</p>
                 </div>
               </rs-card>
@@ -4406,21 +4406,21 @@
             
             <!-- Shipyard Reports Statistics Cards -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-              <rs-card class="bg-blue-50">
+              <rs-card class="bg-primary-50">
                 <div class="text-center">
-                  <h3 class="text-2xl font-bold text-blue-600">{{ shipyardReportsStatistics.totalReports }}</h3>
+                  <h3 class="text-2xl font-bold text-primary-600">{{ shipyardReportsStatistics.totalReports }}</h3>
                   <p class="text-sm text-gray-600">Jumlah Laporan</p>
                 </div>
               </rs-card>
-              <rs-card class="bg-green-50">
+              <rs-card class="bg-success-50">
                 <div class="text-center">
-                  <h3 class="text-2xl font-bold text-green-600">RM {{ shipyardReportsStatistics.kos.toLocaleString() }}</h3>
+                  <h3 class="text-2xl font-bold text-success-600">RM {{ shipyardReportsStatistics.kos.toLocaleString() }}</h3>
                   <p class="text-sm text-gray-600">Jumlah Kos</p>
                 </div>
               </rs-card>
-              <rs-card class="bg-yellow-50">
+              <rs-card class="bg-warning-50">
                 <div class="text-center">
-                  <h3 class="text-2xl font-bold text-yellow-600">{{ shipyardReportsStatistics.averageQualityRating.toFixed(1) }}</h3>
+                  <h3 class="text-2xl font-bold text-warning-600">{{ shipyardReportsStatistics.averageQualityRating.toFixed(1) }}</h3>
                   <p class="text-sm text-gray-600">Purata Penilaian</p>
                 </div>
               </rs-card>
@@ -4456,7 +4456,7 @@
               
               <template v-slot:skor="row">
                 <div class="flex items-center">
-                  <div class="flex text-yellow-400">
+                  <div class="flex text-warning-400">
                     <i v-for="star in 5" :key="star" 
                        :class="star <= row.value.skor ? 'fas fa-star' : 'far fa-star'"
                        class="text-sm"></i>
@@ -4509,10 +4509,10 @@
                 </div>
 
                 <!-- Quality Rating -->
-                <div class="bg-yellow-50 p-4 rounded-lg">
+                <div class="bg-warning-50 p-4 rounded-lg">
                   <h4 class="font-medium text-gray-700 mb-2">Penilaian Kualiti Keseluruhan:</h4>
                   <div class="flex items-center">
-                    <div class="flex text-yellow-400">
+                    <div class="flex text-warning-400">
                       <i v-for="star in 5" :key="star" 
                          :class="star <= shipyardReportForm.skor ? 'fas fa-star' : 'far fa-star'"
                          class="text-xl"></i>
@@ -4528,7 +4528,7 @@
                   <div class="grid grid-cols-2 gap-4">
                     <div>
                       <h4 class="font-medium text-gray-700">Jumlah Kos:</h4>
-                      <p class="text-xl font-bold text-green-600">RM {{ shipyardReportForm.kos.toLocaleString() }}</p>
+                      <p class="text-xl font-bold text-success-600">RM {{ shipyardReportForm.kos.toLocaleString() }}</p>
                     </div>
                     <div>
                       <h4 class="font-medium text-gray-700">Penyelia:</h4>
@@ -5085,7 +5085,7 @@
               </tr>
               <tr>
                 <td class="p-2 border-r border-gray-800 font-medium">Anggaran Kos</td>
-                <td class="p-2">: <span class="font-medium text-blue-600">{{ selectedJobCard['AMOUN'] }}</span></td>
+                <td class="p-2">: <span class="font-medium text-primary-600">{{ selectedJobCard['AMOUN'] }}</span></td>
               </tr>
             </table>
           </div>
@@ -5148,8 +5148,8 @@
               <tr>
                 <td class="p-2">
                   <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
-                    <div class="bg-blue-100 p-2 rounded-lg">
-                      <i class="fas fa-file-pdf text-2xl text-blue-600"></i>
+                    <div class="bg-primary-100 p-2 rounded-lg">
+                      <i class="fas fa-file-pdf text-2xl text-primary-600"></i>
                     </div>
                     <div class="flex-grow">
                       <div class="flex items-center justify-between">
