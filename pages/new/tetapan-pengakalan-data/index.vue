@@ -41,15 +41,17 @@
                         {{ item.value.username }}
                     </template>
                     <template v-slot:status="item">
-                        {{ item.value.status }}
+                        <rs-badge :variant="item.value.status === 'Online' ? 'success' : 'warning'">
+                            {{ item.value.status }}
+                        </rs-badge>
                     </template>
                     <template v-slot:lastUpdate="item">
                         {{ item.value.lastUpdate }}
                     </template>
                     <template v-slot:actions="item">
-                        <div class="flex gap-2">
-                            <button @click="openEditModal(item.value)">
-                                <Icon class="text-primary" name="material-symbols:edit"></Icon>
+                        <div class="flex items-center gap-3">
+                            <button type="button" class="table-action-btn text-success-600 hover:text-success-700" v-tooltip="'Kemaskini'" @click="openEditModal(item.value)">
+                                <Icon name="material-symbols:edit" size="1.2rem" />
                             </button>
                         </div>
                     </template>
@@ -142,7 +144,9 @@
                         {{ data.value.ipAddress }}
                     </template>
                     <template v-slot:status="data">
-                        {{ data.value.status }}
+                        <rs-badge :variant="data.value.status === 'Success' ? 'success' : data.value.status === 'Pending' ? 'warning' : 'danger'">
+                            {{ data.value.status }}
+                        </rs-badge>
                     </template>
                     
                     

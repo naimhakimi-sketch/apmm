@@ -99,12 +99,12 @@
                 </template>
                 
                 <template v-slot:tindakan="row">
-                    <div class="flex gap-2">
-                        <button @click="$router.push(`/lihatVesel/${row.text}`)" class="text-blue-600 hover:text-blue-800">
-                            <Icon class="text-primary" name="weui:eyes-on-outlined"></Icon>
+                    <div class="flex items-center gap-3">
+                        <button type="button" class="table-action-btn text-txt-black-500 hover:text-txt-black-700" v-tooltip="'Lihat'" @click="$router.push(`/lihatVesel/${row.text}`)">
+                            <Icon name="weui:eyes-on-outlined" size="1.2rem" />
                         </button>
-                        <button @click="editAsset(tableData[row.text])" class="text-blue-600 hover:text-blue-800">
-                            <Icon class="text-primary" name="material-symbols:edit"></Icon>
+                        <button type="button" class="table-action-btn text-success-600 hover:text-success-700" v-tooltip="'Kemaskini'" @click="editAsset(tableData[row.text])">
+                            <Icon name="material-symbols:edit" size="1.2rem" />
                         </button>
                     </div>
                 </template>

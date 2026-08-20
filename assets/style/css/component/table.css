@@ -1,4 +1,4 @@
-/* Table Component — MYDS styling: outlined, rounded container */
+/* Table Component: MYDS styling, outlined rounded container */
 .table-wrapper {
   @apply w-full border rounded-lg;
   border-color: rgb(var(--border-color));
@@ -31,4 +31,9 @@
 
 .table-footer-page {
   @apply flex justify-center gap-x-2;
+}
+
+/* Standardized Tindakan (Actions) column icon buttons, with v-tooltip for hover labels */
+.table-action-btn {
+  @apply inline-flex items-center justify-center cursor-pointer transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
 }

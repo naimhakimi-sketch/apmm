@@ -34,9 +34,9 @@
                     </rs-badge>
                 </template>
                 <template v-slot:tindakan="{ value }">
-                    <div class="flex gap-2">
-                        <button class="btn btn-outline-secondary btn-sm" @click="openEditModal(value)">
-                            <Icon name="ic:baseline-edit" />
+                    <div class="flex items-center gap-3">
+                        <button type="button" class="table-action-btn text-success-600 hover:text-success-700" v-tooltip="'Kemaskini'" @click="openEditModal(value)">
+                            <Icon name="material-symbols:edit" size="1.2rem" />
                         </button>
                     </div>
                 </template>

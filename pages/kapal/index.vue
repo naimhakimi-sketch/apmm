@@ -97,11 +97,13 @@
               </rs-badge>
             </template>
             <template v-slot:action="data">
-              <button 
+              <button
+                type="button"
+                class="table-action-btn text-txt-black-500 hover:text-txt-black-700"
+                v-tooltip="'Lihat'"
                 @click="$router.push(`/kapalDetails`)"
-                class="text-blue-600 hover:text-blue-800"
               >
-                <Icon class="text-primary" name="weui:eyes-on-outlined"></Icon>
+                <Icon name="weui:eyes-on-outlined" size="1.2rem" />
               </button>
             </template>
           </rs-table>

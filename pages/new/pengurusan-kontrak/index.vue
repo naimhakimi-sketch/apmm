@@ -29,12 +29,11 @@
                     </rs-badge>
                 </template>
                 <template v-slot:tindakan="row">
-                    <button
-                        class="btn btn-primary btn-sm"
-                        @click="$router.push(`/new/pengurusan-kontrak/detail/${row.value.siri}`)"
-                    >
-                        <Icon name="mdi:eye" class="mr-1" />
-                    </button>
+                    <div class="flex items-center gap-3">
+                        <button type="button" class="table-action-btn text-txt-black-500 hover:text-txt-black-700" v-tooltip="'Lihat'" @click="$router.push(`/new/pengurusan-kontrak/detail/${row.value.siri}`)">
+                            <Icon name="weui:eyes-on-outlined" size="1.2rem" />
+                        </button>
+                    </div>
                 </template>
             </rs-table>
         </div>

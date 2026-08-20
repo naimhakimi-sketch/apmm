@@ -36,15 +36,10 @@
                         </rs-badge>
                     </template>
                     <template v-slot:tindakan="{ value }">
-                        <div class="flex ">
-                            <rs-button 
-                                variant="primary" 
-                                size="sm"
-                                @click="openVendorDetails(value)"
-                            >
-                                <Icon name="mdi:eye" class="mr-1" />
-                                <!-- Lihat -->
-                            </rs-button>
+                        <div class="flex items-center gap-3">
+                            <button type="button" class="table-action-btn text-txt-black-500 hover:text-txt-black-700" v-tooltip="'Lihat'" @click="openVendorDetails(value)">
+                              <Icon name="weui:eyes-on-outlined" size="1.2rem" />
+                            </button>
                         </div>
                     </template>
                 </rs-table>

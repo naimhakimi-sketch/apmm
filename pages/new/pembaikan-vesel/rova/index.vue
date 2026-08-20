@@ -1,5 +1,5 @@
 <template>
-    <div class="space-y-6 bg-bg-white rounded shadow p-4">
+    <div class="space-y-6">
        
         <rs-card>
             <template #header>
@@ -48,10 +48,16 @@
               </template>
               
               <template v-slot:tindakan="row">
-                <div class="flex gap-2">
-                  <rs-button variant="primary" size="sm" @click="openViewRovaModal(row.value)">Lihat</rs-button>
-                  <rs-button variant="warning" size="sm" @click="openEditRovaModal(row.value)">Kemaskini</rs-button>
-                  <rs-button variant="danger" size="sm" @click="deleteRovaItem(row.value.id)">Padam</rs-button>
+                <div class="flex items-center gap-3">
+                  <button type="button" class="table-action-btn text-txt-black-500 hover:text-txt-black-700" v-tooltip="'Lihat'" @click="openViewRovaModal(row.value)">
+                    <Icon name="weui:eyes-on-outlined" size="1.2rem" />
+                  </button>
+                  <button type="button" class="table-action-btn text-success-600 hover:text-success-700" v-tooltip="'Kemaskini'" @click="openEditRovaModal(row.value)">
+                    <Icon name="material-symbols:edit" size="1.2rem" />
+                  </button>
+                  <button type="button" class="table-action-btn text-danger hover:text-danger-700" v-tooltip="'Padam'" @click="deleteRovaItem(row.value.id)">
+                    <Icon name="material-symbols:delete-outline" size="1.2rem" />
+                  </button>
                 </div>
               </template>
             </rs-table>

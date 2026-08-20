@@ -40,10 +40,9 @@
                 </rs-badge>
             </template>
             <template v-slot:tindakan="data">
-                <div class="flex gap-2 ">
-                    
-                    <button @click="editRole(data.value)" >
-                        <Icon class="text-primary" name="material-symbols:edit"></Icon>
+                <div class="flex items-center gap-3">
+                    <button type="button" class="table-action-btn text-success-600 hover:text-success-700" v-tooltip="'Kemaskini'" @click="editRole(data.value)">
+                        <Icon name="material-symbols:edit" size="1.2rem" />
                     </button>
                     <!-- <button @click="deleteRole(data.value.id)" class="text-blue-600 hover:text-blue-800">
                         <Icon class="text-danger" name="material-symbols-light:delete-outline-rounded"></Icon>

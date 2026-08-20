@@ -95,9 +95,9 @@
                 </template>
                 
                 <template v-slot:tindakan="row">
-                    <div class="flex gap-2">
-                        <button @click="$router.push(`/new/lihatVesel/${row.text}`)" class="text-txt-primary hover:text-primary-800">
-                            <Icon class="text-primary" name="weui:eyes-on-outlined"></Icon>
+                    <div class="flex items-center gap-3">
+                        <button type="button" class="table-action-btn text-txt-black-500 hover:text-txt-black-700" v-tooltip="'Lihat'" @click="$router.push(`/new/lihatVesel/${row.text}`)">
+                            <Icon name="weui:eyes-on-outlined" size="1.2rem" />
                         </button>
                     </div>
                 </template>

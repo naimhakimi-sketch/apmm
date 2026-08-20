@@ -41,8 +41,10 @@
                 {{ row.value.penerangan }}
               </template>
               <template v-slot:tindakan="row">
-                <div class="flex gap-2">
-                  <rs-button variant="primary" size="sm" @click="openViewRupacaraModal(row.value)">Lihat</rs-button>
+                <div class="flex items-center gap-3">
+                  <button type="button" class="table-action-btn text-txt-black-500 hover:text-txt-black-700" v-tooltip="'Lihat'" @click="openViewRupacaraModal(row.value)">
+                    <Icon name="weui:eyes-on-outlined" size="1.2rem" />
+                  </button>
                 </div>
               </template>
             </rs-table>

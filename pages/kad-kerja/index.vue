@@ -96,21 +96,21 @@
                   {{ data.text }}
                 </rs-badge>
               </template>
-              <template v-slot:action="data">               
-                <button   v-if="data.text === 'Menunggu Pengesahan'"
-                  @click="$router.push(`/kad-kerja/${data.value.id}/pengesahan`)" 
-                  class="text-blue-600 hover:text-blue-800" >
-                  <Icon class="text-primary" name="weui:eyes-on-outlined"></Icon>
+              <template v-slot:action="data">
+                <button type="button" v-if="data.text === 'Menunggu Pengesahan'"
+                  class="table-action-btn text-txt-black-500 hover:text-txt-black-700" v-tooltip="'Pengesahan'"
+                  @click="$router.push(`/kad-kerja/${data.value.id}/pengesahan`)" >
+                  <Icon name="weui:eyes-on-outlined" size="1.2rem" />
                 </button>
-                <button   v-if="data.text === 'Penilaian Alat Ganti'"
-                  @click="$router.push(`/kad-kerja/${data.value.id}/penilaian-alat-ganti`)" 
-                  class="text-blue-600 hover:text-blue-800" >
-                  <Icon class="text-primary" name="weui:eyes-on-outlined"></Icon>
+                <button type="button" v-if="data.text === 'Penilaian Alat Ganti'"
+                  class="table-action-btn text-txt-black-500 hover:text-txt-black-700" v-tooltip="'Penilaian Alat Ganti'"
+                  @click="$router.push(`/kad-kerja/${data.value.id}/penilaian-alat-ganti`)" >
+                  <Icon name="weui:eyes-on-outlined" size="1.2rem" />
                 </button>
-                <button   v-if="data.text === 'Kelulusan Kerja'"
-                  @click="$router.push(`/kad-kerja/${data.value.id}/kelulusan-kerja`)" 
-                  class="text-blue-600 hover:text-blue-800" >
-                  <Icon class="text-primary" name="weui:eyes-on-outlined"></Icon>
+                <button type="button" v-if="data.text === 'Kelulusan Kerja'"
+                  class="table-action-btn text-txt-black-500 hover:text-txt-black-700" v-tooltip="'Kelulusan Kerja'"
+                  @click="$router.push(`/kad-kerja/${data.value.id}/kelulusan-kerja`)" >
+                  <Icon name="weui:eyes-on-outlined" size="1.2rem" />
                 </button>
                 <!-- <button @click="$router.push(`/kad-kerja/${data.value.id}`)" class="text-blue-600 hover:text-blue-800" >
                   <Icon class="text-primary" name="weui:eyes-on-outlined"></Icon>

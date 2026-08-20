@@ -1,5 +1,5 @@
 <template>
-    <div class="space-y-6 bg-bg-white rounded shadow p-4">
+    <div class="space-y-6">
         <rs-card>
             <template #header>
                 <div class="flex justify-between items-center">
@@ -39,9 +39,13 @@
                 </template>
                 
                 <template v-slot:tindakan="row">
-                <div class="flex gap-2">
-                    <rs-button variant="warning" size="sm" @click="editPMSItem(row.value)">Edit</rs-button>
-                    <rs-button variant="danger" size="sm" @click="deletePMSItem(row.value.bil)">Delete</rs-button>
+                <div class="flex items-center gap-3">
+                    <button type="button" class="table-action-btn text-success-600 hover:text-success-700" v-tooltip="'Edit'" @click="editPMSItem(row.value)">
+                      <Icon name="material-symbols:edit" size="1.2rem" />
+                    </button>
+                    <button type="button" class="table-action-btn text-danger hover:text-danger-700" v-tooltip="'Delete'" @click="deletePMSItem(row.value.bil)">
+                      <Icon name="material-symbols:delete-outline" size="1.2rem" />
+                    </button>
                 </div>
                 </template>
             </rs-table>

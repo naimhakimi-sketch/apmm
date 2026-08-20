@@ -28,20 +28,16 @@
                 advanced
             >
                 <template v-slot:tindakan="data">
-                    <button 
-                        @click="editStaff(data.value)"
-                        class="text-blue-600 hover:text-blue-800 py-3 px-4"
-                    >
-                        Kemaskini
-                    </button>
-                    <button 
-                        @click="deleteStaff(data.value)"
-                        class="text-red-600 hover:text-red-800 py-3 px-4"
-                    >
-                        Hapus
-                    </button>
+                    <div class="flex items-center gap-3">
+                        <button type="button" class="table-action-btn text-success-600 hover:text-success-700" v-tooltip="'Kemaskini'" @click="editStaff(data.value)">
+                            <Icon name="material-symbols:edit" size="1.2rem" />
+                        </button>
+                        <button type="button" class="table-action-btn text-danger hover:text-danger-700" v-tooltip="'Hapus'" @click="deleteStaff(data.value)">
+                            <Icon name="material-symbols:delete-outline" size="1.2rem" />
+                        </button>
+                    </div>
                 </template>
-            
+
             </rs-table>
         </rs-fieldset>
 
@@ -89,18 +85,14 @@
                 advanced
             >
                 <template v-slot:tindakan="data">
-                    <button 
-                        @click="editAlatGanti(data.value)"
-                        class="text-blue-600 hover:text-blue-800 py-3 px-4"
-                    >
-                        Kemaskini
-                    </button>
-                    <button 
-                        @click="deleteAlatGanti(data.value)"
-                        class="text-red-600 hover:text-red-800 py-3 px-4"
-                    >
-                        Hapus
-                    </button>
+                    <div class="flex items-center gap-3">
+                        <button type="button" class="table-action-btn text-success-600 hover:text-success-700" v-tooltip="'Kemaskini'" @click="editAlatGanti(data.value)">
+                            <Icon name="material-symbols:edit" size="1.2rem" />
+                        </button>
+                        <button type="button" class="table-action-btn text-danger hover:text-danger-700" v-tooltip="'Hapus'" @click="deleteAlatGanti(data.value)">
+                            <Icon name="material-symbols:delete-outline" size="1.2rem" />
+                        </button>
+                    </div>
                 </template>
             </rs-table>
 

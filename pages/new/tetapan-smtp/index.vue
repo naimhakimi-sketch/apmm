@@ -228,7 +228,9 @@
                 {{ data.value.ipAddress }}
             </template>
             <template v-slot:status="data">
-                {{ data.value.status }}
+                <rs-badge :variant="data.value.status === 'Success' ? 'success' : data.value.status === 'Pending' ? 'warning' : 'danger'">
+                    {{ data.value.status }}
+                </rs-badge>
             </template>
             
             

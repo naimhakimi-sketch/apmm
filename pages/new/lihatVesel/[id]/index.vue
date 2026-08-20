@@ -2114,8 +2114,10 @@
                 :field="fieldKrew"
               >
                 <template v-slot:tindakan="row">
-                  <div class="flex gap-2">
-                    <rs-button variant="primary" size="sm" @click="viewCrewItem(row.value)">Lihat</rs-button>
+                  <div class="flex items-center gap-3">
+                    <button type="button" class="table-action-btn text-txt-black-500 hover:text-txt-black-700" v-tooltip="'Lihat'" @click="viewCrewItem(row.value)">
+                      <Icon name="weui:eyes-on-outlined" size="1.2rem" />
+                    </button>
                     <!-- <rs-button variant="warning" size="sm" @click="editCrewItem(row.value)">Kemaskini</rs-button>
                     <rs-button variant="danger" size="sm" @click="deleteCrewItem(row.value.id)">Padam</rs-button>
                     <rs-button variant="info" size="sm" @click="printCrewItem(row.value)">
@@ -2464,10 +2466,16 @@
               </template>
               
               <template v-slot:tindakan="row">
-                <div class="flex gap-2">
-                  <rs-button variant="primary" size="sm" @click="openViewOaModal(row.value)">Lihat</rs-button>
-                  <rs-button variant="warning" size="sm" @click="openEditOaModal(row.value)">Kemaskini</rs-button>
-                  <rs-button variant="danger" size="sm" @click="deleteOaItem(row.value.id)">Padam</rs-button>
+                <div class="flex items-center gap-3">
+                  <button type="button" class="table-action-btn text-txt-black-500 hover:text-txt-black-700" v-tooltip="'Lihat'" @click="openViewOaModal(row.value)">
+                    <Icon name="weui:eyes-on-outlined" size="1.2rem" />
+                  </button>
+                  <button type="button" class="table-action-btn text-success-600 hover:text-success-700" v-tooltip="'Kemaskini'" @click="openEditOaModal(row.value)">
+                    <Icon name="material-symbols:edit" size="1.2rem" />
+                  </button>
+                  <button type="button" class="table-action-btn text-danger hover:text-danger-700" v-tooltip="'Padam'" @click="deleteOaItem(row.value.id)">
+                    <Icon name="material-symbols:delete-outline" size="1.2rem" />
+                  </button>
                 </div>
               </template>
             </rs-table>
@@ -2728,10 +2736,16 @@
               </template>
               
               <template v-slot:tindakan="row">
-                <div class="flex gap-2">
-                  <rs-button variant="primary" size="sm" @click="openViewRovaModal(row.value)">Lihat</rs-button>
-                  <rs-button variant="warning" size="sm" @click="openEditRovaModal(row.value)">Kemaskini</rs-button>
-                  <rs-button variant="danger" size="sm" @click="deleteRovaItem(row.value.id)">Padam</rs-button>
+                <div class="flex items-center gap-3">
+                  <button type="button" class="table-action-btn text-txt-black-500 hover:text-txt-black-700" v-tooltip="'Lihat'" @click="openViewRovaModal(row.value)">
+                    <Icon name="weui:eyes-on-outlined" size="1.2rem" />
+                  </button>
+                  <button type="button" class="table-action-btn text-success-600 hover:text-success-700" v-tooltip="'Kemaskini'" @click="openEditRovaModal(row.value)">
+                    <Icon name="material-symbols:edit" size="1.2rem" />
+                  </button>
+                  <button type="button" class="table-action-btn text-danger hover:text-danger-700" v-tooltip="'Padam'" @click="deleteRovaItem(row.value.id)">
+                    <Icon name="material-symbols:delete-outline" size="1.2rem" />
+                  </button>
                 </div>
               </template>
             </rs-table>
@@ -2909,8 +2923,10 @@
                 {{ row.value.penerangan }}
               </template>
               <template v-slot:tindakan="row">
-                <div class="flex gap-2">
-                  <rs-button variant="primary" size="sm" @click="openViewRupacaraModal(row.value)">Lihat</rs-button>
+                <div class="flex items-center gap-3">
+                  <button type="button" class="table-action-btn text-txt-black-500 hover:text-txt-black-700" v-tooltip="'Lihat'" @click="openViewRupacaraModal(row.value)">
+                    <Icon name="weui:eyes-on-outlined" size="1.2rem" />
+                  </button>
                 </div>
               </template>
             </rs-table>
@@ -3117,10 +3133,16 @@
                 </template>
                 
                 <template v-slot:tindakan="row">
-                  <div class="flex gap-2">
-                    <rs-button variant="primary" size="sm" @click="viewEquipmentItem(row.value)">Lihat</rs-button>
-                    <rs-button variant="warning" size="sm" @click="editEquipmentItem(row.value)">Kemaskini</rs-button>
-                    <rs-button variant="danger" size="sm" @click="deleteEquipmentItem(row.value.id)">Padam</rs-button>
+                  <div class="flex items-center gap-3">
+                    <button type="button" class="table-action-btn text-txt-black-500 hover:text-txt-black-700" v-tooltip="'Lihat'" @click="viewEquipmentItem(row.value)">
+                      <Icon name="weui:eyes-on-outlined" size="1.2rem" />
+                    </button>
+                    <button type="button" class="table-action-btn text-success-600 hover:text-success-700" v-tooltip="'Kemaskini'" @click="editEquipmentItem(row.value)">
+                      <Icon name="material-symbols:edit" size="1.2rem" />
+                    </button>
+                    <button type="button" class="table-action-btn text-danger hover:text-danger-700" v-tooltip="'Padam'" @click="deleteEquipmentItem(row.value.id)">
+                      <Icon name="material-symbols:delete-outline" size="1.2rem" />
+                    </button>
                   </div>
                 </template>
               </rs-table>
@@ -3344,10 +3366,16 @@
                 </template>
                 
                 <template v-slot:tindakan="row">
-                  <div class="flex gap-2">
-                    <rs-button variant="primary" size="sm" @click="viewStockItem(row.value)">Lihat</rs-button>
-                    <rs-button variant="warning" size="sm" @click="editStockItem(row.value)">Kemaskini</rs-button>
-                    <rs-button variant="danger" size="sm" @click="deleteStockItem(row.value.id)">Padam</rs-button>
+                  <div class="flex items-center gap-3">
+                    <button type="button" class="table-action-btn text-txt-black-500 hover:text-txt-black-700" v-tooltip="'Lihat'" @click="viewStockItem(row.value)">
+                      <Icon name="weui:eyes-on-outlined" size="1.2rem" />
+                    </button>
+                    <button type="button" class="table-action-btn text-success-600 hover:text-success-700" v-tooltip="'Kemaskini'" @click="editStockItem(row.value)">
+                      <Icon name="material-symbols:edit" size="1.2rem" />
+                    </button>
+                    <button type="button" class="table-action-btn text-danger hover:text-danger-700" v-tooltip="'Padam'" @click="deleteStockItem(row.value.id)">
+                      <Icon name="material-symbols:delete-outline" size="1.2rem" />
+                    </button>
                   </div>
                 </template>
               </rs-table>
@@ -3782,8 +3810,10 @@
                   advanced
                 >
                   <template v-slot:TINDAKAN="row">
-                    <div class="flex gap-2">
-                      <rs-button variant="primary" size="sm" @click="openViewJobCardModal(row.value)">Lihat</rs-button>
+                    <div class="flex items-center gap-3">
+                      <button type="button" class="table-action-btn text-txt-black-500 hover:text-txt-black-700" v-tooltip="'Lihat'" @click="openViewJobCardModal(row.value)">
+                        <Icon name="weui:eyes-on-outlined" size="1.2rem" />
+                      </button>
                       <!-- <rs-button variant="warning" size="sm">Edit</rs-button>
                       <rs-button variant="danger" size="sm">Padam</rs-button> -->
                     </div>
@@ -3829,10 +3859,16 @@
               </template>
               
               <template v-slot:tindakan="row">
-                <div class="flex gap-2">
-                  <rs-button variant="primary" size="sm" @click="viewFloatingEquipmentItem(row.value)">Lihat</rs-button>
-                  <rs-button variant="warning" size="sm" @click="editFloatingEquipmentItem(row.value)">Kemaskini</rs-button>
-                  <rs-button variant="danger" size="sm" @click="deleteFloatingEquipmentItem(row.value.id)">Padam</rs-button>
+                <div class="flex items-center gap-3">
+                  <button type="button" class="table-action-btn text-txt-black-500 hover:text-txt-black-700" v-tooltip="'Lihat'" @click="viewFloatingEquipmentItem(row.value)">
+                    <Icon name="weui:eyes-on-outlined" size="1.2rem" />
+                  </button>
+                  <button type="button" class="table-action-btn text-success-600 hover:text-success-700" v-tooltip="'Kemaskini'" @click="editFloatingEquipmentItem(row.value)">
+                    <Icon name="material-symbols:edit" size="1.2rem" />
+                  </button>
+                  <button type="button" class="table-action-btn text-danger hover:text-danger-700" v-tooltip="'Padam'" @click="deleteFloatingEquipmentItem(row.value.id)">
+                    <Icon name="material-symbols:delete-outline" size="1.2rem" />
+                  </button>
                 </div>
               </template>
             </rs-table>
@@ -4013,10 +4049,16 @@
               </template>
               
               <template v-slot:tindakan="row">
-                <div class="flex gap-2">
-                  <rs-button variant="primary" size="sm" @click="viewHseItem(row.value)">Lihat</rs-button>
-                  <rs-button variant="warning" size="sm" @click="editHseItem(row.value)">Kemaskini</rs-button>
-                  <rs-button variant="danger" size="sm" @click="deleteHseItem(row.value.id)">Padam</rs-button>
+                <div class="flex items-center gap-3">
+                  <button type="button" class="table-action-btn text-txt-black-500 hover:text-txt-black-700" v-tooltip="'Lihat'" @click="viewHseItem(row.value)">
+                    <Icon name="weui:eyes-on-outlined" size="1.2rem" />
+                  </button>
+                  <button type="button" class="table-action-btn text-success-600 hover:text-success-700" v-tooltip="'Kemaskini'" @click="editHseItem(row.value)">
+                    <Icon name="material-symbols:edit" size="1.2rem" />
+                  </button>
+                  <button type="button" class="table-action-btn text-danger hover:text-danger-700" v-tooltip="'Padam'" @click="deleteHseItem(row.value.id)">
+                    <Icon name="material-symbols:delete-outline" size="1.2rem" />
+                  </button>
                 </div>
               </template>
             </rs-table>
@@ -4230,8 +4272,10 @@
                 {{ row.value.penerangan }}
               </template>
               <template v-slot:tindakan="row">
-                <div class="flex gap-2">
-                  <rs-button variant="primary" size="sm" @click="openViewRupacaraModal(row.value)">Lihat</rs-button>
+                <div class="flex items-center gap-3">
+                  <button type="button" class="table-action-btn text-txt-black-500 hover:text-txt-black-700" v-tooltip="'Lihat'" @click="openViewRupacaraModal(row.value)">
+                    <Icon name="weui:eyes-on-outlined" size="1.2rem" />
+                  </button>
                 </div>
               </template>
             </rs-table>
@@ -4466,10 +4510,16 @@
               </template>
               
               <template v-slot:tindakan="row">
-                <div class="flex gap-2">
-                  <rs-button variant="primary" size="sm" @click="openViewShipyardReportModal(row.value)">Lihat</rs-button>
-                  <rs-button variant="warning" size="sm" @click="openEditShipyardReportModal(row.value)">Kemaskini</rs-button>
-                  <rs-button variant="danger" size="sm" @click="deleteShipyardReportItem(row.value.id)">Padam</rs-button>
+                <div class="flex items-center gap-3">
+                  <button type="button" class="table-action-btn text-txt-black-500 hover:text-txt-black-700" v-tooltip="'Lihat'" @click="openViewShipyardReportModal(row.value)">
+                    <Icon name="weui:eyes-on-outlined" size="1.2rem" />
+                  </button>
+                  <button type="button" class="table-action-btn text-success-600 hover:text-success-700" v-tooltip="'Kemaskini'" @click="openEditShipyardReportModal(row.value)">
+                    <Icon name="material-symbols:edit" size="1.2rem" />
+                  </button>
+                  <button type="button" class="table-action-btn text-danger hover:text-danger-700" v-tooltip="'Padam'" @click="deleteShipyardReportItem(row.value.id)">
+                    <Icon name="material-symbols:delete-outline" size="1.2rem" />
+                  </button>
                 </div>
               </template>
             </rs-table>
@@ -4680,10 +4730,16 @@
               </template>
               
               <template v-slot:tindakan="row">
-                <div class="flex gap-2">
-                  <rs-button variant="primary" size="sm" @click="viewCannaidizeAssetItem(row.value)">Lihat</rs-button>
-                  <rs-button variant="warning" size="sm" @click="editCannaidizeAssetItem(row.value)">Kemaskini</rs-button>
-                  <rs-button variant="danger" size="sm" @click="deleteCannaidizeAssetItem(row.value.id)">Padam</rs-button>
+                <div class="flex items-center gap-3">
+                  <button type="button" class="table-action-btn text-txt-black-500 hover:text-txt-black-700" v-tooltip="'Lihat'" @click="viewCannaidizeAssetItem(row.value)">
+                    <Icon name="weui:eyes-on-outlined" size="1.2rem" />
+                  </button>
+                  <button type="button" class="table-action-btn text-success-600 hover:text-success-700" v-tooltip="'Kemaskini'" @click="editCannaidizeAssetItem(row.value)">
+                    <Icon name="material-symbols:edit" size="1.2rem" />
+                  </button>
+                  <button type="button" class="table-action-btn text-danger hover:text-danger-700" v-tooltip="'Padam'" @click="deleteCannaidizeAssetItem(row.value.id)">
+                    <Icon name="material-symbols:delete-outline" size="1.2rem" />
+                  </button>
                 </div>
               </template>
             </rs-table>

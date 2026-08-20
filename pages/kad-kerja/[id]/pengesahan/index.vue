@@ -89,18 +89,14 @@
                     advanced
                 >
                     <template v-slot:tindakan="data">
-                        <button 
-                            @click="openFile(data.value)"
-                            class="text-blue-600 hover:text-blue-800 py-3 px-4"
-                        >
-                            Lihat
-                        </button>
-                        <button 
-                            @click="deleteItem(data.value)"
-                            class="text-red-600 hover:text-red-800 py-3 px-4"
-                        >
-                            Hapus
-                        </button>
+                        <div class="flex items-center gap-3">
+                            <button type="button" class="table-action-btn text-txt-black-500 hover:text-txt-black-700" v-tooltip="'Lihat'" @click="openFile(data.value)">
+                                <Icon name="weui:eyes-on-outlined" size="1.2rem" />
+                            </button>
+                            <button type="button" class="table-action-btn text-danger hover:text-danger-700" v-tooltip="'Hapus'" @click="deleteItem(data.value)">
+                                <Icon name="material-symbols:delete-outline" size="1.2rem" />
+                            </button>
+                        </div>
                     </template>
                 </rs-table>
             </rs-fieldset>
@@ -124,12 +120,11 @@
                     advanced
                 >
                     <template v-slot:tindakan="data">
-                        <button 
-                            @click="openFile(data.value)"
-                            class="text-blue-600 hover:text-blue-800 py-3 px-4"
-                        >
-                            Lihat
-                        </button>
+                        <div class="flex items-center gap-3">
+                            <button type="button" class="table-action-btn text-txt-black-500 hover:text-txt-black-700" v-tooltip="'Lihat'" @click="openFile(data.value)">
+                                <Icon name="weui:eyes-on-outlined" size="1.2rem" />
+                            </button>
+                        </div>
                     </template>
                 </rs-table>
             </rs-fieldset>
@@ -159,18 +154,14 @@
                     advanced
                 >
                     <template v-slot:tindakan="data">
-                        <button 
-                            @click="openFile(data.value)"
-                            class="text-blue-600 hover:text-blue-800 py-3 px-4"
-                        >
-                            Lihat
-                        </button>
-                        <button 
-                            @click="deleteLampiran(data.value)"
-                            class="text-red-600 hover:text-red-800 py-3 px-4"
-                        >
-                            Hapus
-                        </button>
+                        <div class="flex items-center gap-3">
+                            <button type="button" class="table-action-btn text-txt-black-500 hover:text-txt-black-700" v-tooltip="'Lihat'" @click="openFile(data.value)">
+                                <Icon name="weui:eyes-on-outlined" size="1.2rem" />
+                            </button>
+                            <button type="button" class="table-action-btn text-danger hover:text-danger-700" v-tooltip="'Hapus'" @click="deleteLampiran(data.value)">
+                                <Icon name="material-symbols:delete-outline" size="1.2rem" />
+                            </button>
+                        </div>
                     </template>
                 </rs-table>
             </rs-fieldset>
