@@ -52,11 +52,11 @@ const tip = (title) => ({
 });
 
 // MYDS sidebar link states: active is a white pill with primary text,
-// inactive is tinted primary-100 that fills to primary-600 on hover.
+// inactive is tinted primary-100 that fills to primary-700 on hover.
 function activeMenu(routePath) {
   return route.path == routePath
     ? " bg-white text-primary-800 shadow-sm active-menu"
-    : " text-primary-100 transition-colors duration-200 hover:bg-primary-600 hover:text-white";
+    : " text-primary-100 transition-colors duration-200 hover:bg-primary-700 hover:text-white";
 }
 
 // On the rail the active child is hidden, so the group itself carries the
@@ -64,7 +64,7 @@ function activeMenu(routePath) {
 function groupMenu(item) {
   return collapsed.value && hasActiveDescendant(item)
     ? " bg-white text-primary-800 shadow-sm"
-    : " text-primary-100 transition-colors duration-200 hover:bg-primary-600 hover:text-white";
+    : " text-primary-100 transition-colors duration-200 hover:bg-primary-700 hover:text-white";
 }
 
 const linkClass =
@@ -86,7 +86,7 @@ const linkClass =
     <!-- On the rail a rule replaces the section label -->
     <div
       v-if="item.header && collapsed"
-      class="mx-2 mb-2 mt-4 hidden border-t border-primary-600 lg:block"
+      class="mx-2 mb-2 mt-4 hidden border-t border-primary-700 lg:block"
     ></div>
 
     <ul class="navigation-menu space-y-1">

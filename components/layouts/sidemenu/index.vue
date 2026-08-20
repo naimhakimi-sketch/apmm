@@ -19,7 +19,7 @@ const { collapsed, toggleCollapsed, closeMobile } = useSidebar();
     <!-- MYDS rail toggle: round button straddling the sidebar edge (desktop) -->
     <button
       type="button"
-      class="absolute -right-3 top-12 z-10 hidden h-6 w-6 items-center justify-center rounded-full border-2 border-white bg-primary-600 text-white shadow-card transition-colors hover:bg-bg-white hover:text-primary-600 lg:flex"
+      class="absolute -right-3 top-12 z-10 hidden h-6 w-6 items-center justify-center rounded-full border-2 border-white bg-primary-700 text-white shadow-card transition-colors hover:bg-bg-white hover:text-primary-700 lg:flex"
       :aria-label="collapsed ? 'Kembangkan menu' : 'Kecilkan menu'"
       :aria-expanded="!collapsed"
       @click="toggleCollapsed"
@@ -34,7 +34,7 @@ const { collapsed, toggleCollapsed, closeMobile } = useSidebar();
 
     <!-- MYDS sidebar brand row: same height as the app header -->
     <div
-      class="flex h-16 flex-shrink-0 items-center border-b border-primary-600 px-4"
+      class="flex h-16 flex-shrink-0 items-center border-b border-primary-700 px-4"
       :class="collapsed ? 'lg:justify-center lg:px-2' : ''"
     >
       <nuxt-link to="/dashboard" class="flex min-w-0 items-center gap-3">

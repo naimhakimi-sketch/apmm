@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell($env:OUT = \"C:\\\\Users\\\\imhak\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-imhak-apmm\\\\5090d75b-a9f1-48b6-a021-ddf114b3dcf2\\\\scratchpad\"; $env:BASE = \"http://localhost:3001\"; node \"$env:OUT\\\\chat.js\")"
+    ]
+  }
+}

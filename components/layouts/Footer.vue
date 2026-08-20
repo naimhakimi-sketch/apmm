@@ -16,7 +16,7 @@ const year = new Date().getFullYear();
           href="https://design.digital.gov.my"
           target="_blank"
           rel="noopener noreferrer"
-          class="text-primary-600 hover:underline"
+          class="text-txt-primary hover:underline"
         >
           design.digital.gov.my
         </a>

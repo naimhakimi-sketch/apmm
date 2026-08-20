@@ -35,4 +35,6 @@ watch(() => route.fullPath, closeMobile);
     :class="{ hide: !mobileOpen }"
     @click="closeMobile"
   ></div>
+
+  <LayoutsChatbotWidget />
 </template>

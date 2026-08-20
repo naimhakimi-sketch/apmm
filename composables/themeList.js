@@ -5,7 +5,7 @@ export default function () {
       colors: [
         {
           name: "primary",
-          value: "37, 99, 235",
+          value: "30, 64, 175",
         },
         {
           name: "secondary",

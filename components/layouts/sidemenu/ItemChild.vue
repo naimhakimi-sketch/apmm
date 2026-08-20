@@ -41,7 +41,7 @@ const hasChildren = (item) => !!(item.child && item.child.length);
 function activeMenu(routePath) {
   return route.path == routePath
     ? " bg-white text-primary-800 shadow-sm active-menu"
-    : " text-primary-100 transition-colors duration-200 hover:bg-primary-600 hover:text-white";
+    : " text-primary-100 transition-colors duration-200 hover:bg-primary-700 hover:text-white";
 }
 
 const linkClass =
@@ -49,9 +49,9 @@ const linkClass =
 </script>
 
 <template>
-  <!-- MYDS nested group: indented and hung off a primary-600 rule -->
+  <!-- MYDS nested group: indented and hung off a primary-700 rule -->
   <ul
-    class="menu-content ml-5 mt-1 space-y-1 border-l border-primary-600 pl-3 transition-all duration-300"
+    class="menu-content ml-5 mt-1 space-y-1 border-l border-primary-700 pl-3 transition-all duration-300"
     :class="[{ hide: !open }, collapsed ? 'lg:hidden' : '']"
   >
     <li v-for="(item, index) in menuItem" :key="index">
