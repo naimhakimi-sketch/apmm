@@ -4,11 +4,11 @@
     <rs-card>
             <template #header>
               <div class="flex justify-between items-center">
-                <h2 class="text-lg font-semibold">Senarai Rupacara Aset</h2>
                 <rs-button variant="primary" @click="openAddRupacaraModal">Tambah Rupacara</rs-button>
               </div>
             </template>
 
+            <div class="p-4">
             <rs-table
               :data="sortedRupacaraData"
               :columns="[
@@ -48,6 +48,7 @@
                 </div>
               </template>
             </rs-table>
+            </div>
     </rs-card>
 
     <!-- Rupacara Modal -->

@@ -1,7 +1,6 @@
 <template>
     <div class="p-6 bg-bg-white rounded-lg shadow">
         <div class="flex justify-between items-center mb-6">
-            <h1 class="text-2xl font-semibold">Tetapan Peranan</h1>
             <rs-button @click="showAddRoleModal = true">
                 <Icon name="ic:baseline-plus" class="mr-2" />
                 Tambah Peranan

@@ -724,7 +724,6 @@
         <rs-card>
             <template #header>
             <div class="flex justify-between items-center p-2">
-                <h2 class="text-lg font-semibold">Senarai Kad Kerja</h2>
                 <rs-button variant="primary" @click="openAddJobCardModal">
                   <Icon name="material-symbols:add" />
                   Tambah Kad Kerja

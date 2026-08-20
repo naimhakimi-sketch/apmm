@@ -4,14 +4,13 @@
         <rs-card>
             <template #header>
                 <div class="flex justify-between items-center">
-                    <h1 class="text-xl font-semibold">Konfigurasi dan Status Integrasi Sistem Luar</h1>
                     <RsButton variant="primary" @click="openAddModal">
                         Tambah Integrasi Sistem
                     </RsButton>
                 </div>
             </template>
             
-            <div class="overflow-x-auto">
+            <div class="p-4 overflow-x-auto">
                 <RsTable
                     :columns="columns"
                     :data="databases"

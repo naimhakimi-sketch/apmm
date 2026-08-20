@@ -1,7 +1,5 @@
 <template>
     <div>
-        <h1>Dashboard</h1>
-        
         <div class="bg-bg-white rounded-lg shadow">
             <div class="p-6">     
                 <div class="flex justify-between items-center mb-4">

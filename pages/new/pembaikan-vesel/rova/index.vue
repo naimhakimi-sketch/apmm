@@ -4,11 +4,11 @@
         <rs-card>
             <template #header>
               <div class="flex justify-between items-center">
-                <h2 class="text-lg font-semibold">Return of Vessel Availability (ROVA)</h2>
                 <rs-button variant="primary" @click="openAddRovaModal">Tambah ROVA</rs-button>
               </div>
             </template>
 
+            <div class="p-4">
             <rs-table
               :data="sortedRovaData"
               :columns="[
@@ -61,6 +61,7 @@
                 </div>
               </template>
             </rs-table>
+            </div>
           </rs-card>
 
           <!-- ROVA Modal -->

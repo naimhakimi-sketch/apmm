@@ -2088,7 +2088,7 @@
               </div>
             </template>
             
-            <div class="p-2">
+            <div class="p-4">
             <!-- Crew Table -->
               <rs-table
                 :data="filteredCrewData"
@@ -2416,6 +2416,7 @@
               </div>
             </template>
 
+            <div class="p-4">
             <rs-table
               :data="sortedOaData"
               :columns="[
@@ -2479,6 +2480,7 @@
                 </div>
               </template>
             </rs-table>
+            </div>
           </rs-card>
 
           <!-- OA Modal -->
@@ -2697,6 +2699,7 @@
               </div>
             </template>
 
+            <div class="p-4">
             <rs-table
               :data="sortedRovaData"
               :columns="[
@@ -2749,6 +2752,7 @@
                 </div>
               </template>
             </rs-table>
+            </div>
           </rs-card>
 
           <!-- ROVA Modal -->
@@ -2895,6 +2899,7 @@
               </div>
             </template>
 
+            <div class="p-4">
             <rs-table
               :data="sortedRupacaraData"
               :columns="[
@@ -2930,6 +2935,7 @@
                 </div>
               </template>
             </rs-table>
+            </div>
           </rs-card>
 
           <!-- Rupacara Modal -->
@@ -3832,7 +3838,8 @@
                 <rs-button variant="primary" @click="openAddFloatingEquipmentModal">Tambah Peralatan</rs-button>
               </div>
             </template>
-            
+
+            <div class="p-4">
             <rs-table
               :data="floatingEquipmentData"
               :columns="[
@@ -3872,6 +3879,7 @@
                 </div>
               </template>
             </rs-table>
+            </div>
           </rs-card>
 
           <!-- Floating Equipment Modal -->
@@ -4017,7 +4025,8 @@
                 </div>
               </rs-card>
             </div>
-            
+
+            <div class="p-4">
             <rs-table
               :data="hseData"
               :columns="[
@@ -4062,6 +4071,7 @@
                 </div>
               </template>
             </rs-table>
+            </div>
           </rs-card>
 
           <!-- HSE Modal -->
@@ -4244,6 +4254,7 @@
               </div>
             </template>
 
+            <div class="p-4">
             <rs-table
               :data="sortedRupacaraData"
               :columns="[
@@ -4279,6 +4290,7 @@
                 </div>
               </template>
             </rs-table>
+            </div>
           </rs-card>
 
           <!-- Rupacara Modal -->
@@ -4469,7 +4481,8 @@
                 </div>
               </rs-card>
             </div>
-            
+
+            <div class="p-4">
             <rs-table
               :data="sortedShipyardReportsData"
               :columns="[
@@ -4523,6 +4536,7 @@
                 </div>
               </template>
             </rs-table>
+            </div>
           </rs-card>
 
           <!-- Shipyard Report Modal -->
@@ -4688,7 +4702,8 @@
                 <rs-button variant="primary" @click="openAddCannaidizeAssetModal">Tambah Asset</rs-button>
               </div>
             </template>
-            
+
+            <div class="p-4">
             <rs-table
               :data="cannaidizeAssetData"
               :columns="[
@@ -4743,6 +4758,7 @@
                 </div>
               </template>
             </rs-table>
+            </div>
           </rs-card>
 
           <!-- Cannaidize Asset Modal -->

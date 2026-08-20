@@ -1494,6 +1494,7 @@
               </div>
             </template>
 
+            <div class="p-4">
             <rs-table
               :data="sortedRovaData"
               :columns="[
@@ -1546,6 +1547,7 @@
                 </div>
               </template>
             </rs-table>
+            </div>
           </rs-card>
 
           <!-- ROVA Modal -->
@@ -1692,6 +1694,7 @@
               </div>
             </template>
 
+            <div class="p-4">
             <rs-table
               :data="sortedRupacaraData"
               :columns="[
@@ -1727,6 +1730,7 @@
                 </div>
               </template>
             </rs-table>
+            </div>
           </rs-card>
 
           <!-- Rupacara Modal -->

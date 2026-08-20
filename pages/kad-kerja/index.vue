@@ -61,7 +61,6 @@
       <div class="bg-white rounded-lg shadow">
         <div class="p-6">
           <div class="flex justify-between items-center mb-4">
-            <h2 class="text-xl font-semibold">Senarai Kad Kerja</h2>
             <button @click="$router.push('/kad-kerja/add')" class="bg-blue-600 text-white px-4 py-2 rounded-lg flex items-center gap-2">
               <Icon class="text-white" name="material-symbols:add"></Icon>
               Tambah Kad Kerja Baru

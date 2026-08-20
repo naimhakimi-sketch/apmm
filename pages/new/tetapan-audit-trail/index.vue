@@ -1,7 +1,5 @@
 <template>
     <div>
-        <h1 class="text-2xl font-bold mb-6">Audit Trail</h1>
-
         <div class="p-6 bg-bg-white rounded-lg shadow">
                 <!-- Search Form -->
                 <RsFieldset label="Tapisan Audit Trail" class="mb-6">

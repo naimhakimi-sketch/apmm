@@ -1,7 +1,5 @@
 <template>
     <div>
-        <h1>Pengurusan Data</h1>
-        
         <div class="bg-bg-white rounded-lg shadow p-6 mt-6">
             <div class="flex justify-between items-center mb-4">
                 <h2 class="text-xl font-semibold">Muat Turun Templat Data </h2>
@@ -165,11 +163,9 @@
                     advanced
                 >
                     <template v-slot:status="{ text }">
-                        <div class="flex items-center">
-                            <span v-if="text" class="w-2 h-2 rounded-full bg-green-500 mr-2"></span>
-                            <span v-else class="w-2 h-2 rounded-full bg-red-500 mr-2"></span>
-                            {{ text ? '✓' : '✗' }}
-                        </div>
+                        <rs-badge :variant="text ? 'success' : 'danger'">
+                            {{ text ? 'Berjaya' : 'Gagal' }}
+                        </rs-badge>
                     </template>
                 </rs-table>
             </div>

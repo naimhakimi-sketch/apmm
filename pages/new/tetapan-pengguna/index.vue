@@ -1,11 +1,7 @@
 <template>
     <div>
-        <h1 class="text-2xl font-bold mb-6">Tetapan Pengguna</h1>
-        
         <div class="bg-bg-white rounded-lg shadow p-6">
             <div class="flex justify-between items-center mb-4">
-                <h2 class="text-xl font-semibold">Senarai Pengguna</h2>
-                
                 <rs-button variant="primary" @click="openBulkRoleModal">
                     <Icon name="ic:baseline-plus" class="mr-2" />
                     Peranan Pukal

@@ -3,11 +3,11 @@
         <rs-card>
             <template #header>
                 <div class="flex justify-between items-center">
-                <h2 class="text-lg font-semibold">Planning Maintenance System (PMS)</h2>
                 <rs-button variant="primary" @click="openAddPMSModal">Tambah Baru</rs-button>
                 </div>
             </template>
-            
+
+            <div class="p-4">
             <rs-table
                 :data="pmsData"
                 :columns="[
@@ -49,6 +49,7 @@
                 </div>
                 </template>
             </rs-table>
+            </div>
         </rs-card>
     </div>
 

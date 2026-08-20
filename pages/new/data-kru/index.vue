@@ -449,7 +449,6 @@
 <template>
   <div class="space-y-6">
     <div class="flex justify-between items-center">
-        <h2 class="text-lg font-semibold">Senarai Krew Kapal</h2>
         <rs-button variant="primary" @click="openAddCrewModal">
             <Icon name="material-symbols:add" />
             Tambah Krew

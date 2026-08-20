@@ -3,14 +3,23 @@
       <rs-card>
           <template #header>
               <div class="flex justify-between items-center">
-              <h2 class="text-lg font-semibold">Cannibalize Asset</h2>
               <!-- <rs-button variant="primary" @click="openAddCannaidizeAssetModal">Tambah Asset</rs-button> -->
               </div>
           </template>
-          
+
+          <div class="p-4">
           <rs-table
               :data="cannaidizeAssetData"
-              :options="cannaidizeAssetOptions"
+              :options="{
+                variant: 'default',
+                striped: true,
+                borderless: true,
+              }"
+              :options-advanced="{
+                sortable: true,
+                responsive: true,
+                filterable: true,
+              }"
               advanced
           >
               <template v-slot:status="row">
@@ -43,6 +52,7 @@
               </div>
               </template>
           </rs-table>
+          </div>
       </rs-card>
   </div>
   <!-- Cannaidize Asset Modal -->

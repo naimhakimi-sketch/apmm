@@ -4,9 +4,7 @@
     <div class="flex items-center gap-2">
       <i class="ri-settings-4-line text-xl"></i>
       <!-- <h1 class="text-2xl font-bold">Kemas kini Sistem - SMTP</h1> -->
-      <h2 class="text-lg font-semibold 6">Konfigurasi dan Cubaan SMTP</h2>
-
-    </div> 
+    </div>
     <!-- SMTP Configuration Section -->
     <div class="bg-bg-white rounded-lg p-6 shadow-sm">
       

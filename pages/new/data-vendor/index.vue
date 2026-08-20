@@ -4,7 +4,6 @@
         <rs-card>
             <template #header>
                 <div class="flex justify-between items-center">
-                    <h2 class="text-lg font-medium">Senarai Vendor</h2>
                     <!-- <rs-button variant="primary" size="sm">
                         <Icon name="mdi:plus" class="mr-1" />
                         Tambah Vendor
