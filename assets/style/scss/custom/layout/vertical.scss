@@ -3,45 +3,29 @@ $medium: 768px;
 $large: 1024px;
 $xlarge: 1280px;
 
-@media screen and (max-width: $medium) {
-  body:has(.menu-overlay:not(.hide)) {
-    overflow: hidden;
-  }
-
-  .menu-overlay {
-    position: fixed;
-    top: 0;
-    height: 120vh;
-    z-index: 45;
-    display: block;
-    visibility: visible;
-    opacity: 1;
-    transition: all 0.5s ease;
-    background-color: rgba(34, 41, 47, 0.5);
-    left: 0;
-    right: 0;
-  }
-
-  .menu-overlay {
-    &.hide {
-      visibility: hidden;
-      opacity: 0;
-    }
-  }
-}
-
 // Layout Vertical CSS
+//
+// MYDS sidebar behaviour:
+//   desktop (>= $large) : the sidebar collapses to an icon rail, it never
+//                         disappears. `--sidebar-current` drives the sidebar
+//                         width, the header width and the content offset
+//                         together, so they can never desync.
+//   mobile  (<  $large) : the sidebar is an off-canvas drawer over the content,
+//                         and the content keeps the full width.
 .v-layout {
-  .w-header {
-    width: calc(100% - var(--sidebar-width));
+  --sidebar-current: var(--sidebar-width);
 
-    @media screen and (max-width: $medium) {
-      width: 100%;
-    }
+  &.menu-collapsed {
+    --sidebar-current: var(--sidebar-rail-width);
   }
 
   .vertical-menu {
     left: 0;
+    width: var(--sidebar-current);
+  }
+
+  .w-header {
+    width: calc(100% - var(--sidebar-current));
   }
 
   // Content sits below the masthead + header; horizontal padding is supplied
@@ -50,27 +34,9 @@ $xlarge: 1280px;
   .content-page {
     display: flex;
     flex-direction: column;
-    margin-left: var(--sidebar-width);
+    margin-left: var(--sidebar-current);
     padding-top: var(--shell-offset);
     min-height: 100vh;
-
-    @media screen and (max-width: $medium) {
-      margin-left: 0px;
-    }
-  }
-
-  &.menu-hide {
-    .w-header {
-      width: calc(100% - 0px);
-    }
-
-    .vertical-menu {
-      left: calc(var(--sidebar-width) * -1 - 4px);
-    }
-
-    .content-page {
-      margin-left: 0;
-    }
   }
 
   .menu-content,
@@ -96,5 +62,61 @@ $xlarge: 1280px;
     svg.side-menu-arrow {
       transform: rotate(90deg);
     }
+  }
+
+  // ---- Off-canvas drawer below the desktop breakpoint ----
+  @media screen and (max-width: $large - 1px) {
+    --sidebar-current: 0px;
+
+    .vertical-menu {
+      width: var(--sidebar-width);
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+    }
+
+    &.menu-open .vertical-menu {
+      transform: translateX(0);
+    }
+
+    .w-header {
+      width: 100%;
+    }
+
+    .content-page {
+      margin-left: 0;
+    }
+  }
+}
+
+// Dimmer behind the mobile drawer
+@media screen and (max-width: $large - 1px) {
+  body:has(.menu-overlay:not(.hide)) {
+    overflow: hidden;
+  }
+
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    height: 120vh;
+    z-index: 45;
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.5s ease;
+    background-color: rgba(34, 41, 47, 0.5);
+    left: 0;
+    right: 0;
+
+    &.hide {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+}
+
+// The overlay only exists for the drawer, never on desktop
+@media screen and (min-width: $large) {
+  .menu-overlay {
+    display: none;
   }
 }

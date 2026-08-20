@@ -7,11 +7,17 @@ import RSHorizontal from "~/components/layouts/horizontal/index.vue";
 
 const themeStore = useThemeStore();
 const layoutType = themeStore.layoutType;
+
+const { collapsed, mobileOpen } = useSidebar();
 </script>
 
 <template>
   <div class="layout-wrapper">
-    <div v-if="layoutType === 'vertical'" class="v-layout h-100">
+    <div
+      v-if="layoutType === 'vertical'"
+      class="v-layout h-100"
+      :class="{ 'menu-collapsed': collapsed, 'menu-open': mobileOpen }"
+    >
       <RSVertical>
         <slot />
       </RSVertical>

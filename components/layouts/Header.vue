@@ -1,14 +1,11 @@
 <script setup>
 import { useUserStore } from "~/stores/user";
 
-const emit = defineEmits(["toggleMenu"]);
-
 const userStore = useUserStore();
 
-// Toggle Open/Close menu
-const toggleMenu = (event) => {
-  emit("toggleMenu", event);
-};
+// Below lg the sidebar is an off-canvas drawer; on desktop it is collapsed
+// with the rail button on the sidebar edge instead (see sidemenu/index.vue).
+const { toggleMobile } = useSidebar();
 
 // Clear the session and return to the login screen.
 function logout() {
@@ -31,9 +28,9 @@ onMounted(() => {
       class="w-header-main flex h-16 items-center gap-3 px-4 sm:px-6 lg:px-8"
     >
       <button
-        class="icon-btn h-10 w-10 rounded-md flex-shrink-0"
+        class="icon-btn h-10 w-10 rounded-md flex-shrink-0 lg:hidden"
         aria-label="Togol menu"
-        @click="toggleMenu"
+        @click="toggleMobile"
       >
         <Icon name="ic:round-menu" size="22" />
       </button>
