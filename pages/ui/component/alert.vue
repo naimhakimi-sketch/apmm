@@ -43,7 +43,6 @@ const resetAlert = () => {
 
 <template>
   <div>
-    <LayoutsBreadcrumb />
     <rs-card>
       <template #header>
         <h5>Default Alert</h5>

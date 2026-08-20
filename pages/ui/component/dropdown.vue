@@ -51,7 +51,6 @@ const dropdownItems = [
 
 <template>
   <div>
-    <LayoutsBreadcrumb />
     <rs-card>
       <template #header> Default Dropdown </template>
       <template #body>

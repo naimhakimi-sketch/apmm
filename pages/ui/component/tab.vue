@@ -51,7 +51,6 @@ const variantOptions = [
 
 <template>
   <div>
-    <LayoutsBreadcrumb />
     <rs-card>
       <template #header> Default </template>
       <template #body>

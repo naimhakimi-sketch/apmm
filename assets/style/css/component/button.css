@@ -15,7 +15,7 @@
 }
 
 .button.button-secondary {
-  @apply bg-white text-gray-900 border border-gray-300 shadow-button hover:bg-gray-50;
+  @apply bg-bg-white text-txt-black-900 border border-otl-gray-300 shadow-button hover:bg-bg-washed;
 }
 
 .button.button-success {
@@ -40,27 +40,27 @@
 }
 
 .button.outline-primary {
-  @apply border border-primary-600 text-primary-600 bg-transparent;
+  @apply border border-primary-600 text-txt-primary bg-transparent;
 }
 
 .button.outline-primary:hover {
-  @apply bg-primary-50;
+  @apply bg-bg-primary-50;
 }
 
 .button.outline-secondary {
-  @apply border border-gray-300 text-gray-700 bg-transparent;
+  @apply border border-otl-gray-300 text-txt-black-700 bg-transparent;
 }
 
 .button.outline-secondary:hover {
-  @apply bg-gray-100;
+  @apply bg-bg-washed;
 }
 
 .button.outline-success {
-  @apply border border-success-600 text-success-700 bg-transparent;
+  @apply border border-success-600 text-txt-success bg-transparent;
 }
 
 .button.outline-success:hover {
-  @apply bg-success-50;
+  @apply bg-bg-success-50;
 }
 
 .button.outline-info {
@@ -68,23 +68,23 @@
 }
 
 .button.outline-info:hover {
-  @apply bg-primary-50;
+  @apply bg-bg-primary-50;
 }
 
 .button.outline-warning {
-  @apply border border-warning-600 text-warning-700 bg-transparent;
+  @apply border border-warning-600 text-txt-warning bg-transparent;
 }
 
 .button.outline-warning:hover {
-  @apply bg-warning-50;
+  @apply bg-bg-warning-50;
 }
 
 .button.outline-danger {
-  @apply border border-danger-600 text-danger-700 bg-transparent focus-visible:ring-fr-danger;
+  @apply border border-danger-600 text-txt-danger bg-transparent focus-visible:ring-fr-danger;
 }
 
 .button.outline-danger:hover {
-  @apply bg-danger-50;
+  @apply bg-bg-danger-50;
 }
 
 .button[class*="text-"]:disabled {
@@ -93,27 +93,27 @@
 }
 
 .button.texts-primary {
-  @apply text-primary-600;
+  @apply text-txt-primary;
 }
 
 .button.texts-primary:hover {
-  @apply bg-primary-50;
+  @apply bg-bg-primary-50;
 }
 
 .button.texts-secondary {
-  @apply text-gray-700;
+  @apply text-txt-black-700;
 }
 
 .button.texts-secondary:hover {
-  @apply bg-gray-100;
+  @apply bg-bg-washed;
 }
 
 .button.texts-success {
-  @apply text-success-700;
+  @apply text-txt-success;
 }
 
 .button.texts-success:hover {
-  @apply bg-success-50;
+  @apply bg-bg-success-50;
 }
 
 .button.texts-info {
@@ -121,23 +121,23 @@
 }
 
 .button.texts-info:hover {
-  @apply bg-primary-50;
+  @apply bg-bg-primary-50;
 }
 
 .button.texts-warning {
-  @apply text-warning-700;
+  @apply text-txt-warning;
 }
 
 .button.texts-warning:hover {
-  @apply bg-warning-50;
+  @apply bg-bg-warning-50;
 }
 
 .button.texts-danger {
-  @apply text-danger-700 focus-visible:ring-fr-danger;
+  @apply text-txt-danger focus-visible:ring-fr-danger;
 }
 
 .button.texts-danger:hover {
-  @apply bg-danger-50;
+  @apply bg-bg-danger-50;
 }
 
 .button-sm {

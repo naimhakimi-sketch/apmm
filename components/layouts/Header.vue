@@ -1,59 +1,21 @@
 <script setup>
-const isVertical = ref(true);
-const isDesktop = ref(true);
+import { useUserStore } from "~/stores/user";
 
 const emit = defineEmits(["toggleMenu"]);
 
-// const { locale } = useI18n();
-// const colorMode = useColorMode();
-const langList = languageList();
-
-const locale = ref("en");
-
-const themes = themeList();
-
-function setTheme(theme) {
-  document.documentElement.setAttribute("data-theme", theme);
-  localStorage.setItem("theme", theme);
-}
-
-function rgbToHex(rgbString) {
-  // Split the input string into an array of components
-  const rgbArray = rgbString.split(",");
-
-  // Convert each component to its numeric value
-  const r = parseInt(rgbArray[0].trim(), 10);
-  const g = parseInt(rgbArray[1].trim(), 10);
-  const b = parseInt(rgbArray[2].trim(), 10);
-
-  // Convert the numeric RGB values to hexadecimal
-  const rHex = r.toString(16).padStart(2, "0");
-  const gHex = g.toString(16).padStart(2, "0");
-  const bHex = b.toString(16).padStart(2, "0");
-
-  // Concatenate the components and return the final hexadecimal color code
-  return `#${rHex}${gHex}${bHex}`;
-}
+const userStore = useUserStore();
 
 // Toggle Open/Close menu
 const toggleMenu = (event) => {
   emit("toggleMenu", event);
 };
 
-// Focus on search input
-function toggleSearch() {
-  document.getElementById("header-search").value = "";
-  document.getElementById("header-search").focus();
+// Clear the session and return to the login screen.
+function logout() {
+  userStore.setUser(null);
+  userStore.setAuth(false);
+  return navigateTo("/auth/login-v2");
 }
-
-// Change language
-const changeLanguage = (lang) => {
-  locale.value = lang;
-};
-
-const languageNow = computed(() => {
-  return langList.find((lang) => lang.value == locale.value);
-});
 
 onMounted(() => {
   // If mobile toggleMenu
@@ -65,70 +27,75 @@ onMounted(() => {
 
 <template>
   <div class="w-header">
-    <LayoutsMasthead />
-    <div class="w-header-main flex items-stretch justify-between">
-      <div v-if="isVertical" class="flex">
-        <span class="flex items-center justify-center">
-          <button class="icon-btn h-10 w-10 rounded-full" @click="toggleMenu">
-            <Icon name="ic:round-menu" class="" /></button
-        ></span>
-        <span
-          class="flex items-center justify-center text-base lg:text-lg font-heading font-semibold"
+    <div
+      class="w-header-main flex h-16 items-center gap-3 px-4 sm:px-6 lg:px-8"
+    >
+      <button
+        class="icon-btn h-10 w-10 rounded-md flex-shrink-0"
+        aria-label="Togol menu"
+        @click="toggleMenu"
+      >
+        <Icon name="ic:round-menu" size="22" />
+      </button>
+
+      <span
+        class="min-w-0 flex-1 truncate font-heading font-semibold text-body-sm lg:text-body-md text-txt-black-900"
+      >
+        SISTEM PENGURUSAN DAN PEMANTAUAN ASET KEJURUTERAAN MARIN APMM (e-JUTRA)
+      </span>
+
+      <!-- MYDS header utilities -->
+      <div class="flex flex-shrink-0 items-center gap-1">
+        <LayoutsFontSizeToggle />
+        <LayoutsThemeToggle />
+        <LayoutsLanguageSwitcher class="hidden sm:inline-flex" />
+        <LayoutsNotificationBell />
+      </div>
+
+      <VDropdown placement="bottom-end" distance="8" name="profile">
+        <button
+          class="flex items-center gap-2 rounded-md px-2 py-1.5 text-left transition-colors hover:bg-bg-washed"
         >
-          SISTEM PENGURUSAN DAN PEMANTAUAN ASET KEJURUTERAAN MARIN APMM (e-JUTRA)
-        </span>
-      </div>
-      <div class="flex" v-else>
-        <nuxt-link to="/">
-          <div class="flex flex-auto gap-3 justify-center items-center">
-            <img class="h-24 block" src="@/assets/img/logo/apmm_logo_baru.png" alt="" />
-          </div>
-        </nuxt-link>
-      </div>
-      <div class="flex gap-2 item-center justify-items-end">       
-        <VDropdown placement="bottom-end" distance="13" name="profile">
-          <button class="icon-btn profile px-2">
-            <img
-              class="w-8 h-8 object-cover rounded-full"
-              src="@/assets/img/user/default.svg"
-            />
-            <div
-              v-if="isDesktop"
-              class="grid grid-cols-1 text-left ml-3 flex-none"
+          <img
+            class="h-8 w-8 flex-shrink-0 rounded-full object-cover"
+            src="@/assets/img/user/default.svg"
+            alt=""
+          />
+          <span class="hidden min-w-0 sm:grid">
+            <span
+              class="truncate text-body-sm font-medium text-txt-black-900 max-w-[12rem]"
             >
-              <p class="font-semibold text-sm truncate w-24 mb-0">BK(M) ABD HALIM BIN HAMID</p>
-              <span class="font-medium text-xs truncate w-24"
-                >BENTARA KANAN MARITIM</span
+              BK(M) ABD HALIM BIN HAMID
+            </span>
+            <span
+              class="truncate text-body-xs text-txt-black-500 max-w-[12rem]"
+            >
+              BENTARA KANAN MARITIM
+            </span>
+          </span>
+          <Icon
+            name="ic:outline-keyboard-arrow-down"
+            size="18"
+            class="flex-shrink-0 text-txt-black-500"
+          />
+        </button>
+
+        <template #popper>
+          <ul class="header-dropdown w-full md:w-52 py-1">
+            <li>
+              <button
+                v-close-popper
+                type="button"
+                class="flex w-full cursor-pointer items-center px-4 py-2 text-left text-body-sm text-txt-black-700 hover:bg-bg-washed"
+                @click="logout"
               >
-            </div>
-            <Icon name="ic:outline-keyboard-arrow-down" class="ml-3" />
-          </button>
-          <template #popper>
-            <ul class="header-dropdown w-full md:w-52">
-              <li
-                class="flex items-center cursor-pointer py-2 px-4 hover:bg-[rgb(var(--bg-1))]"
-              >
-                <Icon name="ic:outline-logout" class="mr-2" />
-                Logout
-              </li>
-            </ul>
-          </template>
-        </VDropdown>
-      </div>
+                <Icon name="ic:outline-logout" size="18" class="mr-2" />
+                Log Keluar
+              </button>
+            </li>
+          </ul>
+        </template>
+      </VDropdown>
     </div>
   </div>
-
-  <!-- Search Nav for Layout Vertical -->
-  <div tabindex="0" class="w-header-search">
-    <Icon name="ic:outline-search" class="mr-3" />
-    <FormKit
-      id="header-search"
-      :classes="{
-        outer: 'mb-0 flex-1',
-      }"
-      type="search"
-      placeholder="Search..."
-    />
-  </div>
 </template>
-

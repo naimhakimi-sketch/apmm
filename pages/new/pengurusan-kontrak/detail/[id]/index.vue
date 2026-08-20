@@ -1,6 +1,5 @@
 <template>
-    <div class="bg-white rounded-lg shadow p-6 mx-auto">
-        <h1 class="text-2xl font-bold mb-6">Detail Kontrak</h1>
+    <div class="bg-bg-white rounded-lg shadow p-6 mx-auto">
         
         <div class="mb-8">
             <h2 class="text-xl font-semibold mb-4">FCW/BB2/05/20: KONTRAK PEMBELIAN INSULIN ASPART 30% & PROTAMINATED INSULIN ASPART 70% 100IU/ML INJECTION | PEJABAT KESIHATAN DAERAH KLANG BAGI TEMPOH SATU (1) TAHUN</h2>
@@ -36,38 +35,38 @@
                     </div>
                 </template>
                 <div class="overflow-x-auto">
-                    <table class="min-w-full divide-y divide-gray-200">
+                    <table class="min-w-full divide-y divide-otl-gray-200">
                         <thead>
-                            <tr class="bg-gray-50">
-                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b">
+                            <tr class="bg-bg-washed">
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-txt-black-500 uppercase tracking-wider border-b">
                                     Tahun
                                 </th>
-                                <th scope="col" colspan="2" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-b">
+                                <th scope="col" colspan="2" class="px-6 py-3 text-center text-xs font-medium text-txt-black-500 uppercase tracking-wider border-b">
                                     Jumlah Perbelanjaan (RM)
                                 </th>
                             </tr>
-                            <tr class="bg-gray-50">
-                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            <tr class="bg-bg-washed">
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-txt-black-500 uppercase tracking-wider">
                                 </th>
-                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-l">
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-txt-black-500 uppercase tracking-wider border-l">
                                     Penggal 1
                                 </th>
-                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-txt-black-500 uppercase tracking-wider">
                                     Penggal 2
                                 </th>
                             </tr>
                         </thead>
-                        <tbody class="bg-white divide-y divide-gray-200">
+                        <tbody class="bg-bg-white divide-y divide-otl-gray-200">
                             <tr v-for="(row, index) in tableData" :key="index" 
-                                :class="{'bg-gray-50': index % 2 === 0}">
-                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                                :class="{'bg-bg-washed': index % 2 === 0}">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-txt-black-900">
                                     {{ row.year }}
                                 </td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 border-l"
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-txt-black-900 border-l"
                                     :class="{'font-bold': row.year === 2022}">
                                     RM {{ formatNumber(row.penggal1) }}
                                 </td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900"
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-txt-black-900"
                                     :class="{'font-bold': row.year === 2022}">
                                     RM {{ formatNumber(row.penggal2) }}
                                 </td>
@@ -82,6 +81,12 @@
 
 <script setup>
 import RsCard from '@/components/RsCard.vue'
+
+definePageMeta({
+    breadcrumb: "Detail Kontrak",
+});
+
+const { colors: c } = useMydsChart();
 
 const changeKey = ref(0);
 
@@ -121,7 +126,7 @@ const chartOptions = computed(() => ({
     chart: {
         id: 'contractChart',
         fontFamily: "'Inter', ui-sans-serif, system-ui, sans-serif",
-        foreColor: mydsChartColors.axisLabel,
+        foreColor: c.value.axisLabel,
         toolbar: {
             show: true
         },
@@ -129,7 +134,7 @@ const chartOptions = computed(() => ({
             enabled: true
         }
     },
-    colors: [mydsChartColors.primary, mydsChartColors.warning],
+    colors: [c.value.primary, c.value.warning],
     stroke: {
         width: [2, 2],
         curve: 'straight',
@@ -187,7 +192,7 @@ const chartOptions = computed(() => ({
         tickAmount: 7
     },
     grid: {
-        borderColor: mydsChartColors.grid,
+        borderColor: c.value.grid,
         xaxis: {
             lines: {
                 show: true

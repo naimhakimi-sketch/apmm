@@ -148,7 +148,6 @@ onMounted(() => {
 
 <template>
   <div>
-    <LayoutsBreadcrumb />
     <p class="mb-4">
       We ensure Apex Chart is fully supported using vue 3. Read the full
       documentation

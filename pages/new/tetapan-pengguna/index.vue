@@ -2,7 +2,7 @@
     <div>
         <h1 class="text-2xl font-bold mb-6">Tetapan Pengguna</h1>
         
-        <div class="bg-white rounded-lg shadow p-6">
+        <div class="bg-bg-white rounded-lg shadow p-6">
             <div class="flex justify-between items-center mb-4">
                 <h2 class="text-xl font-semibold">Senarai Pengguna</h2>
                 
@@ -53,14 +53,14 @@
             <template #body>
                 <div class="space-y-6">
                     <!-- User Details Display -->
-                    <div class="bg-gray-50 p-4 rounded-lg">
+                    <div class="bg-bg-washed p-4 rounded-lg">
                         <div class="space-y-2">
                             <div>
-                                <label class="text-sm text-gray-600">Nama Pengguna</label>
+                                <label class="text-sm text-txt-black-500">Nama Pengguna</label>
                                 <p class="font-medium">{{ selectedUser?.nama_pengguna }}</p>
                             </div>
                             <div>
-                                <label class="text-sm text-gray-600">Bahagian</label>
+                                <label class="text-sm text-txt-black-500">Bahagian</label>
                                 <p class="font-medium">{{ selectedUser?.bahagian || 'TIADA' }}</p>
                             </div>
                         </div>
@@ -391,7 +391,7 @@ const handleEditSubmit = () => {
     }
 }
 
-.bg-gray-50 {
+.bg-bg-washed {
     background-color: #f9fafb;
 }
 </style>

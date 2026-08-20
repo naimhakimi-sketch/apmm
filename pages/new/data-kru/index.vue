@@ -447,7 +447,7 @@
 </script>
 
 <template>
-  <div class="p-6 space-y-6">
+  <div class="space-y-6">
     <div class="flex justify-between items-center">
         <h2 class="text-lg font-semibold">Senarai Krew Kapal</h2>
         <rs-button variant="primary" @click="openAddCrewModal">
@@ -513,17 +513,17 @@
         <!-- View Mode -->
         <div v-if="isViewingCrew" class="space-y-6">
         <!-- Crew Profile Section -->
-        <div class="bg-white rounded-lg shadow-md p-6">
+        <div class="bg-bg-white rounded-lg shadow-md p-6">
             <h3 class="text-xl font-semibold text-blue-700 mb-4">Profil Krew</h3>
             
             <div class="flex items-center mb-6">
-            <div class="bg-gray-200 rounded-full w-24 h-24 flex items-center justify-center mr-6">
-                <span class="text-3xl font-bold text-gray-500">{{ crewForm.name.charAt(0) }}</span>
+            <div class="bg-bg-black-200 rounded-full w-24 h-24 flex items-center justify-center mr-6">
+                <span class="text-3xl font-bold text-txt-black-500">{{ crewForm.name.charAt(0) }}</span>
             </div>
             
             <div>
                 <h4 class="text-lg font-semibold">{{ crewForm.name }}</h4>
-                <p class="text-gray-600">{{ crewForm.position }}</p>
+                <p class="text-txt-black-500">{{ crewForm.position }}</p>
                 <div class="mt-2">
                 <rs-badge
                     :variant="crewForm.status === 'Aktif' ? 'success' : 'warning'"
@@ -537,34 +537,34 @@
             <div class="grid grid-cols-2 gap-6">
             <div>
                 <div class="mb-4">
-                <h5 class="text-sm font-medium text-gray-500">Kapal</h5>
+                <h5 class="text-sm font-medium text-txt-black-500">Kapal</h5>
                 <p>{{ crewForm.ship }}</p>
                 </div>
 
                 <div class="mb-4">
-                <h5 class="text-sm font-medium text-gray-500">No. Tentera</h5>
+                <h5 class="text-sm font-medium text-txt-black-500">No. Tentera</h5>
                 <p>{{ crewForm.noTentera }}</p>
                 </div>
                 
                 <div class="mb-4">
-                <h5 class="text-sm font-medium text-gray-500">Tarikh Mula</h5>
+                <h5 class="text-sm font-medium text-txt-black-500">Tarikh Mula</h5>
                 <p>{{ crewForm.joinDate }}</p>
                 </div>
             </div>
             
             <div>
                 <div class="mb-4">
-                <h5 class="text-sm font-medium text-gray-500">Jawatan</h5>
+                <h5 class="text-sm font-medium text-txt-black-500">Jawatan</h5>
                 <p>{{ crewForm.position }}</p>
                 </div>
                 
                 <div class="mb-4">
-                <h5 class="text-sm font-medium text-gray-500">Tarikh Tamat</h5>
+                <h5 class="text-sm font-medium text-txt-black-500">Tarikh Tamat</h5>
                 <p>{{ crewForm.endDate }}</p>
                 </div>
                 
                 <div class="mb-4">
-                <h5 class="text-sm font-medium text-gray-500">E-mel</h5>
+                <h5 class="text-sm font-medium text-txt-black-500">E-mel</h5>
                 <p>{{ crewForm.email }}</p>
                 </div>
             </div>
@@ -572,24 +572,24 @@
         </div>
         
         <!-- Service Record Section -->
-        <div class="bg-white rounded-lg shadow-md p-6">
+        <div class="bg-bg-white rounded-lg shadow-md p-6">
             <div class="flex justify-between items-center mb-4">
             <h3 class="text-xl font-semibold text-blue-700">Rekod Perkhidmatan</h3>
             </div>
             
             <div v-if="crewForm.serviceRecord && crewForm.serviceRecord.length > 0">
             <div class="overflow-x-auto">
-                <table class="min-w-full bg-white">
-                <thead class="bg-gray-100">
+                <table class="min-w-full bg-bg-white">
+                <thead class="bg-bg-washed">
                     <tr>
-                    <th class="py-3 px-4 text-left text-sm font-medium text-gray-600">Jawatan</th>
-                    <th class="py-3 px-4 text-left text-sm font-medium text-gray-600">Kapal</th>
-                    <th class="py-3 px-4 text-left text-sm font-medium text-gray-600">Tarikh Mula</th>
-                    <th class="py-3 px-4 text-left text-sm font-medium text-gray-600">Tarikh Tamat</th>
+                    <th class="py-3 px-4 text-left text-sm font-medium text-txt-black-500">Jawatan</th>
+                    <th class="py-3 px-4 text-left text-sm font-medium text-txt-black-500">Kapal</th>
+                    <th class="py-3 px-4 text-left text-sm font-medium text-txt-black-500">Tarikh Mula</th>
+                    <th class="py-3 px-4 text-left text-sm font-medium text-txt-black-500">Tarikh Tamat</th>
                     </tr>
                 </thead>
-                <tbody class="divide-y divide-gray-200">
-                    <tr v-for="record in crewForm.serviceRecord" :key="record.id" class="hover:bg-gray-50">
+                <tbody class="divide-y divide-otl-gray-200">
+                    <tr v-for="record in crewForm.serviceRecord" :key="record.id" class="hover:bg-bg-washed">
                     <td class="py-3 px-4 text-sm">{{ record.position }}</td>
                     <td class="py-3 px-4 text-sm">{{ record.vessel }}</td>
                     <td class="py-3 px-4 text-sm">{{ record.startDate }}</td>
@@ -600,29 +600,29 @@
             </div>
             </div>
             
-            <div v-else class="p-4 text-center text-gray-500">
+            <div v-else class="p-4 text-center text-txt-black-500">
             Tiada rekod perkhidmatan dijumpai.
             </div>
         </div>
         
         <!-- Education Section -->
-        <div class="bg-white rounded-lg shadow-md p-6">
+        <div class="bg-bg-white rounded-lg shadow-md p-6">
             <div class="flex justify-between items-center mb-4">
             <h3 class="text-xl font-semibold text-blue-700">Rekod Pendidikan</h3>
             </div>
             
             <div v-if="crewForm.education && crewForm.education.length > 0">
             <div class="overflow-x-auto">
-                <table class="min-w-full bg-white">
-                <thead class="bg-gray-100">
+                <table class="min-w-full bg-bg-white">
+                <thead class="bg-bg-washed">
                     <tr>
-                    <th class="py-3 px-4 text-left text-sm font-medium text-gray-600">Kelayakan</th>
-                    <th class="py-3 px-4 text-left text-sm font-medium text-gray-600">Institusi</th>
-                    <th class="py-3 px-4 text-left text-sm font-medium text-gray-600">Tahun</th>
+                    <th class="py-3 px-4 text-left text-sm font-medium text-txt-black-500">Kelayakan</th>
+                    <th class="py-3 px-4 text-left text-sm font-medium text-txt-black-500">Institusi</th>
+                    <th class="py-3 px-4 text-left text-sm font-medium text-txt-black-500">Tahun</th>
                     </tr>
                 </thead>
-                <tbody class="divide-y divide-gray-200">
-                    <tr v-for="edu in crewForm.education" :key="edu.id" class="hover:bg-gray-50">
+                <tbody class="divide-y divide-otl-gray-200">
+                    <tr v-for="edu in crewForm.education" :key="edu.id" class="hover:bg-bg-washed">
                     <td class="py-3 px-4 text-sm">{{ edu.qualification }}</td>
                     <td class="py-3 px-4 text-sm">{{ edu.institution }}</td>
                     <td class="py-3 px-4 text-sm">{{ edu.year }}</td>
@@ -632,13 +632,13 @@
             </div>
             </div>
             
-            <div v-else class="p-4 text-center text-gray-500">
+            <div v-else class="p-4 text-center text-txt-black-500">
             Tiada rekod pendidikan dijumpai.
             </div>
         </div>
         
         <!-- Training List Section -->
-        <div class="bg-white rounded-lg shadow-md p-6">
+        <div class="bg-bg-white rounded-lg shadow-md p-6">
             <div class="flex justify-between items-center mb-4">
             <h3 class="text-xl font-semibold text-blue-700">Senarai Latihan</h3>
             <!-- <rs-button variant="primary" size="sm">Tambah Latihan</rs-button> -->
@@ -646,17 +646,17 @@
             
             <div v-if="crewForm.training && crewForm.training.length > 0">
             <div class="overflow-x-auto">
-                <table class="min-w-full bg-white">
-                <thead class="bg-gray-100">
+                <table class="min-w-full bg-bg-white">
+                <thead class="bg-bg-washed">
                     <tr>
-                    <th class="py-3 px-4 text-left text-sm font-medium text-gray-600">Nama Latihan</th>
-                    <th class="py-3 px-4 text-left text-sm font-medium text-gray-600">Tarikh</th>
-                    <th class="py-3 px-4 text-left text-sm font-medium text-gray-600">Tempoh</th>
-                    <th class="py-3 px-4 text-left text-sm font-medium text-gray-600">Lokasi</th>
+                    <th class="py-3 px-4 text-left text-sm font-medium text-txt-black-500">Nama Latihan</th>
+                    <th class="py-3 px-4 text-left text-sm font-medium text-txt-black-500">Tarikh</th>
+                    <th class="py-3 px-4 text-left text-sm font-medium text-txt-black-500">Tempoh</th>
+                    <th class="py-3 px-4 text-left text-sm font-medium text-txt-black-500">Lokasi</th>
                     </tr>
                 </thead>
-                <tbody class="divide-y divide-gray-200">
-                    <tr v-for="training in crewForm.training" :key="training.id" class="hover:bg-gray-50">
+                <tbody class="divide-y divide-otl-gray-200">
+                    <tr v-for="training in crewForm.training" :key="training.id" class="hover:bg-bg-washed">
                     <td class="py-3 px-4 text-sm">{{ training.name }}</td>
                     <td class="py-3 px-4 text-sm">{{ training.date }}</td>
                     <td class="py-3 px-4 text-sm">{{ training.duration }}</td>
@@ -667,7 +667,7 @@
             </div>
             </div>
             
-            <div v-else class="p-4 text-center text-gray-500">
+            <div v-else class="p-4 text-center text-txt-black-500">
             Tiada rekod latihan dijumpai.
             </div>
         </div>

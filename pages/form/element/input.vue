@@ -46,7 +46,6 @@ const computedKey = computed(() => {
 
 <template>
   <div>
-    <LayoutsBreadcrumb />
     <rs-card>
       <template #header>
         <div class="flex">

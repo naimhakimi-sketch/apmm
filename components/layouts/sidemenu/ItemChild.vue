@@ -1,101 +1,91 @@
 <script setup>
-import { useThemeStore } from "~/stores/theme";
 import RSChildItem from "~/components/layouts/sidemenu/ItemChild.vue";
 
 const route = useRoute();
+
 const props = defineProps({
   items: {
     type: Array,
     required: true,
   },
-  indent: {
-    type: Number,
-    default: 0.2,
+  // Driven by the parent group's expand state.
+  open: {
+    type: Boolean,
+    default: false,
   },
 });
-const emit = defineEmits(["openMenu"]);
 
-const themeStore = useThemeStore();
-const theme = themeStore.theme;
+const menuItem = computed(() => props.items ?? []);
 
-const indent = ref(props.indent);
-
-const menuItem = props.items ? props.items : [];
-
-// Toggle Open/Close menu
-function openMenu(event) {
-  emit("openMenu", event);
+function hasActiveDescendant(item) {
+  if (!item) return false;
+  if (item.path && route.path === item.path) return true;
+  return (item.child || []).some(hasActiveDescendant);
 }
 
-// Active menu — MYDS style: quiet translucent highlight, no motion
+const manual = ref({});
+
+function isOpen(item, key) {
+  if (key in manual.value) return manual.value[key];
+  return hasActiveDescendant(item);
+}
+
+function toggle(item, key) {
+  manual.value = { ...manual.value, [key]: !isOpen(item, key) };
+}
+
+const hasChildren = (item) => !!(item.child && item.child.length);
+
+// MYDS sidebar link states (see Item.vue).
 function activeMenu(routePath) {
   return route.path == routePath
-    ? ` text-white
-            font-medium
-            bg-[rgba(255,255,255,0.15)]
-            active-menu`
-    : ` text-[rgba(255,255,255,0.85)]
-            transition-colors
-            duration-200
-            hover:bg-[rgba(255,255,255,0.1)]
-            hover:text-white`;
+    ? " bg-white text-primary-700 shadow-sm active-menu"
+    : " text-primary-100 transition-colors duration-200 hover:bg-primary-600 hover:text-white";
 }
 
-const indentStyle = computed(() => {
-  return { "background-color": `rgba(0, 0, 0, ${indent.value})` };
-});
+const linkClass =
+  "flex w-full items-center gap-3 rounded-md px-3 py-2 text-body-sm leading-tight cursor-pointer";
 </script>
 
 <template>
+  <!-- MYDS nested group: indented and hung off a primary-600 rule -->
   <ul
-    class="menu-content hide transition-all duration-300"
-    :style="indentStyle"
+    class="menu-content ml-5 mt-1 space-y-1 border-l border-primary-600 pl-3 transition-all duration-300"
+    :class="{ hide: !open }"
   >
-    <li
-      v-for="(item, index) in menuItem"
-      :key="index"
-      @click.stop="
-        item.child !== undefined || (item.child && item.child.length !== 0)
-          ? openMenu($event)
-          : ''
-      "
-    >
+    <li v-for="(item, index) in menuItem" :key="index">
       <NuxtLink
-        v-if="
-          item.child === undefined || (item.child && item.child.length !== 0)
-        "
-        class="flex items-center px-4 py-3 mx-3 rounded-lg cursor-pointer"
+        v-if="!hasChildren(item)"
+        :class="[linkClass, activeMenu(item.path)]"
         :to="item.path"
-        :class="activeMenu(item.path)"
       >
-        <span class="mx-4 font-normal">{{ item.title }}</span>
-        <Icon
-          v-if="item.child && item.child.length > 0"
-          class="ml-auto side-menu-arrow"
-          name="material-symbols:chevron-right-rounded"
-          size="18"
-        ></Icon>
+        <span class="flex-1 truncate" :title="item.title">{{
+          item.title
+        }}</span>
       </NuxtLink>
-      <a
-        v-else
-        class="flex items-center px-4 py-3 mx-3 rounded-lg cursor-pointer"
-        :class="activeMenu(item.path)"
-      >
-        <span class="mx-3 font-normal">{{ item.title }}</span>
-        <Icon
-          v-if="item.child && item.child.length > 0"
-          class="ml-auto side-menu-arrow"
-          name="material-symbols:chevron-right-rounded"
-          size="18"
-        ></Icon>
-      </a>
-      <RSChildItem
-        v-if="item.child"
-        :items="item.child"
-        :indent="indent + 0.1"
-        @openMenu="openMenu"
-        @activeMenu="activeMenu"
-      ></RSChildItem>
+
+      <template v-else>
+        <a
+          :class="[
+            linkClass,
+            activeMenu(item.path),
+            { 'nav-open': isOpen(item, index) },
+          ]"
+          :aria-expanded="isOpen(item, index)"
+          @click.stop="toggle(item, index)"
+        >
+          <span class="flex-1 truncate" :title="item.title">{{
+          item.title
+        }}</span>
+          <Icon
+            class="ml-auto side-menu-arrow flex-shrink-0"
+            name="material-symbols:chevron-right-rounded"
+            size="18"
+          ></Icon>
+        </a>
+
+        <RSChildItem :items="item.child" :open="isOpen(item, index)"></RSChildItem>
+      </template>
     </li>
   </ul>
 </template>

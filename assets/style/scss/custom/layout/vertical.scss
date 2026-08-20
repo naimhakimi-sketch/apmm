@@ -32,20 +32,8 @@ $xlarge: 1280px;
 
 // Layout Vertical CSS
 .v-layout {
-  .content-page {
-    height: 100%;
-  }
-
-  .w-header-search {
-    position: fixed;
-    display: flex;
-    align-items: center;
-    height: 64px;
-  }
-
-  .w-header,
-  .w-header-search {
-    width: calc(100% - 256px);
+  .w-header {
+    width: calc(100% - var(--sidebar-width));
 
     @media screen and (max-width: $medium) {
       width: 100%;
@@ -56,13 +44,18 @@ $xlarge: 1280px;
     left: 0;
   }
 
+  // Content sits below the masthead + header; horizontal padding is supplied
+  // by the MYDS page container inside, so the page header band can be
+  // full-bleed. Column layout keeps the footer at the bottom.
   .content-page {
-    margin-left: 256px;
-    padding: 7rem 2rem 10px 2rem;
+    display: flex;
+    flex-direction: column;
+    margin-left: var(--sidebar-width);
+    padding-top: var(--shell-offset);
+    min-height: 100vh;
 
     @media screen and (max-width: $medium) {
       margin-left: 0px;
-      padding: 7rem 1.25rem 0 1.25rem;
     }
   }
 
@@ -72,7 +65,7 @@ $xlarge: 1280px;
     }
 
     .vertical-menu {
-      left: -260px;
+      left: calc(var(--sidebar-width) * -1 - 4px);
     }
 
     .content-page {

@@ -1,5 +1,5 @@
 <template>
-  <div class="p-6 space-y-6 bg-white rounded shadow p-4">
+  <div class="space-y-6 bg-bg-white rounded shadow p-4">
       <rs-card>
           <template #header>
               <div class="flex justify-between items-center">
@@ -51,22 +51,22 @@
       <!-- View Mode -->
       <div v-if="isViewingCannaidizeAsset" class="space-y-6">
       <!-- Asset Details -->
-      <div class="bg-gray-50 p-4 rounded-lg">
+      <div class="bg-bg-washed p-4 rounded-lg">
           <div class="grid grid-cols-2 gap-4">
           <div>
-              <h4 class="font-medium text-gray-700">nama Asset:</h4>
+              <h4 class="font-medium text-txt-black-700">nama Asset:</h4>
               <p class="text-lg font-semibold">{{ cannaidizeAssetForm.nama }}</p>
           </div>
           <div>
-              <h4 class="font-medium text-gray-700">No. Siri:</h4>
+              <h4 class="font-medium text-txt-black-700">No. Siri:</h4>
               <p class="font-mono">{{ cannaidizeAssetForm.serialNo }}</p>
           </div>
           <div>
-              <h4 class="font-medium text-gray-700">Lokasi:</h4>
+              <h4 class="font-medium text-txt-black-700">Lokasi:</h4>
               <p>{{ cannaidizeAssetForm.lokasi }}</p>
           </div>
           <div>
-              <h4 class="font-medium text-gray-700">Status:</h4>
+              <h4 class="font-medium text-txt-black-700">Status:</h4>
               <rs-badge
               :variant="cannaidizeAssetForm.status === 'Tersedia' ? 'success' : 'warning'"
               >
@@ -74,7 +74,7 @@
               </rs-badge>
           </div>
           <div>
-              <h4 class="font-medium text-gray-700">Keadaan:</h4>
+              <h4 class="font-medium text-txt-black-700">Keadaan:</h4>
               <rs-badge
               :variant="cannaidizeAssetForm.kaadaan === 'Baik' ? 'success' : cannaidizeAssetForm.kaadaan === 'Sederhana' ? 'warning' : 'danger'"
               >
@@ -82,27 +82,27 @@
               </rs-badge>
           </div>
           <div>
-              <h4 class="font-medium text-gray-700">Kapal Sumber:</h4>
+              <h4 class="font-medium text-txt-black-700">Kapal Sumber:</h4>
               <p>{{ cannaidizeAssetForm.namaKapal }}</p>
           </div>
           <div>
-              <h4 class="font-medium text-gray-700">Penerima:</h4>
+              <h4 class="font-medium text-txt-black-700">Penerima:</h4>
               <p>{{ cannaidizeAssetForm.penerima }}</p>
           </div>
           <div>
-              <h4 class="font-medium text-gray-700">Tarikh Pemeriksaan Terakhir:</h4>
+              <h4 class="font-medium text-txt-black-700">Tarikh Pemeriksaan Terakhir:</h4>
               <p>{{ cannaidizeAssetForm.tarikhTerakhirPemeriksaan }}</p>
           </div>
           <div>
-              <h4 class="font-medium text-gray-700">Tarikh Cannaidize:</h4>
+              <h4 class="font-medium text-txt-black-700">Tarikh Cannaidize:</h4>
               <p>{{ cannaidizeAssetForm.cannaidizeDate }}</p>
           </div>
           </div>
       </div>
 
       <!-- Remarks -->
-      <div class="bg-white p-4 rounded-lg border">
-          <h4 class="font-medium text-gray-700 mb-2">Catatan:</h4>
+      <div class="bg-bg-white p-4 rounded-lg border">
+          <h4 class="font-medium text-txt-black-700 mb-2">Catatan:</h4>
           <p>{{ cannaidizeAssetForm.remarks }}</p>
       </div>
       </div>

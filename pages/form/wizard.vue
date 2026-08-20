@@ -44,7 +44,6 @@ function submit() {
 
 <template>
   <div>
-    <LayoutsBreadcrumb />
     <rs-card>
       <template #header> Top Step </template>
       <template #body>

@@ -88,7 +88,47 @@ export default [
       {
         title: "Pengurusan Kontrak",
         path: "/new/pengurusan-kontrak",
-        icon: "material-symbols-light:lab-profile-outline-sharp",       
+        icon: "material-symbols-light:lab-profile-outline-sharp",
+      },
+    ],
+  },
+  {
+    header: "TETAPAN",
+    child: [
+      {
+        title: "Peranan",
+        path: "/new/tetapan-peranan",
+        icon: "ic:outline-admin-panel-settings",
+      },
+      {
+        title: "Pengguna",
+        path: "/new/tetapan-pengguna",
+        icon: "ic:outline-people",
+      },
+      {
+        title: "Audit Trail",
+        path: "/new/tetapan-audit-trail",
+        icon: "ic:outline-history",
+      },
+      {
+        title: "SMTP",
+        path: "/new/tetapan-smtp",
+        icon: "ic:outline-mail",
+      },
+      {
+        title: "Pangkalan Data",
+        path: "/new/tetapan-pengakalan-data",
+        icon: "ic:outline-storage",
+      },
+      {
+        title: "Integrasi Sistem Luar",
+        path: "/new/tetapan-integrasi-sistem-luar",
+        icon: "ic:outline-hub",
+      },
+      {
+        title: "Pengurusan Data",
+        path: "/new/pengurusan-data",
+        icon: "ic:outline-dataset",
       },
     ],
   },

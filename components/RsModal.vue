@@ -112,7 +112,7 @@ watch(
               <slot name="header"></slot>
               <Icon
                 @click="closeModal"
-                class="hover:text-gray-800 cursor-pointer"
+                class="hover:text-txt-black-900 cursor-pointer"
                 name="ic:round-close"
               ></Icon>
             </div>

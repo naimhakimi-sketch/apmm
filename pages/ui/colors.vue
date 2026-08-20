@@ -187,7 +187,6 @@ const color = {
 
 <template>
   <div>
-    <LayoutsBreadcrumb />
     <rs-card>
       <template #header> Default Color </template>
       <template #body>

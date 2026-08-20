@@ -47,7 +47,6 @@ const modules = [Navigation, Pagination, Scrollbar, A11y];
 
 <template>
   <div>
-    <LayoutsBreadcrumb />
     <rs-card>
       <template #header>
         <div class="flex">

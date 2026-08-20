@@ -1,28 +1,30 @@
 /* RS Badge — MYDS styling: soft tint background + strong text */
 .badge {
-  @apply inline-flex items-center justify-center px-2.5 py-0.5 rounded-full text-xs font-medium leading-none;
+  /* `whitespace-nowrap` keeps the pill intact in narrow table columns —
+     wrapped text collides with `leading-none` and escapes the background. */
+  @apply inline-flex items-center justify-center whitespace-nowrap px-2.5 py-1 rounded-full text-xs font-medium leading-none;
 }
 
 .badge.badge-primary {
-  @apply bg-primary-50 text-primary-600;
+  @apply bg-bg-primary-50 text-txt-primary;
 }
 
 .badge.badge-secondary {
-  @apply bg-gray-100 text-gray-600;
+  @apply bg-bg-washed text-txt-black-500;
 }
 
 .badge.badge-success {
-  @apply bg-success-50 text-success-700;
+  @apply bg-bg-success-50 text-txt-success;
 }
 
 .badge.badge-info {
-  @apply bg-primary-50 text-primary-600;
+  @apply bg-bg-primary-50 text-txt-primary;
 }
 
 .badge.badge-warning {
-  @apply bg-warning-50 text-warning-700;
+  @apply bg-bg-warning-50 text-txt-warning;
 }
 
 .badge.badge-danger {
-  @apply bg-danger-50 text-danger-700;
+  @apply bg-bg-danger-50 text-txt-danger;
 }

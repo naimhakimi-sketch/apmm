@@ -8,7 +8,7 @@
 
     </div> 
     <!-- SMTP Configuration Section -->
-    <div class="bg-white rounded-lg p-6 shadow-sm">
+    <div class="bg-bg-white rounded-lg p-6 shadow-sm">
       
       <!-- Configuration Form -->
       <div class="space-y-6">
@@ -86,7 +86,7 @@
     </div>
 
     <div class="space-y-4">
-        <div class="bg-white rounded-lg p-6 shadow-sm">         
+        <div class="bg-bg-white rounded-lg p-6 shadow-sm">         
         <!-- SMTP Test Section -->
         <div class="mt-8 space-y-6">
           <h3 class="font-medium">Cubaan SMTP</h3>
@@ -139,7 +139,7 @@
     </div>
 
     <!-- SMTP Response Log Section -->
-    <div class="bg-white rounded-lg p-6 shadow-sm">
+    <div class="bg-bg-white rounded-lg p-6 shadow-sm">
       <h2 class="text-lg font-semibold mb-6">Log Respons SMTP</h2>
       
       <div class="space-y-4">

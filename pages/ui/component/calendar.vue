@@ -96,7 +96,6 @@ onMounted(() => {
 
 <template>
   <div>
-    <LayoutsBreadcrumb />
     <rs-card>
       <template #header>
         <div class="flex">

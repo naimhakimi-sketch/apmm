@@ -65,11 +65,11 @@ async function navigateMenu(path) {
             v-if="index != 0"
             name="ic:round-chevron-right"
             size="14"
-            class="mr-1 text-gray-500"
+            class="mr-1 text-txt-black-500"
           ></Icon>
           <a
             @click="navigateMenu(item.path)"
-            class="cursor-pointer hover:underline pr-1 font-normal text-sm text-gray-500"
+            class="cursor-pointer hover:underline pr-1 font-normal text-sm text-txt-black-500"
             :class="{
               '!text-primary': breadcrumb.length - 1 == index,
             }"
@@ -86,7 +86,7 @@ async function navigateMenu(path) {
         <div class="flex flex-wrap items-center">
           <div>
             <div>
-              <span class="text-xl font-semibold text-gray-600">
+              <span class="text-xl font-semibold text-txt-black-500">
                 {{ title }}
               </span>
             </div>

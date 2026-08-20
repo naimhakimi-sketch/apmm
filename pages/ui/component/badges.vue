@@ -36,7 +36,6 @@ const showTooltip = (codeId, message) => {
 
 <template>
   <div>
-    <LayoutsBreadcrumb />
     <rs-card>
       <template #header>
         <h5>Default Badges</h5>

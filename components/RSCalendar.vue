@@ -171,13 +171,13 @@ watch(dateNow, () => {
         <div class="flex gap-5">
           <button
             @click="prevMonth"
-            class="flex items-center px-2 py-2 rounded-md shadow-md bg-white text-primary hover:bg-primary/80 hover:text-white"
+            class="flex items-center px-2 py-2 rounded-md shadow-md bg-bg-white text-primary hover:bg-primary/80 hover:text-white"
           >
             <Icon size="20px" name="ic:round-keyboard-arrow-left"></Icon>
           </button>
           <button
             @click="nextMonth"
-            class="flex items-center px-2 py-2 rounded-md shadow-md bg-white text-primary hover:bg-primary/80 hover:text-white"
+            class="flex items-center px-2 py-2 rounded-md shadow-md bg-bg-white text-primary hover:bg-primary/80 hover:text-white"
           >
             <Icon size="20px" name="ic:round-keyboard-arrow-right"></Icon>
           </button>

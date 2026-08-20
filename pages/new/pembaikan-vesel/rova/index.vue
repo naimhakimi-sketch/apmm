@@ -1,5 +1,5 @@
 <template>
-    <div class="p-6 space-y-6 bg-white rounded shadow p-4">
+    <div class="space-y-6 bg-bg-white rounded shadow p-4">
        
         <rs-card>
             <template #header>
@@ -40,7 +40,7 @@
               
               <template v-slot:peratus="row">
                 <div class="flex items-center">
-                  <div class="w-full bg-gray-200 rounded-full h-2.5 mr-2">
+                  <div class="w-full bg-bg-black-200 rounded-full h-2.5 mr-2">
                     <div class="bg-primary-600 h-2.5 rounded-full" :style="{ width: row.value.peratus + '%' }"></div>
                   </div>
                   <span>{{ row.value.peratus }}%</span>
@@ -70,12 +70,12 @@
               <div v-if="isViewingRova" class="space-y-4">
                 <div class="grid grid-cols-2 gap-4">
                   <div class="mb-2">
-                    <h4 class="font-medium text-gray-700">Bulan:</h4>
+                    <h4 class="font-medium text-txt-black-700">Bulan:</h4>
                     <p>{{ rovaForm.bulan }}</p>
                   </div>
                   
                   <div class="mb-2">
-                    <h4 class="font-medium text-gray-700">Status Kapal:</h4>
+                    <h4 class="font-medium text-txt-black-700">Status Kapal:</h4>
                     <rs-badge
                       :variant="rovaForm.statusKapal === 'Operational' ? 'success' : 'warning'"
                     >
@@ -86,20 +86,20 @@
                 
                 <div class="grid grid-cols-2 gap-4">
                   <div class="mb-2">
-                    <h4 class="font-medium text-gray-700">Tarikh Mula:</h4>
+                    <h4 class="font-medium text-txt-black-700">Tarikh Mula:</h4>
                     <p>{{ rovaForm.tarikhMula }}</p>
                   </div>
                   
                   <div class="mb-2">
-                    <h4 class="font-medium text-gray-700">Tarikh Tamat:</h4>
+                    <h4 class="font-medium text-txt-black-700">Tarikh Tamat:</h4>
                     <p>{{ rovaForm.tarikhTamat }}</p>
                   </div>
                 </div>
                 
                 <div class="mb-2">
-                  <h4 class="font-medium text-gray-700">Peratus Ketersediaan:</h4>
+                  <h4 class="font-medium text-txt-black-700">Peratus Ketersediaan:</h4>
                   <div class="flex items-center mt-1">
-                    <div class="w-full bg-gray-200 rounded-full h-2.5 mr-2">
+                    <div class="w-full bg-bg-black-200 rounded-full h-2.5 mr-2">
                       <div class="bg-primary-600 h-2.5 rounded-full" :style="{ width: rovaForm.peratus + '%' }"></div>
                     </div>
                     <span>{{ rovaForm.peratus }}%</span>
@@ -107,7 +107,7 @@
                 </div>
                 
                 <div class="mb-2">
-                  <h4 class="font-medium text-gray-700">Catatan:</h4>
+                  <h4 class="font-medium text-txt-black-700">Catatan:</h4>
                   <p>{{ rovaForm.catatan }}</p>
                 </div>
               </div>

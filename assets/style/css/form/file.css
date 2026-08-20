@@ -7,7 +7,7 @@
 }
 
 .formkit-input-file {
-  @apply w-full cursor-pointer border rounded-md text-gray-600 text-sm mb-1 file:cursor-pointer file:mr-4 file:py-2 file:px-4 file:rounded-l-md file:border-0 file:text-sm file:bg-primary file:text-white hover:file:bg-primary/90;
+  @apply w-full cursor-pointer border rounded-md text-txt-black-500 text-sm mb-1 file:cursor-pointer file:mr-4 file:py-2 file:px-4 file:rounded-l-md file:border-0 file:text-sm file:bg-primary file:text-white hover:file:bg-primary/90;
   border-color: rgb(var(--fk-border-color));
 }
 
@@ -16,7 +16,7 @@
 }
 
 .formkit-file-item {
-  @apply flex items-center py-2 px-4 rounded-md border border-gray-200 mb-1 mt-1;
+  @apply flex items-center py-2 px-4 rounded-md border border-otl-gray-200 mb-1 mt-1;
 }
 
 .formkit-file-name {

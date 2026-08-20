@@ -62,7 +62,6 @@ const options2 = [
 
 <template>
   <div>
-    <LayoutsBreadcrumb />
     <rs-card>
       <template #header> Single Select </template>
       <template #body>

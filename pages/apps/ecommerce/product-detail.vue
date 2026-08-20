@@ -32,7 +32,6 @@ const formatSold = (n) => {
 
 <template>
   <div>
-    <LayoutsBreadcrumb />
     <rs-card class="py-5">
       <div
         class="flex flex-col md:flex-row items-center md:items-start justify-center my-4 px-5"

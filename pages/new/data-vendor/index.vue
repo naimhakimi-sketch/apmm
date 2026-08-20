@@ -1,6 +1,5 @@
 <template>
-    <div class="p-6">
-        <h1 class="text-2xl font-semibold mb-6">Data Vendor</h1>
+    <div>
         
         <rs-card>
             <template #header>
@@ -61,11 +60,11 @@
                 <div class="space-y-4">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
-                            <label class="block text-sm font-medium text-gray-700">ID Vendor</label>
-                            <div class="mt-1 text-gray-900">{{ selectedVendor?.id }}</div>
+                            <label class="block text-sm font-medium text-txt-black-700">ID Vendor</label>
+                            <div class="mt-1 text-txt-black-900">{{ selectedVendor?.id }}</div>
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-gray-700">Status</label>
+                            <label class="block text-sm font-medium text-txt-black-700">Status</label>
                             <div class="mt-1">
                                 <rs-badge
                                     :variant="selectedVendor?.status === 'Aktif' ? 'success' : 'danger'"
@@ -75,20 +74,20 @@
                             </div>
                         </div>
                         <div class="md:col-span-2">
-                            <label class="block text-sm font-medium text-gray-700">Nama Vendor</label>
-                            <div class="mt-1 text-gray-900">{{ selectedVendor?.namaVendor }}</div>
+                            <label class="block text-sm font-medium text-txt-black-700">Nama Vendor</label>
+                            <div class="mt-1 text-txt-black-900">{{ selectedVendor?.namaVendor }}</div>
                         </div>
                         <div class="md:col-span-2">
-                            <label class="block text-sm font-medium text-gray-700">Alamat</label>
-                            <div class="mt-1 text-gray-900">{{ selectedVendor?.alamat }}</div>
+                            <label class="block text-sm font-medium text-txt-black-700">Alamat</label>
+                            <div class="mt-1 text-txt-black-900">{{ selectedVendor?.alamat }}</div>
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-gray-700">No. Telefon</label>
-                            <div class="mt-1 text-gray-900">{{ selectedVendor?.noTelefon }}</div>
+                            <label class="block text-sm font-medium text-txt-black-700">No. Telefon</label>
+                            <div class="mt-1 text-txt-black-900">{{ selectedVendor?.noTelefon }}</div>
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-gray-700">Emel</label>
-                            <div class="mt-1 text-gray-900">{{ selectedVendor?.emel }}</div>
+                            <label class="block text-sm font-medium text-txt-black-700">Emel</label>
+                            <div class="mt-1 text-txt-black-900">{{ selectedVendor?.emel }}</div>
                         </div>
                     </div>
                 </div>

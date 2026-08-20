@@ -86,7 +86,7 @@ const hitAPI = async () => {
     />
 
     <label
-      class="formkit-label text-gray-700 dark:text-gray-200 mb-2 font-semibold text-sm formkit-invalid:text-red-500 dark:formkit-invalid:text-danger flex justify-between items-center"
+      class="formkit-label text-txt-black-700 dark:text-gray-200 mb-2 font-semibold text-sm formkit-invalid:text-red-500 dark:formkit-invalid:text-danger flex justify-between items-center"
       for="input_8"
       >Parameter
       <rs-button size="sm" @click="addParam()"> Add</rs-button>
@@ -102,7 +102,7 @@ const hitAPI = async () => {
     <br />
 
     <label
-      class="formkit-label text-gray-700 dark:text-gray-200 mb-2 font-semibold text-sm formkit-invalid:text-red-500 dark:formkit-invalid:text-danger flex justify-between items-center"
+      class="formkit-label text-txt-black-700 dark:text-gray-200 mb-2 font-semibold text-sm formkit-invalid:text-red-500 dark:formkit-invalid:text-danger flex justify-between items-center"
       for="input_8"
       >Body
     </label>
@@ -114,7 +114,7 @@ const hitAPI = async () => {
 
     <br />
     <label
-      class="formkit-label text-gray-700 dark:text-gray-200 mb-2 font-semibold text-sm formkit-invalid:text-red-500 dark:formkit-invalid:text-danger flex justify-between items-center"
+      class="formkit-label text-txt-black-700 dark:text-gray-200 mb-2 font-semibold text-sm formkit-invalid:text-red-500 dark:formkit-invalid:text-danger flex justify-between items-center"
       for="input_8"
       >Response
     </label>

@@ -16,7 +16,6 @@ const formatPrice = (price) => {
 
 <template>
   <div>
-    <LayoutsBreadcrumb />
 
     <rs-card>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">

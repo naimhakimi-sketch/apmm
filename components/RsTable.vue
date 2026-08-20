@@ -619,17 +619,17 @@ watch(
                 'border-b-0': options.borderless,
                 'border-[rgb(var(--border-color))] odd:bg-[rgb(var(--bg-1))] even:bg-[rgb(var(--bg-2))]':
                   options.variant === 'default' && options.striped,
-                'border-primary/20 odd:bg-white even:bg-primary/5':
+                'border-primary/20 odd:bg-bg-white even:bg-primary/5':
                   options.variant === 'primary' && options.striped,
-                'border-secondary/20 odd:bg-white even:bg-secondary/5':
+                'border-secondary/20 odd:bg-bg-white even:bg-secondary/5':
                   options.variant === 'secondary' && options.striped,
-                'border-info/20 odd:bg-white even:bg-info/5':
+                'border-info/20 odd:bg-bg-white even:bg-info/5':
                   options.variant === 'info' && options.striped,
-                'border-success/20 odd:bg-white even:bg-success/5':
+                'border-success/20 odd:bg-bg-white even:bg-success/5':
                   options.variant === 'success' && options.striped,
-                'border-warning/20 odd:bg-white even:bg-warning/5':
+                'border-warning/20 odd:bg-bg-white even:bg-warning/5':
                   options.variant === 'warning' && options.striped,
-                'border-danger/20 odd:bg-white even:bg-danger/5':
+                'border-danger/20 odd:bg-bg-white even:bg-danger/5':
                   options.variant === 'danger' && options.striped,
                 'cursor-pointer hover:bg-[rgb(var(--bg-1))]':
                   options.hover && options.variant === 'default',
@@ -797,7 +797,7 @@ watch(
       <div class="p-8 text-center">
         <Icon name="mdi:table-off" class="text-gray-300 mb-4" size="48px" />
         <p class="text-[rgb(var(--text-color))] text-lg font-medium">No data</p>
-        <p class="text-gray-500 mt-2">
+        <p class="text-txt-black-500 mt-2">
           There is no data to display at this time.
         </p>
       </div>

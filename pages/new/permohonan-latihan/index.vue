@@ -1,7 +1,6 @@
 <template>
-    <div class="p-6 space-y-6">
+    <div class="space-y-6">
         <div class="flex justify-between items-center">
-            <h1 class="text-2xl font-semibold mb-6">Permohonan Latihan</h1>
             <rs-button variant="primary" @click="openAddModal">
                 <Icon name="material-symbols:add" class="mr-1" />
                 Tambah Latihan
@@ -321,6 +320,6 @@ const downloadAttachment = (filename) => {
 
 <style lang="scss" scoped>
 .rs-card {
-    @apply bg-white rounded-lg shadow;
+    @apply bg-bg-white rounded-lg shadow;
 }
 </style>

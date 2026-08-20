@@ -2019,7 +2019,7 @@
 </script>
 
 <template>
-  <div class="p-6 space-y-6">
+  <div class="space-y-6">
      <!-- Ship identity Banner -->
      <div class="bg-gradient-to-r from-blue-700 to-blue-900 rounded-lg shadow-lg overflow-hidden">
               <div class="flex flex-col md:flex-row">
@@ -2048,22 +2048,22 @@
 
     <!-- Status Overview -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-      <div class="bg-white rounded-lg shadow p-4 border-l-4 border-success-500">
-        <p class="text-sm text-gray-500">STATUS KAPAL</p>
+      <div class="bg-bg-white rounded-lg shadow p-4 border-l-4 border-success-500">
+        <p class="text-sm text-txt-black-500">STATUS KAPAL</p>
         <p class="text-xl font-semibold">{{ statusKapal }}</p>
       </div>
-      <div class="bg-white rounded-lg shadow p-4 border-l-4 border-primary-500">
-        <p class="text-sm text-gray-500">NEXT AD DATE</p>
+      <div class="bg-bg-white rounded-lg shadow p-4 border-l-4 border-primary-500">
+        <p class="text-sm text-txt-black-500">NEXT AD DATE</p>
         <p class="text-xl font-semibold">{{ nextAdDate }}</p>
       </div>
-      <div class="bg-white rounded-lg shadow p-4 border-l-4 border-gray-500">
-        <p class="text-sm text-gray-500">NEXT PREFIT DATE</p>
+      <div class="bg-bg-white rounded-lg shadow p-4 border-l-4 border-gray-500">
+        <p class="text-sm text-txt-black-500">NEXT PREFIT DATE</p>
         <p class="text-xl font-semibold">{{ nextPrefitDate }}</p>
       </div>
     </div>
 
     <!-- Tabs Section -->
-    <div class="bg-white rounded shadow p-4">
+    <div class="bg-bg-white rounded shadow p-4">
       <div class="flex space-x-2 border-b mb-4">
         <button
           v-for="tab in tabs"
@@ -2071,14 +2071,14 @@
           @click="activeTab = tab.key"
           :class="[
             'px-4 py-2 font-semibold',
-            activeTab === tab.key ? 'border-b-2 border-primary-500 text-primary-500' : 'text-gray-600'
+            activeTab === tab.key ? 'border-b-2 border-primary-500 text-primary-500' : 'text-txt-black-500'
           ]"
         >
           {{ tab.nama }}
         </button>
       </div>
 
-      <div class="p-4 bg-gray-50 rounded">
+      <div class="p-4 bg-bg-washed rounded">
         <div v-if="activeTab === 'profile'">
           <rs-card>
             <template #header>
@@ -2139,17 +2139,17 @@
               <!-- View Mode -->
               <div v-if="isViewingCrew" class="space-y-6">
                 <!-- Crew Profile Section -->
-                <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="bg-bg-white rounded-lg shadow-md p-6">
                   <h3 class="text-xl font-semibold text-primary-700 mb-4">Profil Krew</h3>
                   
                   <div class="flex items-center mb-6">
-                    <div class="bg-gray-200 rounded-full w-24 h-24 flex items-center justify-center mr-6">
-                      <span class="text-3xl font-bold text-gray-500">{{ crewForm.nama.charAt(0) }}</span>
+                    <div class="bg-bg-black-200 rounded-full w-24 h-24 flex items-center justify-center mr-6">
+                      <span class="text-3xl font-bold text-txt-black-500">{{ crewForm.nama.charAt(0) }}</span>
                     </div>
                     
                     <div>
                       <h4 class="text-lg font-semibold">{{ crewForm.nama }}</h4>
-                      <p class="text-gray-600">{{ crewForm.position }}</p>
+                      <p class="text-txt-black-500">{{ crewForm.position }}</p>
                       <div class="mt-2">
                         <rs-badge
                           :variant="crewForm.status === 'Aktif' ? 'success' : 'warning'"
@@ -2163,34 +2163,34 @@
                   <div class="grid grid-cols-2 gap-6">
                     <div>
                       <div class="mb-4">
-                        <h5 class="text-sm font-medium text-gray-500">No. Tentera</h5>
+                        <h5 class="text-sm font-medium text-txt-black-500">No. Tentera</h5>
                         <p>{{ crewForm.noTentera }}</p>
                       </div>
                       
                       <div class="mb-4">
-                        <h5 class="text-sm font-medium text-gray-500">Tarikh Mula</h5>
+                        <h5 class="text-sm font-medium text-txt-black-500">Tarikh Mula</h5>
                         <p>{{ crewForm.joinDate }}</p>
                       </div>
                       
                       <div class="mb-4">
-                        <h5 class="text-sm font-medium text-gray-500">No. Telefon</h5>
+                        <h5 class="text-sm font-medium text-txt-black-500">No. Telefon</h5>
                         <p>{{ crewForm.contactNo }}</p>
                       </div>
                     </div>
                     
                     <div>
                       <div class="mb-4">
-                        <h5 class="text-sm font-medium text-gray-500">Jawatan</h5>
+                        <h5 class="text-sm font-medium text-txt-black-500">Jawatan</h5>
                         <p>{{ crewForm.position }}</p>
                       </div>
                       
                       <div class="mb-4">
-                        <h5 class="text-sm font-medium text-gray-500">Tarikh Tamat</h5>
+                        <h5 class="text-sm font-medium text-txt-black-500">Tarikh Tamat</h5>
                         <p>{{ crewForm.endDate }}</p>
                       </div>
                       
                       <div class="mb-4">
-                        <h5 class="text-sm font-medium text-gray-500">E-mel</h5>
+                        <h5 class="text-sm font-medium text-txt-black-500">E-mel</h5>
                         <p>{{ crewForm.email }}</p>
                       </div>
                     </div>
@@ -2198,24 +2198,24 @@
                 </div>
                 
                 <!-- Service Record Section -->
-                <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="bg-bg-white rounded-lg shadow-md p-6">
                   <div class="flex justify-between items-center mb-4">
                     <h3 class="text-xl font-semibold text-primary-700">Rekod Perkhidmatan</h3>
                   </div>
                   
                   <div v-if="crewForm.serviceRecord && crewForm.serviceRecord.length > 0">
                     <div class="overflow-x-auto">
-                      <table class="min-w-full bg-white">
-                        <thead class="bg-gray-100">
+                      <table class="min-w-full bg-bg-white">
+                        <thead class="bg-bg-washed">
                           <tr>
-                            <th class="py-3 px-4 text-left text-sm font-medium text-gray-600">Jawatan</th>
-                            <th class="py-3 px-4 text-left text-sm font-medium text-gray-600">Kapal</th>
-                            <th class="py-3 px-4 text-left text-sm font-medium text-gray-600">Tarikh Mula</th>
-                            <th class="py-3 px-4 text-left text-sm font-medium text-gray-600">Tarikh Tamat</th>
+                            <th class="py-3 px-4 text-left text-sm font-medium text-txt-black-500">Jawatan</th>
+                            <th class="py-3 px-4 text-left text-sm font-medium text-txt-black-500">Kapal</th>
+                            <th class="py-3 px-4 text-left text-sm font-medium text-txt-black-500">Tarikh Mula</th>
+                            <th class="py-3 px-4 text-left text-sm font-medium text-txt-black-500">Tarikh Tamat</th>
                           </tr>
                         </thead>
-                        <tbody class="divide-y divide-gray-200">
-                          <tr v-for="record in crewForm.serviceRecord" :key="record.id" class="hover:bg-gray-50">
+                        <tbody class="divide-y divide-otl-gray-200">
+                          <tr v-for="record in crewForm.serviceRecord" :key="record.id" class="hover:bg-bg-washed">
                             <td class="py-3 px-4 text-sm">{{ record.position }}</td>
                             <td class="py-3 px-4 text-sm">{{ record.vessel }}</td>
                             <td class="py-3 px-4 text-sm">{{ record.startDate }}</td>
@@ -2226,29 +2226,29 @@
                     </div>
                   </div>
                   
-                  <div v-else class="p-4 text-center text-gray-500">
+                  <div v-else class="p-4 text-center text-txt-black-500">
                     Tiada rekod perkhidmatan dijumpai.
                   </div>
                 </div>
                 
                 <!-- Education Section -->
-                <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="bg-bg-white rounded-lg shadow-md p-6">
                   <div class="flex justify-between items-center mb-4">
                     <h3 class="text-xl font-semibold text-primary-700">Rekod Pendidikan</h3>
                   </div>
                   
                   <div v-if="crewForm.education && crewForm.education.length > 0">
                     <div class="overflow-x-auto">
-                      <table class="min-w-full bg-white">
-                        <thead class="bg-gray-100">
+                      <table class="min-w-full bg-bg-white">
+                        <thead class="bg-bg-washed">
                           <tr>
-                            <th class="py-3 px-4 text-left text-sm font-medium text-gray-600">Kelayakan</th>
-                            <th class="py-3 px-4 text-left text-sm font-medium text-gray-600">Institusi</th>
-                            <th class="py-3 px-4 text-left text-sm font-medium text-gray-600">Tahun</th>
+                            <th class="py-3 px-4 text-left text-sm font-medium text-txt-black-500">Kelayakan</th>
+                            <th class="py-3 px-4 text-left text-sm font-medium text-txt-black-500">Institusi</th>
+                            <th class="py-3 px-4 text-left text-sm font-medium text-txt-black-500">Tahun</th>
                           </tr>
                         </thead>
-                        <tbody class="divide-y divide-gray-200">
-                          <tr v-for="edu in crewForm.education" :key="edu.id" class="hover:bg-gray-50">
+                        <tbody class="divide-y divide-otl-gray-200">
+                          <tr v-for="edu in crewForm.education" :key="edu.id" class="hover:bg-bg-washed">
                             <td class="py-3 px-4 text-sm">{{ edu.qualification }}</td>
                             <td class="py-3 px-4 text-sm">{{ edu.institution }}</td>
                             <td class="py-3 px-4 text-sm">{{ edu.year }}</td>
@@ -2258,13 +2258,13 @@
                     </div>
                   </div>
                   
-                  <div v-else class="p-4 text-center text-gray-500">
+                  <div v-else class="p-4 text-center text-txt-black-500">
                     Tiada rekod pendidikan dijumpai.
                   </div>
                 </div>
                 
                 <!-- Training List Section -->
-                <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="bg-bg-white rounded-lg shadow-md p-6">
                   <div class="flex justify-between items-center mb-4">
                     <h3 class="text-xl font-semibold text-primary-700">Senarai Latihan</h3>
                     <!-- <rs-button variant="primary" size="sm">Tambah Latihan</rs-button> -->
@@ -2272,17 +2272,17 @@
                   
                   <div v-if="crewForm.training && crewForm.training.length > 0">
                     <div class="overflow-x-auto">
-                      <table class="min-w-full bg-white">
-                        <thead class="bg-gray-100">
+                      <table class="min-w-full bg-bg-white">
+                        <thead class="bg-bg-washed">
                           <tr>
-                            <th class="py-3 px-4 text-left text-sm font-medium text-gray-600">nama Latihan</th>
-                            <th class="py-3 px-4 text-left text-sm font-medium text-gray-600">Tarikh</th>
-                            <th class="py-3 px-4 text-left text-sm font-medium text-gray-600">Tempoh</th>
-                            <th class="py-3 px-4 text-left text-sm font-medium text-gray-600">Lokasi</th>
+                            <th class="py-3 px-4 text-left text-sm font-medium text-txt-black-500">nama Latihan</th>
+                            <th class="py-3 px-4 text-left text-sm font-medium text-txt-black-500">Tarikh</th>
+                            <th class="py-3 px-4 text-left text-sm font-medium text-txt-black-500">Tempoh</th>
+                            <th class="py-3 px-4 text-left text-sm font-medium text-txt-black-500">Lokasi</th>
                           </tr>
                         </thead>
-                        <tbody class="divide-y divide-gray-200">
-                          <tr v-for="training in crewForm.training" :key="training.id" class="hover:bg-gray-50">
+                        <tbody class="divide-y divide-otl-gray-200">
+                          <tr v-for="training in crewForm.training" :key="training.id" class="hover:bg-bg-washed">
                             <td class="py-3 px-4 text-sm">{{ training.nama }}</td>
                             <td class="py-3 px-4 text-sm">{{ training.date }}</td>
                             <td class="py-3 px-4 text-sm">{{ training.duration }}</td>
@@ -2293,7 +2293,7 @@
                     </div>
                   </div>
                   
-                  <div v-else class="p-4 text-center text-gray-500">
+                  <div v-else class="p-4 text-center text-txt-black-500">
                     Tiada rekod latihan dijumpai.
                   </div>
                 </div>
@@ -2486,24 +2486,24 @@
               <div v-if="isViewingOa" class="space-y-4">
                 <div class="grid grid-cols-2 gap-4">
                   <div class="mb-2">
-                    <h4 class="font-medium text-gray-700">Kerosakan Kritikal:</h4>
+                    <h4 class="font-medium text-txt-black-700">Kerosakan Kritikal:</h4>
                     <p>{{ oaForm.kerosakanKritikal }}</p>
                   </div>
                   
                   <div class="mb-2">
-                    <h4 class="font-medium text-gray-700">Tarikh OPS/NON-OPS:</h4>
+                    <h4 class="font-medium text-txt-black-700">Tarikh OPS/NON-OPS:</h4>
                     <p>{{ oaForm.tarikhOpsNonOps }}</p>
                   </div>
                 </div>
                 
                 <div class="grid grid-cols-2 gap-4">
                   <div class="mb-2">
-                    <h4 class="font-medium text-gray-700">KJKP:</h4>
+                    <h4 class="font-medium text-txt-black-700">KJKP:</h4>
                     <p>{{ oaForm.kjkp }}</p>
                   </div>
                   
                   <div class="mb-2">
-                    <h4 class="font-medium text-gray-700">KAT:</h4>
+                    <h4 class="font-medium text-txt-black-700">KAT:</h4>
                     <rs-badge
                       :variant="oaForm.kat === 'KAT 4' ? 'warning' : 'danger'"
                     >
@@ -2513,36 +2513,36 @@
                 </div>
                 
                 <div class="mb-2">
-                  <h4 class="font-medium text-gray-700">Vendor:</h4>
+                  <h4 class="font-medium text-txt-black-700">Vendor:</h4>
                   <p>{{ oaForm.vendor }}</p>
                 </div>
                 
                 <div class="grid grid-cols-2 gap-4">
                   <div class="mb-2">
-                    <h4 class="font-medium text-gray-700">CD:</h4>
+                    <h4 class="font-medium text-txt-black-700">CD:</h4>
                     <p>{{ oaForm.cd }}</p>
                   </div>
                   
                   <div class="mb-2">
-                    <h4 class="font-medium text-gray-700">HAT:</h4>
+                    <h4 class="font-medium text-txt-black-700">HAT:</h4>
                     <p>{{ oaForm.hat }}</p>
                   </div>
                 </div>
                 
                 <div class="grid grid-cols-2 gap-4">
                   <div class="mb-2">
-                    <h4 class="font-medium text-gray-700">SAT:</h4>
+                    <h4 class="font-medium text-txt-black-700">SAT:</h4>
                     <p>{{ oaForm.sat }}</p>
                   </div>
                   
                   <div class="mb-2">
-                    <h4 class="font-medium text-gray-700">REC1:</h4>
+                    <h4 class="font-medium text-txt-black-700">REC1:</h4>
                     <p>{{ oaForm.rec1 }}</p>
                   </div>
                 </div>
                 
                 <div class="mb-2">
-                  <h4 class="font-medium text-gray-700">CAT Kapal (1-5):</h4>
+                  <h4 class="font-medium text-txt-black-700">CAT Kapal (1-5):</h4>
                   <rs-badge
                     :variant="
                       oaForm.catKapal === '1' ? 'success' :
@@ -2720,7 +2720,7 @@
               
               <template v-slot:peratus="row">
                 <div class="flex items-center">
-                  <div class="w-full bg-gray-200 rounded-full h-2.5 mr-2">
+                  <div class="w-full bg-bg-black-200 rounded-full h-2.5 mr-2">
                     <div class="bg-primary-600 h-2.5 rounded-full" :style="{ width: row.value.peratus + '%' }"></div>
                   </div>
                   <span>{{ row.value.peratus }}%</span>
@@ -2750,12 +2750,12 @@
               <div v-if="isViewingRova" class="space-y-4">
                 <div class="grid grid-cols-2 gap-4">
                   <div class="mb-2">
-                    <h4 class="font-medium text-gray-700">Bulan:</h4>
+                    <h4 class="font-medium text-txt-black-700">Bulan:</h4>
                     <p>{{ rovaForm.bulan }}</p>
                   </div>
                   
                   <div class="mb-2">
-                    <h4 class="font-medium text-gray-700">Status Kapal:</h4>
+                    <h4 class="font-medium text-txt-black-700">Status Kapal:</h4>
                     <rs-badge
                       :variant="rovaForm.statusKapal === 'Operational' ? 'success' : 'warning'"
                     >
@@ -2766,20 +2766,20 @@
                 
                 <div class="grid grid-cols-2 gap-4">
                   <div class="mb-2">
-                    <h4 class="font-medium text-gray-700">Tarikh Mula:</h4>
+                    <h4 class="font-medium text-txt-black-700">Tarikh Mula:</h4>
                     <p>{{ rovaForm.tarikhMula }}</p>
                   </div>
                   
                   <div class="mb-2">
-                    <h4 class="font-medium text-gray-700">Tarikh Tamat:</h4>
+                    <h4 class="font-medium text-txt-black-700">Tarikh Tamat:</h4>
                     <p>{{ rovaForm.tarikhTamat }}</p>
                   </div>
                 </div>
                 
                 <div class="mb-2">
-                  <h4 class="font-medium text-gray-700">Peratus Ketersediaan:</h4>
+                  <h4 class="font-medium text-txt-black-700">Peratus Ketersediaan:</h4>
                   <div class="flex items-center mt-1">
-                    <div class="w-full bg-gray-200 rounded-full h-2.5 mr-2">
+                    <div class="w-full bg-bg-black-200 rounded-full h-2.5 mr-2">
                       <div class="bg-primary-600 h-2.5 rounded-full" :style="{ width: rovaForm.peratus + '%' }"></div>
                     </div>
                     <span>{{ rovaForm.peratus }}%</span>
@@ -2787,7 +2787,7 @@
                 </div>
                 
                 <div class="mb-2">
-                  <h4 class="font-medium text-gray-700">Catatan:</h4>
+                  <h4 class="font-medium text-txt-black-700">Catatan:</h4>
                   <p>{{ rovaForm.catatan }}</p>
                 </div>
               </div>
@@ -2928,53 +2928,53 @@
               <!-- View Mode -->
               <div v-if="isViewingRupacara" class="space-y-6">
                 <div class="mb-4">
-                  <h4 class="font-medium text-gray-700">Tarikh Kemaskini:</h4>
+                  <h4 class="font-medium text-txt-black-700">Tarikh Kemaskini:</h4>
                   <p>{{ rupacaraForm.tarikhKemaskini }}</p>
                 </div>
                 
                 <div class="mb-4">
-                  <h4 class="font-medium text-gray-700">Penerangan:</h4>
+                  <h4 class="font-medium text-txt-black-700">Penerangan:</h4>
                   <p>{{ rupacaraForm.penerangan }}</p>
                 </div>
                 
                 <div class="grid grid-cols-2 gap-4">
                   <div v-if="rupacaraForm.portView" class="mb-4 flex flex-col items-center">
-                    <h4 class="font-medium text-gray-700">Port View:</h4>
+                    <h4 class="font-medium text-txt-black-700">Port View:</h4>
                     <div class="mt-2 flex justify-center w-full">
                       <img src="@/assets/img/vessels/port_view.png" alt="Port View" class="max-h-40 rounded" />
                     </div>
                   </div>
                   
                   <div v-if="rupacaraForm.starboardView" class="mb-4 flex flex-col items-center">
-                    <h4 class="font-medium text-gray-700">Starboard View:</h4>
+                    <h4 class="font-medium text-txt-black-700">Starboard View:</h4>
                     <div class="mt-2 flex justify-center w-full">
                       <img src="@/assets/img/vessels/starboardView.png" alt="Starboard View" class="max-h-40 rounded" />
                     </div>
                   </div>
                   
                   <div v-if="rupacaraForm.forwardView" class="mb-4 flex flex-col items-center">
-                    <h4 class="font-medium text-gray-700">Forward View:</h4>
+                    <h4 class="font-medium text-txt-black-700">Forward View:</h4>
                     <div class="mt-2 flex justify-center w-full">
                       <img src="@/assets/img/vessels/forwardView.png" alt="Forward View" class="max-h-40 rounded" />
                     </div>
                   </div>
                   
                   <div v-if="rupacaraForm.afterView" class="mb-4 flex flex-col items-center">
-                    <h4 class="font-medium text-gray-700">After View:</h4>
+                    <h4 class="font-medium text-txt-black-700">After View:</h4>
                     <div class="mt-2 flex justify-center w-full">
                       <img src="@/assets/img/vessels/afterView.png" alt="After View" class="max-h-40 rounded" />
                     </div>
                   </div>
                   
                   <div v-if="rupacaraForm.engineRoom" class="mb-4 flex flex-col items-center">
-                    <h4 class="font-medium text-gray-700">Engine Room:</h4>
+                    <h4 class="font-medium text-txt-black-700">Engine Room:</h4>
                     <div class="mt-2 flex justify-center w-full">
                       <img src="@/assets/img/vessels/engineRoom.png" alt="Engine Room" class="max-h-40 rounded" />
                     </div>
                   </div>
                   
                   <div v-if="rupacaraForm.closedBridge" class="mb-4 flex flex-col items-center">
-                    <h4 class="font-medium text-gray-700">Closed Bridge:</h4>
+                    <h4 class="font-medium text-txt-black-700">Closed Bridge:</h4>
                     <div class="mt-2 flex justify-center w-full">
                       <img src="@/assets/img/vessels/closedBridge.png" alt="Closed Bridge" class="max-h-40 rounded" />
                     </div>
@@ -3140,12 +3140,12 @@
               <div v-if="isViewingEquipment" class="space-y-4">
                 <div class="grid grid-cols-2 gap-4">
                   <div class="mb-2">
-                    <h4 class="font-medium text-gray-700">No. Aset:</h4>
+                    <h4 class="font-medium text-txt-black-700">No. Aset:</h4>
                     <p>{{ equipmentForm.noAset }}</p>
                   </div>
                   
                   <div class="mb-2">
-                    <h4 class="font-medium text-gray-700">Status:</h4>
+                    <h4 class="font-medium text-txt-black-700">Status:</h4>
                     <rs-badge
                       :variant="
                         equipmentForm.status === 'Beroperasi' ? 'success' : 
@@ -3158,36 +3158,36 @@
                 </div>
                 
                 <div class="mb-2">
-                  <h4 class="font-medium text-gray-700">nama Aset:</h4>
+                  <h4 class="font-medium text-txt-black-700">nama Aset:</h4>
                   <p>{{ equipmentForm.nama }}</p>
                 </div>
                 
                 <div class="grid grid-cols-2 gap-4">
                   <div class="mb-2">
-                    <h4 class="font-medium text-gray-700">Kategori:</h4>
+                    <h4 class="font-medium text-txt-black-700">Kategori:</h4>
                     <p>{{ equipmentForm.kategori }}</p>
                   </div>
                   
                   <div class="mb-2">
-                    <h4 class="font-medium text-gray-700">Pengeluar:</h4>
+                    <h4 class="font-medium text-txt-black-700">Pengeluar:</h4>
                     <p>{{ equipmentForm.pengeluaran }}</p>
                   </div>
                 </div>
                 
                 <div class="grid grid-cols-2 gap-4">
                   <div class="mb-2">
-                    <h4 class="font-medium text-gray-700">Model:</h4>
+                    <h4 class="font-medium text-txt-black-700">Model:</h4>
                     <p>{{ equipmentForm.model }}</p>
                   </div>
                   
                   <div class="mb-2">
-                    <h4 class="font-medium text-gray-700">No. Siri:</h4>
+                    <h4 class="font-medium text-txt-black-700">No. Siri:</h4>
                     <p>{{ equipmentForm.noSiri }}</p>
                   </div>
                 </div>
                 
                 <div class="mb-2">
-                  <h4 class="font-medium text-gray-700">Tarikh Pemasangan:</h4>
+                  <h4 class="font-medium text-txt-black-700">Tarikh Pemasangan:</h4>
                   <p>{{ equipmentForm.tarikhPemasangan }}</p>
                 </div>
               </div>
@@ -3367,12 +3367,12 @@
               <div v-if="isViewingStock" class="space-y-4">
                 <div class="grid grid-cols-2 gap-4">
                   <div class="mb-2">
-                    <h4 class="font-medium text-gray-700">No. Stok:</h4>
+                    <h4 class="font-medium text-txt-black-700">No. Stok:</h4>
                     <p>{{ stockForm.noAset }}</p>
                   </div>
                   
                   <div class="mb-2">
-                    <h4 class="font-medium text-gray-700">Status:</h4>
+                    <h4 class="font-medium text-txt-black-700">Status:</h4>
                     <rs-badge
                       :variant="stockForm.status === 'Mencukupi' ? 'success' : 'danger'"
                     >
@@ -3382,36 +3382,36 @@
                 </div>
                 
                 <div class="mb-2">
-                  <h4 class="font-medium text-gray-700">nama Item:</h4>
+                  <h4 class="font-medium text-txt-black-700">nama Item:</h4>
                   <p>{{ stockForm.nama }}</p>
                 </div>
                 
                 <div class="grid grid-cols-2 gap-4">
                   <div class="mb-2">
-                    <h4 class="font-medium text-gray-700">Kategori:</h4>
+                    <h4 class="font-medium text-txt-black-700">Kategori:</h4>
                     <p>{{ stockForm.kategori }}</p>
                   </div>
                   
                   <div class="mb-2">
-                    <h4 class="font-medium text-gray-700">Lokasi:</h4>
+                    <h4 class="font-medium text-txt-black-700">Lokasi:</h4>
                     <p>{{ stockForm.lokasi }}</p>
                   </div>
                 </div>
                 
                 <div class="grid grid-cols-2 gap-4">
                   <div class="mb-2">
-                    <h4 class="font-medium text-gray-700">Kuantiti:</h4>
+                    <h4 class="font-medium text-txt-black-700">Kuantiti:</h4>
                     <p>{{ stockForm.kuantiti }} {{ stockForm.unit }}</p>
                   </div>
                   
                   <div class="mb-2">
-                    <h4 class="font-medium text-gray-700">Stok Minimum:</h4>
+                    <h4 class="font-medium text-txt-black-700">Stok Minimum:</h4>
                     <p>{{ stockForm.jumlah }} {{ stockForm.unit }}</p>
                   </div>
                 </div>
                 
                 <div class="mb-2">
-                  <h4 class="font-medium text-gray-700">Tarikh Kemaskini:</h4>
+                  <h4 class="font-medium text-txt-black-700">Tarikh Kemaskini:</h4>
                   <p>{{ stockForm.tarikhTerakhirKemaskini }}</p>
                 </div>
               </div>
@@ -3559,7 +3559,7 @@
                     :key="yearOffset"
                     class="border-b last:border-b-0 p-4"
                     :class="{ 
-                      'bg-gray-50': startYear + yearOffset - 1 === currentYear
+                      'bg-bg-washed': startYear + yearOffset - 1 === currentYear
                     }"
                   >
                     <div class="flex items-center justify-between">
@@ -3599,7 +3599,7 @@
               <!-- View Mode -->
               <div v-if="isViewingMaintenance" class="space-y-4">
                 <div class="mb-2">
-                  <h4 class="font-medium text-gray-700">Jenis:</h4>
+                  <h4 class="font-medium text-txt-black-700">Jenis:</h4>
                   <rs-badge
                     :variant="
                       maintenanceForm.type === 'AD' ? 'info' : 
@@ -3611,17 +3611,17 @@
                 </div>
                 
                 <div class="mb-2">
-                  <h4 class="font-medium text-gray-700">Tahun:</h4>
+                  <h4 class="font-medium text-txt-black-700">Tahun:</h4>
                   <p>{{ maintenanceForm.year }}</p>
                 </div>
                 
                 <div class="mb-2">
-                  <h4 class="font-medium text-gray-700">Lokasi:</h4>
+                  <h4 class="font-medium text-txt-black-700">Lokasi:</h4>
                   <p>{{ maintenanceForm.lokasi }}</p>
                 </div>
                 
                 <div class="mb-2">
-                  <h4 class="font-medium text-gray-700">Penerangan:</h4>
+                  <h4 class="font-medium text-txt-black-700">Penerangan:</h4>
                   <p>{{ maintenanceForm.description }}</p>
                 </div>
               </div>
@@ -3693,52 +3693,52 @@
           <div class="space-y-6">
             <!-- Statistics Cards Row -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              <div class="bg-white rounded-lg shadow p-4 hover:shadow-md transition-shadow">
+              <div class="bg-bg-white rounded-lg shadow p-4 hover:shadow-md transition-shadow">
                 <div class="text-center">
                   <h3 class="font-bold">JUMLAH KAD KERJA</h3>
-                  <p class="text-3xl font-bold text-primary-600 mt-2">24</p>
+                  <p class="text-3xl font-bold text-txt-primary mt-2">24</p>
                 </div>
               </div>
               
-              <div class="bg-white rounded-lg shadow p-4 hover:shadow-md transition-shadow">
+              <div class="bg-bg-white rounded-lg shadow p-4 hover:shadow-md transition-shadow">
                 <div class="text-center">
                   <h3 class="font-bold">JUMLAH BAJET</h3>
                   <p class="text-3xl font-bold text-success-600 mt-2">RM 125,000</p>
                 </div>
               </div>
               
-              <div class="bg-white rounded-lg shadow p-4 hover:shadow-md transition-shadow">
+              <div class="bg-bg-white rounded-lg shadow p-4 hover:shadow-md transition-shadow">
                 <div class="text-center">
                   <h3 class="font-bold">KAD KERJA SELESAI</h3>
-                  <p class="text-3xl font-bold text-gray-600 mt-2">15</p>
+                  <p class="text-3xl font-bold text-txt-black-500 mt-2">15</p>
                 </div>
               </div>
               
-              <div class="bg-white rounded-lg shadow p-4 hover:shadow-md transition-shadow">
+              <div class="bg-bg-white rounded-lg shadow p-4 hover:shadow-md transition-shadow">
                 <div class="text-center">
                   <h3 class="font-bold">JUMLAH KAD KERJA TERTUNGGAK</h3>
-                  <p class="text-3xl font-bold text-warning-700 mt-2">9</p>
+                  <p class="text-3xl font-bold text-txt-warning mt-2">9</p>
                 </div>
               </div>
             </div>
             
             <!-- Approval Status Cards Row -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              <div class="bg-white rounded-lg shadow p-4 hover:shadow-md transition-shadow">
+              <div class="bg-bg-white rounded-lg shadow p-4 hover:shadow-md transition-shadow">
                 <div class="text-center">
                   <h3 class="font-bold">MENUNGGU KELULUSAN DARI MN/ZM</h3>
                   <p class="text-3xl font-bold text-warning-600 mt-2">3</p>
                 </div>
               </div>
               
-              <div class="bg-white rounded-lg shadow p-4 hover:shadow-md transition-shadow">
+              <div class="bg-bg-white rounded-lg shadow p-4 hover:shadow-md transition-shadow">
                 <div class="text-center">
                   <h3 class="font-bold">MENUNGGU KELULUSAN DARI KJPKP</h3>
                   <p class="text-3xl font-bold text-warning-600 mt-2">4</p>
                 </div>
               </div>
               
-              <div class="bg-white rounded-lg shadow p-4 hover:shadow-md transition-shadow">
+              <div class="bg-bg-white rounded-lg shadow p-4 hover:shadow-md transition-shadow">
                 <div class="text-center">
                   <h3 class="font-bold">MENUNGGU PEMBAYARAN</h3>
                   <p class="text-3xl font-bold text-danger-600 mt-2">2</p>
@@ -3851,28 +3851,28 @@
               <div v-if="isViewingFloatingEquipment" class="space-y-4">
                 <div class="grid grid-cols-2 gap-4">
                     <div>
-                        <h4 class="font-medium text-gray-700">nama Peralatan:</h4>
+                        <h4 class="font-medium text-txt-black-700">nama Peralatan:</h4>
                         <p>{{ floatingEquipmentForm.nama }}</p>
                     </div>
                     <div>
-                        <h4 class="font-medium text-gray-700">No Siri:</h4>
+                        <h4 class="font-medium text-txt-black-700">No Siri:</h4>
                         <p>{{ floatingEquipmentForm.serialNo }}</p>
                     </div>
                 </div>
                 <div class="grid grid-cols-2 gap-4">
                     <div>
-                        <h4 class="font-medium text-gray-700">Lokasi:</h4>
+                        <h4 class="font-medium text-txt-black-700">Lokasi:</h4>
                         <p>{{ floatingEquipmentForm.lokasi }}</p>
                     </div>
                     <div>
-                        <h4 class="font-medium text-gray-700">Status:</h4>
+                        <h4 class="font-medium text-txt-black-700">Status:</h4>
                         <rs-badge :variant="floatingEquipmentForm.status === 'Baik' ? 'success' : 'danger'">
                         {{ floatingEquipmentForm.status }}
                         </rs-badge>
                     </div>
                 </div>
                 <div>
-                    <h4 class="font-medium text-gray-700">Tarikh Pemeriksaan Terakhir:</h4>
+                    <h4 class="font-medium text-txt-black-700">Tarikh Pemeriksaan Terakhir:</h4>
                     <p>{{ floatingEquipmentForm.tarikhTerakhirPemeriksaan }}</p>
                 </div>
               </div>
@@ -3956,28 +3956,28 @@
             
             <!-- HSE Statistics Cards -->
             <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
-              <rs-card class="bg-primary-50">
+              <rs-card class="bg-bg-primary-50">
                 <div class="text-center">
-                  <h3 class="text-2xl font-bold text-primary-600">{{ hseData.length }}</h3>
-                  <p class="text-sm text-gray-600">Jumlah Insiden</p>
+                  <h3 class="text-2xl font-bold text-txt-primary">{{ hseData.length }}</h3>
+                  <p class="text-sm text-txt-black-500">Jumlah Insiden</p>
                 </div>
               </rs-card>
-              <rs-card class="bg-success-50">
+              <rs-card class="bg-bg-success-50">
                 <div class="text-center">
                   <h3 class="text-2xl font-bold text-success-600">RM {{ hseData.reduce((sum, item) => sum + item.kosPembaikan, 0).toLocaleString() }}</h3>
-                  <p class="text-sm text-gray-600">Jumlah Kos Pembaikan</p>
+                  <p class="text-sm text-txt-black-500">Jumlah Kos Pembaikan</p>
                 </div>
               </rs-card>
-              <rs-card class="bg-warning-50">
+              <rs-card class="bg-bg-warning-50">
                 <div class="text-center">
                   <h3 class="text-2xl font-bold text-warning-600">{{ hseData.filter(item => item.status === 'Dalam Proses').length }}</h3>
-                  <p class="text-sm text-gray-600">Insiden Dalam Proses</p>
+                  <p class="text-sm text-txt-black-500">Insiden Dalam Proses</p>
                 </div>
               </rs-card>
-              <rs-card class="bg-gray-100">
+              <rs-card class="bg-bg-washed">
                 <div class="text-center">
-                  <h3 class="text-2xl font-bold text-gray-700">{{ hseData.filter(item => item.status === 'Selesai').length }}</h3>
-                  <p class="text-sm text-gray-600">Insiden Selesai</p>
+                  <h3 class="text-2xl font-bold text-txt-black-700">{{ hseData.filter(item => item.status === 'Selesai').length }}</h3>
+                  <p class="text-sm text-txt-black-500">Insiden Selesai</p>
                 </div>
               </rs-card>
             </div>
@@ -4035,48 +4035,48 @@
               <div v-if="isViewingHse" class="space-y-4">
                 <div class="grid grid-cols-2 gap-4">
                   <div>
-                    <h4 class="font-medium text-gray-700">Tarikh Insiden:</h4>
+                    <h4 class="font-medium text-txt-black-700">Tarikh Insiden:</h4>
                     <p>{{ hseForm.tarikhKejadian }}</p>
                   </div>
                   <div>
-                    <h4 class="font-medium text-gray-700">Jenis Insiden:</h4>
+                    <h4 class="font-medium text-txt-black-700">Jenis Insiden:</h4>
                     <p>{{ hseForm.jenisKejadian }}</p>
                   </div>
                 </div>
                 <div>
-                  <h4 class="font-medium text-gray-700">nama Aset:</h4>
+                  <h4 class="font-medium text-txt-black-700">nama Aset:</h4>
                   <p>{{ hseForm.namaAset }}</p>
                 </div>
                 <div>
-                  <h4 class="font-medium text-gray-700">Penerangan Insiden:</h4>
+                  <h4 class="font-medium text-txt-black-700">Penerangan Insiden:</h4>
                   <p>{{ hseForm.penerangan }}</p>
                 </div>
                 <div class="grid grid-cols-2 gap-4">
                   <div>
-                    <h4 class="font-medium text-gray-700">Tahap Kerosakan:</h4>
+                    <h4 class="font-medium text-txt-black-700">Tahap Kerosakan:</h4>
                     <p>{{ hseForm.statusKerosakan }}</p>
                   </div>
                   <div>
-                    <h4 class="font-medium text-gray-700">Kos Pembaikan:</h4>
+                    <h4 class="font-medium text-txt-black-700">Kos Pembaikan:</h4>
                     <p>RM {{ hseForm.kosPembaikan.toLocaleString() }}</p>
                   </div>
                 </div>
                 <div class="grid grid-cols-2 gap-4">
                   <div>
-                    <h4 class="font-medium text-gray-700">Tempoh Pembaikan:</h4>
+                    <h4 class="font-medium text-txt-black-700">Tempoh Pembaikan:</h4>
                     <p>{{ hseForm.tempohPembaikan }}</p>
                   </div>
                   <div>
-                    <h4 class="font-medium text-gray-700">Pihak Bertanggungjawab:</h4>
+                    <h4 class="font-medium text-txt-black-700">Pihak Bertanggungjawab:</h4>
                     <p>{{ hseForm.jabatan }}</p>
                   </div>
                 </div>
                 <div>
-                  <h4 class="font-medium text-gray-700">Tindakan Pencegahan:</h4>
+                  <h4 class="font-medium text-txt-black-700">Tindakan Pencegahan:</h4>
                   <p>{{ hseForm.langkahPembaikan  }}</p>
                 </div>
                 <div>
-                  <h4 class="font-medium text-gray-700">Status:</h4>
+                  <h4 class="font-medium text-txt-black-700">Status:</h4>
                   <rs-badge :variant="hseForm.status === 'Selesai' ? 'success' : 'warning'">
                     {{ hseForm.status }}
                   </rs-badge>
@@ -4249,53 +4249,53 @@
               <!-- View Mode -->
               <div v-if="isViewingRupacara" class="space-y-6">
                 <div class="mb-4">
-                  <h4 class="font-medium text-gray-700">Tarikh Kemaskini:</h4>
+                  <h4 class="font-medium text-txt-black-700">Tarikh Kemaskini:</h4>
                   <p>{{ rupacaraForm.tarikhKemaskini }}</p>
                 </div>
                 
                 <div class="mb-4">
-                  <h4 class="font-medium text-gray-700">Penerangan:</h4>
+                  <h4 class="font-medium text-txt-black-700">Penerangan:</h4>
                   <p>{{ rupacaraForm.penerangan }}</p>
                 </div>
                 
                 <div class="grid grid-cols-2 gap-4">
                   <div v-if="rupacaraForm.portView" class="mb-4 flex flex-col items-center">
-                    <h4 class="font-medium text-gray-700">Port View:</h4>
+                    <h4 class="font-medium text-txt-black-700">Port View:</h4>
                     <div class="mt-2 flex justify-center w-full">
                       <img src="@/assets/img/vessels/port_view.png" alt="Port View" class="max-h-40 rounded" />
                     </div>
                   </div>
                   
                   <div v-if="rupacaraForm.starboardView" class="mb-4 flex flex-col items-center">
-                    <h4 class="font-medium text-gray-700">Starboard View:</h4>
+                    <h4 class="font-medium text-txt-black-700">Starboard View:</h4>
                     <div class="mt-2 flex justify-center w-full">
                       <img src="@/assets/img/vessels/starboardView.png" alt="Starboard View" class="max-h-40 rounded" />
                     </div>
                   </div>
                   
                   <div v-if="rupacaraForm.forwardView" class="mb-4 flex flex-col items-center">
-                    <h4 class="font-medium text-gray-700">Forward View:</h4>
+                    <h4 class="font-medium text-txt-black-700">Forward View:</h4>
                     <div class="mt-2 flex justify-center w-full">
                       <img src="@/assets/img/vessels/forwardView.png" alt="Forward View" class="max-h-40 rounded" />
                     </div>
                   </div>
                   
                   <div v-if="rupacaraForm.afterView" class="mb-4 flex flex-col items-center">
-                    <h4 class="font-medium text-gray-700">After View:</h4>
+                    <h4 class="font-medium text-txt-black-700">After View:</h4>
                     <div class="mt-2 flex justify-center w-full">
                       <img src="@/assets/img/vessels/afterView.png" alt="After View" class="max-h-40 rounded" />
                     </div>
                   </div>
                   
                   <div v-if="rupacaraForm.engineRoom" class="mb-4 flex flex-col items-center">
-                    <h4 class="font-medium text-gray-700">Engine Room:</h4>
+                    <h4 class="font-medium text-txt-black-700">Engine Room:</h4>
                     <div class="mt-2 flex justify-center w-full">
                       <img src="@/assets/img/vessels/engineRoom.png" alt="Engine Room" class="max-h-40 rounded" />
                     </div>
                   </div>
                   
                   <div v-if="rupacaraForm.closedBridge" class="mb-4 flex flex-col items-center">
-                    <h4 class="font-medium text-gray-700">Closed Bridge:</h4>
+                    <h4 class="font-medium text-txt-black-700">Closed Bridge:</h4>
                     <div class="mt-2 flex justify-center w-full">
                       <img src="@/assets/img/vessels/closedBridge.png" alt="Closed Bridge" class="max-h-40 rounded" />
                     </div>
@@ -4406,22 +4406,22 @@
             
             <!-- Shipyard Reports Statistics Cards -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-              <rs-card class="bg-primary-50">
+              <rs-card class="bg-bg-primary-50">
                 <div class="text-center">
-                  <h3 class="text-2xl font-bold text-primary-600">{{ shipyardReportsStatistics.totalReports }}</h3>
-                  <p class="text-sm text-gray-600">Jumlah Laporan</p>
+                  <h3 class="text-2xl font-bold text-txt-primary">{{ shipyardReportsStatistics.totalReports }}</h3>
+                  <p class="text-sm text-txt-black-500">Jumlah Laporan</p>
                 </div>
               </rs-card>
-              <rs-card class="bg-success-50">
+              <rs-card class="bg-bg-success-50">
                 <div class="text-center">
                   <h3 class="text-2xl font-bold text-success-600">RM {{ shipyardReportsStatistics.kos.toLocaleString() }}</h3>
-                  <p class="text-sm text-gray-600">Jumlah Kos</p>
+                  <p class="text-sm text-txt-black-500">Jumlah Kos</p>
                 </div>
               </rs-card>
-              <rs-card class="bg-warning-50">
+              <rs-card class="bg-bg-warning-50">
                 <div class="text-center">
                   <h3 class="text-2xl font-bold text-warning-600">{{ shipyardReportsStatistics.averageQualityRating.toFixed(1) }}</h3>
-                  <p class="text-sm text-gray-600">Purata Penilaian</p>
+                  <p class="text-sm text-txt-black-500">Purata Penilaian</p>
                 </div>
               </rs-card>
             </div>
@@ -4461,7 +4461,7 @@
                        :class="star <= row.value.skor ? 'fas fa-star' : 'far fa-star'"
                        class="text-sm"></i>
                   </div>
-                  <span class="ml-2 text-sm text-gray-600">({{ row.value.skor.toFixed(1) }})</span>
+                  <span class="ml-2 text-sm text-txt-black-500">({{ row.value.skor.toFixed(1) }})</span>
                 </div>
               </template>
               
@@ -4487,30 +4487,30 @@
               <!-- View Mode -->
               <div v-if="isViewingShipyardReport" class="space-y-6">
                 <!-- Report Header -->
-                <div class="bg-gray-50 p-4 rounded-lg">
+                <div class="bg-bg-washed p-4 rounded-lg">
                   <div class="grid grid-cols-2 gap-4">
                     <div>
-                      <h4 class="font-medium text-gray-700">Minggu:</h4>
+                      <h4 class="font-medium text-txt-black-700">Minggu:</h4>
                       <p class="text-lg font-semibold">{{ shipyardReportForm.minggu }}</p>
                     </div>
                     <div>
-                      <h4 class="font-medium text-gray-700">Tarikh Laporan:</h4>
+                      <h4 class="font-medium text-txt-black-700">Tarikh Laporan:</h4>
                       <p>{{ shipyardReportForm.tarikhLapor }}</p>
                     </div>
                     <div>
-                      <h4 class="font-medium text-gray-700">No. Sebut Harga:</h4>
+                      <h4 class="font-medium text-txt-black-700">No. Sebut Harga:</h4>
                       <p class="font-mono">{{ shipyardReportForm.noSebutHarga }}</p>
                     </div>
                     <div>
-                      <h4 class="font-medium text-gray-700">nama Limbungan:</h4>
+                      <h4 class="font-medium text-txt-black-700">nama Limbungan:</h4>
                       <p>{{ shipyardReportForm.namaLimbungan }}</p>
                     </div>
                   </div>
                 </div>
 
                 <!-- Quality Rating -->
-                <div class="bg-warning-50 p-4 rounded-lg">
-                  <h4 class="font-medium text-gray-700 mb-2">Penilaian Kualiti Keseluruhan:</h4>
+                <div class="bg-bg-warning-50 p-4 rounded-lg">
+                  <h4 class="font-medium text-txt-black-700 mb-2">Penilaian Kualiti Keseluruhan:</h4>
                   <div class="flex items-center">
                     <div class="flex text-warning-400">
                       <i v-for="star in 5" :key="star" 
@@ -4524,16 +4524,16 @@
                
 
                 <!-- Summary -->
-                <div class="bg-gray-50 p-4 rounded-lg">
+                <div class="bg-bg-washed p-4 rounded-lg">
                   <div class="grid grid-cols-2 gap-4">
                     <div>
-                      <h4 class="font-medium text-gray-700">Jumlah Kos:</h4>
+                      <h4 class="font-medium text-txt-black-700">Jumlah Kos:</h4>
                       <p class="text-xl font-bold text-success-600">RM {{ shipyardReportForm.kos.toLocaleString() }}</p>
                     </div>
                     <div>
-                      <h4 class="font-medium text-gray-700">Penyelia:</h4>
+                      <h4 class="font-medium text-txt-black-700">Penyelia:</h4>
                       <p>{{ shipyardReportForm.namaPenyelia }}</p>
-                      <p class="text-sm text-gray-600">{{ shipyardReportForm.noTelefonPenyelia }}</p>
+                      <p class="text-sm text-txt-black-500">{{ shipyardReportForm.noTelefonPenyelia }}</p>
                     </div>
                   </div>
                 </div>
@@ -4701,22 +4701,22 @@
               <!-- View Mode -->
               <div v-if="isViewingCannaidizeAsset" class="space-y-6">
                 <!-- Asset Details -->
-                <div class="bg-gray-50 p-4 rounded-lg">
+                <div class="bg-bg-washed p-4 rounded-lg">
                   <div class="grid grid-cols-2 gap-4">
                     <div>
-                      <h4 class="font-medium text-gray-700">nama Asset:</h4>
+                      <h4 class="font-medium text-txt-black-700">nama Asset:</h4>
                       <p class="text-lg font-semibold">{{ cannaidizeAssetForm.nama }}</p>
                     </div>
                     <div>
-                      <h4 class="font-medium text-gray-700">No. Siri:</h4>
+                      <h4 class="font-medium text-txt-black-700">No. Siri:</h4>
                       <p class="font-mono">{{ cannaidizeAssetForm.serialNo }}</p>
                     </div>
                     <div>
-                      <h4 class="font-medium text-gray-700">Lokasi:</h4>
+                      <h4 class="font-medium text-txt-black-700">Lokasi:</h4>
                       <p>{{ cannaidizeAssetForm.lokasi }}</p>
                     </div>
                     <div>
-                      <h4 class="font-medium text-gray-700">Status:</h4>
+                      <h4 class="font-medium text-txt-black-700">Status:</h4>
                       <rs-badge
                         :variant="cannaidizeAssetForm.status === 'Tersedia' ? 'success' : 'warning'"
                       >
@@ -4724,7 +4724,7 @@
                       </rs-badge>
                     </div>
                     <div>
-                      <h4 class="font-medium text-gray-700">Keadaan:</h4>
+                      <h4 class="font-medium text-txt-black-700">Keadaan:</h4>
                       <rs-badge
                         :variant="cannaidizeAssetForm.condition === 'Baik' ? 'success' : cannaidizeAssetForm.condition === 'Sederhana' ? 'warning' : 'danger'"
                       >
@@ -4732,23 +4732,23 @@
                       </rs-badge>
                     </div>
                     <div>
-                      <h4 class="font-medium text-gray-700">Kapal Sumber:</h4>
+                      <h4 class="font-medium text-txt-black-700">Kapal Sumber:</h4>
                       <p>{{ cannaidizeAssetForm.sourceVessel }}</p>
                     </div>
                     <div>
-                      <h4 class="font-medium text-gray-700">Tarikh Pemeriksaan Terakhir:</h4>
+                      <h4 class="font-medium text-txt-black-700">Tarikh Pemeriksaan Terakhir:</h4>
                       <p>{{ cannaidizeAssetForm.tarikhTerakhirPemeriksaan }}</p>
                     </div>
                     <div>
-                      <h4 class="font-medium text-gray-700">Tarikh Cannaidize:</h4>
+                      <h4 class="font-medium text-txt-black-700">Tarikh Cannaidize:</h4>
                       <p>{{ cannaidizeAssetForm.cannaidizeDate }}</p>
                     </div>
                   </div>
                 </div>
 
                 <!-- Remarks -->
-                <div class="bg-white p-4 rounded-lg border">
-                  <h4 class="font-medium text-gray-700 mb-2">Catatan:</h4>
+                <div class="bg-bg-white p-4 rounded-lg border">
+                  <h4 class="font-medium text-txt-black-700 mb-2">Catatan:</h4>
                   <p>{{ cannaidizeAssetForm.remarks }}</p>
                 </div>
               </div>
@@ -4854,7 +4854,7 @@
           <FormKit type="form" :value="newJobCardForm" @submit="submitNewJobCard">
             <!-- Report Type Section -->
             <div class="mb-4">
-              <label class="block text-sm font-medium text-gray-700 mb-2">Jenis Laporan</label>
+              <label class="block text-sm font-medium text-txt-black-700 mb-2">Jenis Laporan</label>
               <div class="flex items-center space-x-4">
                 <FormKit
                   type="radio"
@@ -4872,8 +4872,8 @@
             </div>
             
             <!-- Basic Information Section -->
-            <div class="bg-gray-50 p-4 rounded-lg mb-4">
-              <h4 class="font-medium text-gray-700 mb-3">Maklumat Asas</h4>
+            <div class="bg-bg-washed p-4 rounded-lg mb-4">
+              <h4 class="font-medium text-txt-black-700 mb-3">Maklumat Asas</h4>
               
               <div class="grid grid-cols-2 gap-4 mb-4">
                 <FormKit
@@ -4912,8 +4912,8 @@
             </div>
             
             <!-- Technical Information Section -->
-            <div class="bg-gray-50 p-4 rounded-lg mb-4">
-              <h4 class="font-medium text-gray-700 mb-3">Maklumat Teknikal</h4>
+            <div class="bg-bg-washed p-4 rounded-lg mb-4">
+              <h4 class="font-medium text-txt-black-700 mb-3">Maklumat Teknikal</h4>
               
               <div class="grid grid-cols-2 gap-4 mb-4">
                 <FormKit
@@ -4950,8 +4950,8 @@
             </div>
             
             <!-- Cost & Details Section -->
-            <div class="bg-gray-50 p-4 rounded-lg mb-4">
-              <h4 class="font-medium text-gray-700 mb-3">Kos & Keterangan</h4>
+            <div class="bg-bg-washed p-4 rounded-lg mb-4">
+              <h4 class="font-medium text-txt-black-700 mb-3">Kos & Keterangan</h4>
               
               <FormKit
                 type="text"
@@ -4972,8 +4972,8 @@
             </div>
             
             <!-- Attachment Section -->
-            <div class="bg-gray-50 p-4 rounded-lg">
-              <h4 class="font-medium text-gray-700 mb-3">Lampiran</h4>
+            <div class="bg-bg-washed p-4 rounded-lg">
+              <h4 class="font-medium text-txt-black-700 mb-3">Lampiran</h4>
               
               <FormKit
                 type="file"
@@ -5010,21 +5010,21 @@
           </div>
           
           <!-- Report Type Section -->
-          <div class="border border-gray-800 mb-4">
+          <div class="border border-txt-black-900 mb-4">
             <table class="w-full">
-              <tr class="border-b border-gray-800">
-                <td class="p-2 border-r border-gray-800 font-medium w-1/5">JENIS LAPORAN:</td>
+              <tr class="border-b border-txt-black-900">
+                <td class="p-2 border-r border-txt-black-900 font-medium w-1/5">JENIS LAPORAN:</td>
                 <td class="p-2">
                   <div class="flex items-center space-x-4">
                     <div class="flex items-center space-x-2">
                       <span>KEROSAKAN</span>
-                      <div class="w-5 h-5 border border-gray-800 flex items-center justify-center">
+                      <div class="w-5 h-5 border border-txt-black-900 flex items-center justify-center">
                         <span class="text-lg" v-if="selectedJobCard.reportType === 'DEFECT'">✓</span>
                       </div>
                     </div>
                     <div class="flex items-center space-x-2">
                       <span>OSL</span>
-                      <div class="w-5 h-5 border border-gray-800 flex items-center justify-center">
+                      <div class="w-5 h-5 border border-txt-black-900 flex items-center justify-center">
                         <span class="text-lg" v-if="selectedJobCard.reportType === 'OSL'">✓</span>
                       </div>
                     </div>
@@ -5035,99 +5035,99 @@
           </div>
           
           <!-- Vessel Information Section -->
-          <div class="border border-gray-800 mb-4">
+          <div class="border border-txt-black-900 mb-4">
             <table class="w-full">
-              <tr class="border-b border-gray-800">
-                <td class="p-2 border-r border-gray-800 font-medium w-1/3">Kapal Maritim</td>
+              <tr class="border-b border-txt-black-900">
+                <td class="p-2 border-r border-txt-black-900 font-medium w-1/3">Kapal Maritim</td>
                 <td class="p-2">: {{ selectedJobCard['Pengguna Terakhir'] }}</td>
-                <td class="p-2 border-l border-gray-800 font-medium w-1/5">Jam Operasi</td>
+                <td class="p-2 border-l border-txt-black-900 font-medium w-1/5">Jam Operasi</td>
                 <td class="p-2">{{ selectedJobCard.runningHours || 'N/A' }}</td>
               </tr>
-              <tr class="border-b border-gray-800">
-                <td class="p-2 border-r border-gray-800 font-medium">Pangkalan Maritim</td>
+              <tr class="border-b border-txt-black-900">
+                <td class="p-2 border-r border-txt-black-900 font-medium">Pangkalan Maritim</td>
                 <td class="p-2">: {{ selectedJobCard.lokasi || 'PANGKALAN TLDM LUMUT' }}</td>
-                <td class="p-2 border-l border-gray-800 font-medium">Pengeluar / Model</td>
+                <td class="p-2 border-l border-txt-black-900 font-medium">Pengeluar / Model</td>
                 <td class="p-2">{{ selectedJobCard.pengeluaran || 'N/A' }}</td>
               </tr>
-              <tr class="border-b border-gray-800">
-                <td class="p-2 border-r border-gray-800 font-medium">Lokasi</td>
+              <tr class="border-b border-txt-black-900">
+                <td class="p-2 border-r border-txt-black-900 font-medium">Lokasi</td>
                 <td class="p-2">: {{ selectedJobCard.lokasi || 'PANGKALAN TLDM LUMUT' }}</td>
-                <td class="p-2 border-l border-gray-800 font-medium">No. Siri</td>
+                <td class="p-2 border-l border-txt-black-900 font-medium">No. Siri</td>
                 <td class="p-2">{{ selectedJobCard.serialNo || 'N/A' }}</td>
               </tr>
               <tr>
-                <td class="p-2 border-r border-gray-800 font-medium">Sistem Utama / Peralatan</td>
+                <td class="p-2 border-r border-txt-black-900 font-medium">Sistem Utama / Peralatan</td>
                 <td colspan="3" class="p-2">: {{ selectedJobCard['JENIS ASET'] }}</td>
               </tr>
             </table>
           </div>
           
           <!-- Description Section -->
-          <div class="border border-gray-800 mb-4">
+          <div class="border border-txt-black-900 mb-4">
             <table class="w-full">
               <tr>
-                <td class="p-2 border-r border-gray-800 font-medium w-1/3">Penerangan</td>
+                <td class="p-2 border-r border-txt-black-900 font-medium w-1/3">Penerangan</td>
                 <td class="p-2">: {{ selectedJobCard.remarks || 'Tiada penerangan terperinci.' }}</td>
               </tr>
             </table>
           </div>
           
           <!-- Details Section -->
-          <div class="border border-gray-800 mb-4">
+          <div class="border border-txt-black-900 mb-4">
             <table class="w-full">
-              <tr class="border-b border-gray-800">
-                <td class="p-2 border-r border-gray-800 font-medium w-1/3">Tarikh Rosak</td>
+              <tr class="border-b border-txt-black-900">
+                <td class="p-2 border-r border-txt-black-900 font-medium w-1/3">Tarikh Rosak</td>
                 <td class="p-2">: {{ selectedJobCard['TARIKH ROSAK'] }}</td>
               </tr>
-              <tr class="border-b border-gray-800">
-                <td class="p-2 border-r border-gray-800 font-medium">Pemohon</td>
+              <tr class="border-b border-txt-black-900">
+                <td class="p-2 border-r border-txt-black-900 font-medium">Pemohon</td>
                 <td class="p-2">: {{ selectedJobCard['PEMOHON'] }}</td>
               </tr>
               <tr>
-                <td class="p-2 border-r border-gray-800 font-medium">Anggaran Kos</td>
-                <td class="p-2">: <span class="font-medium text-primary-600">{{ selectedJobCard['AMOUN'] }}</span></td>
+                <td class="p-2 border-r border-txt-black-900 font-medium">Anggaran Kos</td>
+                <td class="p-2">: <span class="font-medium text-txt-primary">{{ selectedJobCard['AMOUN'] }}</span></td>
               </tr>
             </table>
           </div>
           
           <!-- Report By / Verified By Section -->
-          <div class="border border-gray-800 mb-4">
+          <div class="border border-txt-black-900 mb-4">
             <table class="w-full">
-              <tr class="border-b border-gray-800">
-                <td class="p-2 border-r border-gray-800 font-medium w-1/3">Dilaporkan Oleh</td>
+              <tr class="border-b border-txt-black-900">
+                <td class="p-2 border-r border-txt-black-900 font-medium w-1/3">Dilaporkan Oleh</td>
                 <td class="p-2">Disahkan Oleh:</td>
               </tr>
-              <tr class="border-b border-gray-800">
-                <td class="p-2 border-r border-gray-800 font-medium text-xs">(PEGAWAI TEKNIKAL)</td>
+              <tr class="border-b border-txt-black-900">
+                <td class="p-2 border-r border-txt-black-900 font-medium text-xs">(PEGAWAI TEKNIKAL)</td>
                 <td class="p-2 font-medium text-xs">(PEGAWAI KAPAL)</td>
               </tr>
-              <tr class="border-b border-gray-800">
-                <td class="p-2 border-r border-gray-800">Tandatangan: <span class="italic">[Signed]</span></td>
+              <tr class="border-b border-txt-black-900">
+                <td class="p-2 border-r border-txt-black-900">Tandatangan: <span class="italic">[Signed]</span></td>
                 <td class="p-2">Tandatangan: <span class="italic">[Signed]</span></td>
               </tr>
-              <tr class="border-b border-gray-800">
-                <td class="p-2 border-r border-gray-800">nama: {{ selectedJobCard['PEMOHON'] }}</td>
+              <tr class="border-b border-txt-black-900">
+                <td class="p-2 border-r border-txt-black-900">nama: {{ selectedJobCard['PEMOHON'] }}</td>
                 <td class="p-2">nama: _________________</td>
               </tr>
-              <tr class="border-b border-gray-800">
-                <td class="p-2 border-r border-gray-800">Jawatan: PEGAWAI TEKNIKAL</td>
+              <tr class="border-b border-txt-black-900">
+                <td class="p-2 border-r border-txt-black-900">Jawatan: PEGAWAI TEKNIKAL</td>
                 <td class="p-2">Jawatan: PEGAWAI KAPAL</td>
               </tr>
               <tr>
-                <td class="p-2 border-r border-gray-800">Tarikh: {{ selectedJobCard['TARIKH ROSAK'] }}</td>
+                <td class="p-2 border-r border-txt-black-900">Tarikh: {{ selectedJobCard['TARIKH ROSAK'] }}</td>
                 <td class="p-2">Tarikh: {{ selectedJobCard['TARIKH ROSAK'] }}</td>
               </tr>
             </table>
           </div>
           
           <!-- Status Section -->
-          <div class="border border-gray-800 mb-4">
+          <div class="border border-txt-black-900 mb-4">
             <table class="w-full">
-              <tr class="border-b border-gray-800 bg-gray-100">
+              <tr class="border-b border-txt-black-900 bg-bg-washed">
                 <td colspan="2" class="p-2 font-bold">STATUS SEMASA</td>
               </tr>
               <tr>
-                <td class="p-2 border-r border-gray-800 font-medium w-1/4">Status</td>
+                <td class="p-2 border-r border-txt-black-900 font-medium w-1/4">Status</td>
                 <td class="p-2">: 
                   <rs-badge
                     :variant="'info'"
@@ -5140,22 +5140,22 @@
           </div>
           
           <!-- Attachment Section -->
-          <div class="border border-gray-800 mb-4">
+          <div class="border border-txt-black-900 mb-4">
             <table class="w-full">
-              <tr class="border-b border-gray-800 bg-gray-100">
+              <tr class="border-b border-txt-black-900 bg-bg-washed">
                 <td colspan="2" class="p-2 font-bold">LAMPIRAN</td>
               </tr>
               <tr>
                 <td class="p-2">
-                  <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+                  <div class="flex items-center gap-3 p-3 bg-bg-washed rounded-lg">
                     <div class="bg-primary-100 p-2 rounded-lg">
-                      <i class="fas fa-file-pdf text-2xl text-primary-600"></i>
+                      <i class="fas fa-file-pdf text-2xl text-txt-primary"></i>
                     </div>
                     <div class="flex-grow">
                       <div class="flex items-center justify-between">
                         <div>
                           <p class="font-medium">Laporan Kerosakan.pdf</p>
-                          <p class="text-sm text-gray-500">2.5 MB</p>
+                          <p class="text-sm text-txt-black-500">2.5 MB</p>
                         </div>
                         <div>
                           <rs-button variant="primary" size="sm" class="px-3">

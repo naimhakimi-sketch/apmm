@@ -54,7 +54,6 @@ const computedtype = computed(() => {
 
 <template>
   <div>
-    <LayoutsBreadcrumb />
     <rs-card>
       <template #header> Default </template>
       <template #body>

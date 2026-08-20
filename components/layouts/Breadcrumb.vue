@@ -1,59 +1,57 @@
 <script setup>
-const route = useRoute();
-
-const breadcrumb = computed(() => {
-  const matched = route.matched;
-  const breadcrumb = matched.map((item) => {
-    return {
-      name: item.meta.title,
-      path: item.path,
-    };
-  });
-  return breadcrumb;
+// MYDS breadcrumb: compact chevron trail, muted ancestors, bold current page.
+const props = defineProps({
+  // Optional override. Defaults to the trail derived from the sidebar
+  // navigation tree for the current route.
+  items: {
+    type: Array,
+    default: null,
+  },
 });
 
-const title = computed(() => {
-  const matched = route.matched;
-  const title = matched[matched.length - 1].meta.title;
-  return title;
-});
+const { home, items: derived } = useAppBreadcrumb();
 
-async function navigateMenu(path) {
-  try {
-    await navigateTo(path);
-  } catch (e) {
-    return;
-  }
-}
+const trail = computed(() => props.items ?? derived.value);
 </script>
 
 <template>
-  <div
-    v-if="breadcrumb && title"
-    class="flex flex-col md:flex-row items-stretch justify-between pb-5"
-  >
-    <span class="text-xl font-semibold">{{ title }}</span>
-    <div
-      class="flex items-center text-sm"
-      v-if="breadcrumb && breadcrumb.length != 0"
-    >
-      <span
-        v-for="(item, index) in breadcrumb"
-        :key="index"
-        class="flex items-center text-primary"
+  <nav aria-label="Breadcrumb" class="flex">
+    <ol class="flex flex-wrap items-center gap-1.5 text-body-xs">
+      <li>
+        <NuxtLink
+          :to="home.path"
+          class="text-txt-black-500 hover:text-txt-black-900"
+        >
+          {{ home.label }}
+        </NuxtLink>
+      </li>
+
+      <li
+        v-for="(item, index) in trail"
+        :key="`${item.label}-${index}`"
+        class="flex items-center gap-1.5"
       >
         <Icon
-          v-if="index != 0"
-          name="ic:round-chevron-right"
+          name="material-symbols:chevron-right-rounded"
           size="14"
-          class="pr-1"
-        ></Icon>
-        <a
-          @click="navigateMenu(item.path)"
-          class="underline cursor-pointer hover:text-primary/90 pr-1"
-          >{{ item.name }}</a
+          class="text-txt-black-500 flex-shrink-0"
+        />
+
+        <NuxtLink
+          v-if="item.path && index !== trail.length - 1"
+          :to="item.path"
+          class="text-txt-black-500 hover:text-txt-black-900"
         >
-      </span>
-    </div>
-  </div>
+          {{ item.label }}
+        </NuxtLink>
+        <span
+          v-else
+          class="font-medium text-txt-black-900"
+          :aria-current="index === trail.length - 1 ? 'page' : undefined"
+        >
+          {{ item.label }}
+        </span>
+      </li>
+    </ol>
+  </nav>
 </template>

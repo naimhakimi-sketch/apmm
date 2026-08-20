@@ -1,5 +1,5 @@
 <template>
-    <div class="p-6 bg-white rounded-lg shadow">
+    <div class="p-6 bg-bg-white rounded-lg shadow">
         <div class="flex justify-between items-center mb-6">
             <h1 class="text-2xl font-semibold">Tetapan Peranan</h1>
             <rs-button @click="showAddRoleModal = true">
@@ -57,25 +57,25 @@
             <div class="p-4">
                 <div class="space-y-4">
                     <div>
-                        <label class="block text-sm font-medium text-gray-700">Nama Peranan</label>
+                        <label class="block text-sm font-medium text-txt-black-700">Nama Peranan</label>
                         <FormKit
                             v-model="newRole.name"
                             type="text"
-                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                            class="mt-1 block w-full rounded-md border-otl-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                             placeholder="Masukkan nama peranan"
                         />
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700">Keterangan</label>
+                        <label class="block text-sm font-medium text-txt-black-700">Keterangan</label>
                         <FormKit
                             v-model="newRole.keterangan"
                             type="textarea"
-                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                            class="mt-1 block w-full rounded-md border-otl-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                             placeholder="Masukkan keterangan peranan"
                         />
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700">Status</label>
+                        <label class="block text-sm font-medium text-txt-black-700">Status</label>
                         <FormKit
                             v-model="newRole.status"
                             type="select"
@@ -83,18 +83,18 @@
                                 { label: 'Active', value: 'Active' },
                                 { label: 'Inactive', value: 'Inactive' }
                             ]"
-                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                            class="mt-1 block w-full rounded-md border-otl-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                         />
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700">Pilih Modul</label>
+                        <label class="block text-sm font-medium text-txt-black-700">Pilih Modul</label>
                         <FormKit
                             input-class="h-full"
                             v-model="newRole.navigation"
                             type="select"
                             multiple="true"
                             :options="navigationOptions"
-                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                            class="mt-1 block w-full rounded-md border-otl-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                         />
                     </div>
                 </div>
@@ -103,7 +103,7 @@
                 <div class="flex justify-end gap-2">
                     <button
                         @click="showAddRoleModal = false"
-                        class="px-4 py-2 border rounded-lg text-gray-700 hover:bg-gray-50"
+                        class="px-4 py-2 border rounded-lg text-txt-black-700 hover:bg-bg-washed"
                     >
                         Batal
                     </button>
@@ -122,25 +122,25 @@
             <div class="p-4">
                 <div class="space-y-4">
                     <div>
-                        <label class="block text-sm font-medium text-gray-700">Nama Peranan</label>
+                        <label class="block text-sm font-medium text-txt-black-700">Nama Peranan</label>
                         <FormKit
                             v-model="editingRole.name"
                             type="text"
-                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                            class="mt-1 block w-full rounded-md border-otl-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                             placeholder="Masukkan nama peranan"
                         />
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700">Keterangan</label>
+                        <label class="block text-sm font-medium text-txt-black-700">Keterangan</label>
                         <FormKit
                             v-model="editingRole.keterangan"
                             type="textarea"
-                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                            class="mt-1 block w-full rounded-md border-otl-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                             placeholder="Masukkan keterangan peranan"
                         />
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700">Status</label>
+                        <label class="block text-sm font-medium text-txt-black-700">Status</label>
                         <FormKit
                             v-model="editingRole.status"
                             type="select"
@@ -148,18 +148,18 @@
                                 { label: 'Active', value: 'Active' },
                                 { label: 'Inactive', value: 'Inactive' }
                             ]"
-                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                            class="mt-1 block w-full rounded-md border-otl-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                         />
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700">Pilih Modul</label>
+                        <label class="block text-sm font-medium text-txt-black-700">Pilih Modul</label>
                         <FormKit
                             type="select"
                             multiple
                             v-model="editingRole.navigation"                            
                             :options="navigationOptions"
                             input-class="h-full"
-                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                            class="mt-1 block w-full rounded-md border-otl-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                         />
                     </div>
                 </div>
@@ -168,7 +168,7 @@
                 <div class="flex justify-end gap-2">
                     <button
                         @click="showEditRoleModal = false"
-                        class="px-4 py-2 border rounded-lg text-gray-700 hover:bg-gray-50"
+                        class="px-4 py-2 border rounded-lg text-txt-black-700 hover:bg-bg-washed"
                     >
                         Batal
                     </button>

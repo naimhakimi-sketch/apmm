@@ -12,7 +12,7 @@ const refreshPage = () => {
 </script>
 
 <template>
-  <div class="rs-loading bg-white absolute z-50 top-0 left-0 w-full h-full">
+  <div class="rs-loading bg-bg-white absolute z-50 top-0 left-0 w-full h-full">
     <div class="flex justify-center text-center items-center h-screen">
       <div>
         <div class="flex justify-center items-center">
@@ -35,7 +35,7 @@ const refreshPage = () => {
             ></path>
           </svg>
         </div>
-        <div v-if="showMessage" class="my-10 text-gray-500 font-medium">
+        <div v-if="showMessage" class="my-10 text-txt-black-500 font-medium">
           If loading takes too long,
           <br />
           please click

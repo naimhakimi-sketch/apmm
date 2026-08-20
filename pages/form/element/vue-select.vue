@@ -51,7 +51,6 @@ const selected = ref([]);
 
 <template>
   <div>
-    <LayoutsBreadcrumb />
     <rs-card>
       <template #header> Info </template>
       <template #body>

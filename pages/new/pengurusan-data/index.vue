@@ -2,7 +2,7 @@
     <div>
         <h1>Pengurusan Data</h1>
         
-        <div class="bg-white rounded-lg shadow p-6 mt-6">
+        <div class="bg-bg-white rounded-lg shadow p-6 mt-6">
             <div class="flex justify-between items-center mb-4">
                 <h2 class="text-xl font-semibold">Muat Turun Templat Data </h2>
             </div>
@@ -31,12 +31,12 @@
                         {{ isDownloading ? 'Sedang Muat Turun...' : 'Muat Turun' }}
                     </rs-button>
                 </div>
-                <p class="text-sm text-gray-500 mt-2">Pilih templat untuk muat turun templat Excel</p>
+                <p class="text-sm text-txt-black-500 mt-2">Pilih templat untuk muat turun templat Excel</p>
             </div>
         </div>
 
         <!-- New Upload and Review Section -->
-        <div class="bg-white rounded-lg shadow p-6 mt-6">
+        <div class="bg-bg-white rounded-lg shadow p-6 mt-6">
             <div class="flex justify-between items-center mb-4">
                 <h2 class="text-xl font-semibold">Muat Naik dan Semak Data</h2>
             </div>
@@ -62,7 +62,7 @@
                                     Pilih Fail
                                 </rs-button>
                                 <div v-if="selectedFile" class="flex items-center space-x-2">
-                                    <span class="text-sm text-gray-600">
+                                    <span class="text-sm text-txt-black-500">
                                         {{ selectedFile.name }}
                                     </span>
                                     <rs-button
@@ -81,13 +81,13 @@
 
                 <!-- Upload Progress -->
                 <div v-if="isUploading" class="mt-4">
-                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                    <div class="w-full bg-bg-black-200 rounded-full h-2.5">
                         <div
                             class="bg-blue-600 h-2.5 rounded-full"
                             :style="{ width: uploadProgress + '%' }"
                         ></div>
                     </div>
-                    <p class="text-sm text-gray-600 mt-1">Memuat naik... {{ uploadProgress }}%</p>
+                    <p class="text-sm text-txt-black-500 mt-1">Memuat naik... {{ uploadProgress }}%</p>
                 </div>
 
                 <!-- Error Review Section -->
@@ -95,18 +95,18 @@
                     <h3 class="text-lg font-medium mb-4">Semakan Ralat</h3>
                     
                     <div class="overflow-x-auto">
-                        <table class="min-w-full divide-y divide-gray-200">
-                            <thead class="bg-gray-50">
+                        <table class="min-w-full divide-y divide-otl-gray-200">
+                            <thead class="bg-bg-washed">
                                 <tr>
                                     <th v-for="header in errorHeaders" 
                                         :key="header"
-                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                        class="px-6 py-3 text-left text-xs font-medium text-txt-black-500 uppercase tracking-wider"
                                     >
                                         {{ header }}
                                     </th>
                                 </tr>
                             </thead>
-                            <tbody class="bg-white divide-y divide-gray-200">
+                            <tbody class="bg-bg-white divide-y divide-otl-gray-200">
                                 <tr v-for="(row, index) in errorData" :key="index">
                                     <td v-for="(cell, cellIndex) in row" 
                                         :key="cellIndex"
@@ -144,7 +144,7 @@
             </div>
         </div>
 
-        <div class="bg-white rounded-lg shadow p-6 mt-6">
+        <div class="bg-bg-white rounded-lg shadow p-6 mt-6">
             <div class="mt-8">
                 <h2 class="text-xl font-semibold mb-4">Log Respons Kesiapsiagaan Aset - Harian</h2>
                 
@@ -427,7 +427,7 @@ const downloadTemplate = async () => {
 </script>
 
 <style lang="scss" scoped>
-.bg-white {
+.bg-bg-white {
     background-color: white;
 }
 </style>

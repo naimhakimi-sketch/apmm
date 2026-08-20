@@ -58,7 +58,7 @@
         </rs-card>
 
         <!-- SMTP Response Log Section -->
-        <div class="bg-white rounded-lg p-6 shadow-sm">
+        <div class="bg-bg-white rounded-lg p-6 shadow-sm">
             <h2 class="text-lg font-semibold mb-6">Log Respons</h2>
             
             <div class="SPAce-y-4">

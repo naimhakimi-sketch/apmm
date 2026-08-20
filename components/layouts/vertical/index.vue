@@ -3,8 +3,6 @@ import { useLayoutStore } from "~/stores/layout";
 
 import RSHeader from "~/components/layouts/Header.vue";
 import RSSideMenu from "~~/components/layouts/sidemenu/index.vue";
-// import RSConfigMenu from "~~/components/layouts/configmenu/index.vue";
-// import RSFooter from "~/components/layouts/Footer.vue";
 import { useWindowSize } from "vue-window-size";
 
 const { width } = useWindowSize();
@@ -29,13 +27,23 @@ function toggleMenu(event) {
 </script>
 
 <template>
+  <!-- MYDS shell: government masthead spans the full width above the app -->
+  <div class="w-masthead">
+    <LayoutsMasthead />
+  </div>
+
   <RSHeader @toggleMenu="toggleMenu" />
   <RSSideMenu />
-  <div class="content-page duration-300">
-    <slot />
-  </div>
-  <!-- <RSConfigMenu /> -->
-  <div @click="toggleMenu" class="menu-overlay"></div>
 
-  <!-- <RSFooter /> -->
+  <div class="content-page duration-300">
+    <LayoutsPageHeader />
+
+    <div class="page-container flex-1 px-4 sm:px-6 lg:px-8 py-8">
+      <slot />
+    </div>
+
+    <LayoutsFooter />
+  </div>
+
+  <div @click="toggleMenu" class="menu-overlay"></div>
 </template>

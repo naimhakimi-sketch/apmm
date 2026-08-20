@@ -1,5 +1,5 @@
 <template>
-    <div class="p-6 space-y-6 bg-white rounded shadow p-4">
+    <div class="space-y-6 bg-bg-white rounded shadow p-4">
         <rs-card>
             <template #header>
                 <div class="flex justify-between items-center">

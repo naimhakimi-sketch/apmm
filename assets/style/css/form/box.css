@@ -51,7 +51,7 @@
 }
 
 .formkit-label-box {
-  @apply text-sm formkit-disabled:text-gray-300;
+  @apply text-sm formkit-disabled:text-txt-black-disabled;
 }
 
 .formkit-message-box {

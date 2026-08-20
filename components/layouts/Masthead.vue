@@ -1,10 +1,12 @@
 <script setup>
-// MYDS official government masthead (Malaysia Government Design System)
+// MYDS official government masthead (Malaysia Government Design System).
 </script>
 
 <template>
-  <div class="bg-gray-900 text-white">
-    <div class="flex items-center gap-2 px-5 py-1 text-xs">
+  <div class="bg-bg-black-900 text-txt-white">
+    <div
+      class="flex h-7 items-center gap-2 px-4 sm:px-6 lg:px-8 text-body-xs"
+    >
       <svg
         class="h-3.5 w-5 flex-shrink-0"
         viewBox="0 0 30 20"
@@ -22,7 +24,14 @@
           <rect y="17.16" width="30" height="1.43" />
         </g>
       </svg>
-      <span>Portal rasmi Kerajaan Malaysia — An official Malaysian Government website</span>
+
+      <span class="truncate">
+        <span class="hidden sm:inline">
+          Portal rasmi Kerajaan Malaysia — An official Malaysian Government
+          website
+        </span>
+        <span class="sm:hidden">Portal rasmi Kerajaan Malaysia</span>
+      </span>
     </div>
   </div>
 </template>

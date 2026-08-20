@@ -184,7 +184,6 @@ const { scatterChartProps } = useScatterChart({
 
 <template>
   <div>
-    <LayoutsBreadcrumb />
     <p class="mb-4">
       We ensure Chartjs is fully supported using vue 3. Read the full
       documentation

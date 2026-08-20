@@ -135,7 +135,6 @@ const pages = computed(() => {
 
 <template>
   <div>
-    <LayoutsBreadcrumb />
 
     <!-- Top Header -->
     <div class="product-header mb-2 flex justify-between items-center">

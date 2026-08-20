@@ -2,7 +2,7 @@
     <div>
         <h1 class="text-2xl font-bold mb-6">Audit Trail</h1>
 
-        <div class="p-6 bg-white rounded-lg shadow">
+        <div class="p-6 bg-bg-white rounded-lg shadow">
                 <!-- Search Form -->
                 <RsFieldset label="Tapisan Audit Trail" class="mb-6">
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -73,7 +73,7 @@
                 </RsFieldset>
         </div>
         <!-- Audit Trail Table -->
-        <div class="p-6 mt-4 bg-white rounded-lg shadow">
+        <div class="p-6 mt-4 bg-bg-white rounded-lg shadow">
             <rs-table
                 :data="auditTrailData"
                 :field="['bil', 'tarikhDanMasa', 'namaPenguna','kategori', 'penerangan', 'jenisAktiviti', 'alamatIP', 'status']"

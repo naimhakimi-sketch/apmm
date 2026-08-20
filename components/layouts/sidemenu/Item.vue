@@ -11,107 +11,105 @@ const props = defineProps({
   },
 });
 
-const menuItem = props.items ? props.items : [];
+const menuItem = computed(() => props.items ?? []);
 
-// Toggle show and hide menu content
-function openMenu(event) {
-  const target = event.currentTarget;
-  try {
-    target.querySelector("a").classList.toggle("nav-open");
-    target.querySelector("ul").classList.toggle("hide");
-  } catch (e) {
-    // console.log(e);
-    return;
-  }
+// A group is open when it holds the active route, until the user says otherwise.
+function hasActiveDescendant(item) {
+  if (!item) return false;
+  if (item.path && route.path === item.path) return true;
+  return (item.child || []).some(hasActiveDescendant);
 }
 
-// Active menu — MYDS style: quiet translucent highlight, no motion
+const manual = ref({});
+
+const keyOf = (i, j) => `${i}-${j}`;
+
+function isOpen(item, key) {
+  if (key in manual.value) return manual.value[key];
+  return hasActiveDescendant(item);
+}
+
+function toggle(item, key) {
+  manual.value = { ...manual.value, [key]: !isOpen(item, key) };
+}
+
+const hasChildren = (item) => !!(item.child && item.child.length);
+
+// MYDS sidebar link states: active is a white pill with primary text,
+// inactive is tinted primary-100 that fills to primary-600 on hover.
 function activeMenu(routePath) {
   return route.path == routePath
-    ? ` text-white
-            font-medium
-            bg-[rgba(255,255,255,0.15)]
-            active-menu`
-    : ` text-[rgba(255,255,255,0.85)]
-            transition-colors
-            duration-200
-            hover:bg-[rgba(255,255,255,0.1)]
-            hover:text-white`;
+    ? " bg-white text-primary-700 shadow-sm active-menu"
+    : " text-primary-100 transition-colors duration-200 hover:bg-primary-600 hover:text-white";
 }
+
+const linkClass =
+  "flex w-full items-center gap-3 rounded-md px-3 py-2 text-body-sm font-medium leading-tight cursor-pointer";
 </script>
 
 <template>
   <div v-for="(item, index) in menuItem" :key="index">
     <div
       v-if="item.header"
-      class="text-left font-normal text-xs mx-6 mt-5 mb-2"
+      class="px-3 pt-5 pb-2 text-body-xs font-medium uppercase tracking-wide text-primary-200"
     >
-      <span class="uppercase tracking-wide text-[rgba(255,255,255,0.6)]">
-        {{ item.header ? item.header : "" }}
-      </span>
-      <p class="text-[rgba(255,255,255,0.45)]">
-        {{ item.description ? item.description : "" }}
+      <span>{{ item.header }}</span>
+      <p v-if="item.description" class="normal-case text-primary-300">
+        {{ item.description }}
       </p>
     </div>
-    <ul class="navigation-menu">
+
+    <ul class="navigation-menu space-y-1">
       <li
         class="navigation-item"
         v-for="(item2, index2) in item.child"
         :key="index2"
-        @click.stop="
-          item2.child !== undefined || (item2.child && item2.child.length !== 0)
-            ? openMenu($event)
-            : ''
-        "
       >
         <NuxtLink
-          v-if="
-            item2.child === undefined ||
-            (item2.child && item2.child.length === 0)
-          "
-          class="flex items-center px-4 py-3 mx-3 rounded-lg cursor-pointer"
+          v-if="!hasChildren(item2)"
+          :class="[linkClass, activeMenu(item2.path)]"
           :to="item2.path"
-          :class="activeMenu(item2.path)"
         >
-          <Icon v-if="item2.icon" :name="item2.icon" size="18"></Icon>
           <Icon
-            v-else
-            name="material-symbols:file-copy-outline-rounded"
+            :name="item2.icon || 'material-symbols:file-copy-outline-rounded'"
             size="18"
+            class="flex-shrink-0"
           ></Icon>
-          <span class="mx-3 font-normal">{{ item2.title }}</span>
-          <Icon
-            v-if="item2.child && item2.child.length > 0"
-            class="ml-auto side-menu-arrow"
-            name="material-symbols:chevron-right-rounded"
-            size="18"
-          ></Icon>
+          <span class="flex-1 truncate" :title="item2.title">{{
+            item2.title
+          }}</span>
         </NuxtLink>
-        <a
-          v-else
-          class="flex items-center px-4 py-3 mx-3 rounded-lg cursor-pointer"
-          :class="activeMenu(item2.path)"
-        >
-          <Icon v-if="item2.icon" :name="item2.icon" size="18"></Icon>
-          <Icon
-            v-else
-            name="material-symbols:file-copy-outline-rounded"
-            size="18"
-          ></Icon>
-          <span class="mx-3 font-normal">{{ item2.title }}</span>
-          <Icon
-            v-if="item2.child && item2.child.length > 0"
-            class="ml-auto side-menu-arrow"
-            name="material-symbols:chevron-right-rounded"
-            size="18"
-          ></Icon>
-        </a>
-        <RSChildItem
-          v-if="item2.child"
-          :items="item2.child"
-          @openMenu="openMenu"
-          @activeMenu="activeMenu"
-        ></RSChildItem>
+
+        <template v-else>
+          <a
+            :class="[
+              linkClass,
+              activeMenu(item2.path),
+              { 'nav-open': isOpen(item2, keyOf(index, index2)) },
+            ]"
+            :aria-expanded="isOpen(item2, keyOf(index, index2))"
+            @click.stop="toggle(item2, keyOf(index, index2))"
+          >
+            <Icon
+              :name="item2.icon || 'material-symbols:file-copy-outline-rounded'"
+              size="18"
+              class="flex-shrink-0"
+            ></Icon>
+            <span class="flex-1 truncate" :title="item2.title">{{
+            item2.title
+          }}</span>
+            <Icon
+              class="ml-auto side-menu-arrow flex-shrink-0"
+              name="material-symbols:chevron-right-rounded"
+              size="18"
+            ></Icon>
+          </a>
+
+          <RSChildItem
+            :items="item2.child"
+            :open="isOpen(item2, keyOf(index, index2))"
+          ></RSChildItem>
+        </template>
       </li>
     </ul>
   </div>

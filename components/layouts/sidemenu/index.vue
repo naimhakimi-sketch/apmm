@@ -2,8 +2,6 @@
 import Menu from "~/navigation/index.js";
 import RSItem from "~/components/layouts/sidemenu/Item.vue";
 
-// const menuItem = Menu;
-
 const props = defineProps({
   menuItem: {
     type: Array,
@@ -12,48 +10,34 @@ const props = defineProps({
   },
 });
 
-onMounted(() => {
-  try {
-    const el = document.querySelector(".active-menu").closest(".menu-content");
-    const elParent = el.parentElement.parentElement;
-
-    if (elParent) {
-      elParent.classList.remove("hide");
-      elParent.querySelector("a").classList.add("nav-open");
-    }
-    if (el) el.classList.remove("hide");
-  } catch (e) {
-    // console.log(e);
-    return;
-  }
-});
+// Group expansion is Vue state (see Item.vue) — the group holding the active
+// route opens itself, so no DOM class-walking is needed here.
 </script>
 
 <template>
-  <div class="vertical-menu">
-    <div class="py-2 px-4">
-      <nuxt-link to="/">
-        <div class="flex flex-auto gap-3 justify-center items-center h-[48px]">
-          <img
-            class="h-10 block"
-            src="@/assets/img/logo/apmm_logo_baru.png"
-            alt=""
-          />
-          <img
-            class="h-10 block"
-            src="@/assets/img/logo/LOGO_apmm.png"
-            alt=""
-          />
-          <!-- <span class="text-sm font-semibold">
-            e-Jutra
-          </span> -->
-        </div>
+  <div class="vertical-menu flex flex-col">
+    <!-- MYDS sidebar brand row: same height as the app header -->
+    <div
+      class="flex h-16 flex-shrink-0 items-center border-b border-primary-600 px-4"
+    >
+      <nuxt-link to="/dashboard" class="flex min-w-0 items-center gap-3">
+        <img
+          class="h-9 w-auto flex-shrink-0"
+          src="@/assets/img/logo/apmm_logo_baru.png"
+          alt="APMM"
+        />
+        <span class="min-w-0 leading-tight">
+          <span class="block truncate font-heading text-body-sm font-semibold">
+            e-JUTRA
+          </span>
+          <span class="block truncate text-body-xs text-primary-200">
+            APMM
+          </span>
+        </span>
       </nuxt-link>
     </div>
-    <NuxtScrollbar
-      class="flex flex-col justify-between my-6"
-      style="max-height: 82dvh"
-    >
+
+    <NuxtScrollbar class="flex-1 px-3 py-4">
       <RSItem :items="menuItem"></RSItem>
     </NuxtScrollbar>
   </div>

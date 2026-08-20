@@ -717,7 +717,7 @@
 </script>
 
 <template>
-  <div class="p-6 space-y-6">  
+  <div class="space-y-6">  
     <div class="space-y-6">
                
         <!-- Job Card List Section -->
@@ -785,7 +785,7 @@
           <FormKit type="form" :value="newJobCardForm" @submit="submitNewJobCard">
             <!-- Report Type Section -->
             <div class="">
-              <label class="block text-sm font-medium text-gray-700 mb-2">Jenis Laporan</label>
+              <label class="block text-sm font-medium text-txt-black-700 mb-2">Jenis Laporan</label>
               <div class="flex items-center space-x-4">
                 <FormKit type="radio" name="reportType" value="DEFECT" label="KEROSAKAN" />
                 <FormKit type="radio" name="reportType" value="OSL" label="OSL" />
@@ -857,7 +857,7 @@
           <FormKit type="form" :value="selectedJobCard" :disabled="true" :hidden-input="true">
             <!-- Report Type Section -->
             <div class="">
-              <label class="block text-sm font-medium text-gray-700 mb-2">Jenis Laporan</label>
+              <label class="block text-sm font-medium text-txt-black-700 mb-2">Jenis Laporan</label>
               <div class="flex items-center space-x-4">
                 <FormKit type="radio" name="reportType" value="DEFECT" label="KEROSAKAN" :disabled="true" :checked="true" />
                 <FormKit type="radio" name="reportType" value="OSL" label="OSL" :disabled="true" :checked="false" />

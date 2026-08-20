@@ -49,7 +49,6 @@ const options2 = [
 
 <template>
   <div>
-    <LayoutsBreadcrumb />
     <rs-card>
       <template #header> Default </template>
       <template #body>

@@ -49,7 +49,6 @@ const dateEnd = dt.plus({ days: 7 }).toFormat("yyyy-MM-dd");
 
 <template>
   <div>
-    <LayoutsBreadcrumb />
     <rs-card>
       <template #header> Default </template>
       <template #body>

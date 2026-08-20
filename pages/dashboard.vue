@@ -71,8 +71,10 @@ import RsCard from "@/components/RsCard.vue";
 
 const changeKey = ref(0);
 
-const base = mydsApexBase();
-const c = mydsChartColors;
+// Theme-aware MYDS chart styling (neutrals flip with dark mode).
+const { colors, base: mydsBase } = useMydsChart();
+const base = computed(() => mydsBase.value);
+const c = colors;
 
 const negeriCategories = [
   "MN KEDAH & PERLIS",
@@ -116,8 +118,8 @@ const series = ref([
 ]);
 
 const chartOptions = computed(() => ({
-  ...base,
-  chart: { ...base.chart, id: "apexChart", stacked: false },
+  ...base.value,
+  chart: { ...base.value.chart, id: "apexChart", stacked: false },
   xaxis: {
     categories: [2020, 2021, 2022],
     title: { text: "Tahun" },
@@ -155,7 +157,7 @@ const chartOptions = computed(() => ({
     width: [0, 0, 2],
     curve: "smooth",
   },
-  colors: [c.primary, c.danger, c.warning],
+  colors: [c.value.primary, c.value.danger, c.value.warning],
   responsive: responsiveLegend,
 }));
 
@@ -183,8 +185,8 @@ const seriesKapalBot = ref([
 ]);
 
 const chartOptionsKapalBot = computed(() => ({
-  ...base,
-  chart: { ...base.chart, id: "apexChartKapalBot", stacked: false },
+  ...base.value,
+  chart: { ...base.value.chart, id: "apexChartKapalBot", stacked: false },
   xaxis: {
     categories: [2020, 2021, 2022],
     title: { text: "Tahun" },
@@ -227,7 +229,7 @@ const chartOptionsKapalBot = computed(() => ({
     curve: "smooth",
     dashArray: [0, 0, 0, 6],
   },
-  colors: [c.primary, c.warning, c.success, c.ink],
+  colors: [c.value.primary, c.value.warning, c.value.success, c.value.ink],
   responsive: responsiveLegend,
 }));
 
@@ -245,8 +247,8 @@ const seriesBotNegeri = ref([
 ]);
 
 const chartOptionsBotNegeri = computed(() => ({
-  ...base,
-  chart: { ...base.chart, id: "apexChartBotNegeri", stacked: false },
+  ...base.value,
+  chart: { ...base.value.chart, id: "apexChartBotNegeri", stacked: false },
   xaxis: {
     categories: negeriCategories,
     title: { text: "" },
@@ -282,7 +284,7 @@ const chartOptionsBotNegeri = computed(() => ({
     width: [0, 2],
     curve: "smooth",
   },
-  colors: [c.warning, c.warningDark],
+  colors: [c.value.warning, c.value.warningDark],
   responsive: responsiveLegend,
 }));
 
@@ -300,8 +302,8 @@ const seriesKapalNegeri = ref([
 ]);
 
 const chartOptionsKapalNegeri = computed(() => ({
-  ...base,
-  chart: { ...base.chart, id: "apexChartKapalNegeri", stacked: false },
+  ...base.value,
+  chart: { ...base.value.chart, id: "apexChartKapalNegeri", stacked: false },
   xaxis: {
     categories: negeriCategories,
     title: { text: "" },
@@ -337,7 +339,7 @@ const chartOptionsKapalNegeri = computed(() => ({
     width: [0, 2],
     curve: "smooth",
   },
-  colors: [c.primary, c.success],
+  colors: [c.value.primary, c.value.success],
   responsive: responsiveLegend,
 }));
 

@@ -4,7 +4,7 @@
         <div class="mb-6 flex justify-between items-center">
             <div>
                 <h1 class="text-2xl font-bold">Senarai Kapal / Bot</h1>
-                <p class="text-gray-600">Dikemaskini sehingga 27/05/2025</p>
+                <p class="text-txt-black-500">Dikemaskini sehingga 27/05/2025</p>
             </div>
             <button @click="showAddModal = true" class="bg-primary text-white px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-primary/80 transition-colors">
                 <Icon name="material-symbols:add" />
@@ -15,10 +15,10 @@
         <!-- Analytics Cards -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
             <!-- Jumlah Kapal -->
-            <div class="bg-white rounded-lg shadow p-6">
+            <div class="bg-bg-white rounded-lg shadow p-6">
                 <div class="flex items-center justify-between">
                 <div>
-                    <p class="text-sm text-gray-500">Jumlah Kapal</p>
+                    <p class="text-sm text-txt-black-500">Jumlah Kapal</p>
                     <h3 class="text-2xl font-bold">3</h3>
                 </div>
                 <div class="p-3 bg-blue-100 rounded-full">
@@ -28,10 +28,10 @@
             </div>
 
             <!-- Jumlah Bot -->
-            <div class="bg-white rounded-lg shadow p-6">
+            <div class="bg-bg-white rounded-lg shadow p-6">
                 <div class="flex items-center justify-between">
                 <div>
-                    <p class="text-sm text-gray-500">Jumlah Bot</p>
+                    <p class="text-sm text-txt-black-500">Jumlah Bot</p>
                     <h3 class="text-2xl font-bold">7</h3>
                 </div>
                 <div class="p-3 bg-green-100 rounded-full">
@@ -41,10 +41,10 @@
             </div>
 
             <!-- Kapal OPS -->
-            <div class="bg-white rounded-lg shadow p-6">
+            <div class="bg-bg-white rounded-lg shadow p-6">
                 <div class="flex items-center justify-between">
                 <div>
-                    <p class="text-sm text-gray-500">OPS</p>
+                    <p class="text-sm text-txt-black-500">OPS</p>
                     <h3 class="text-2xl font-bold"> Kapal 0 | Bot 0 </h3>
                 </div>
                 <div class="p-3 bg-yellow-100 rounded-full">
@@ -54,10 +54,10 @@
             </div>
 
             <!-- Kapal Non OPS -->
-            <div class="bg-white rounded-lg shadow p-6">
+            <div class="bg-bg-white rounded-lg shadow p-6">
                 <div class="flex items-center justify-between">
                 <div>
-                    <p class="text-sm text-gray-500">Non OPS</p>
+                    <p class="text-sm text-txt-black-500">Non OPS</p>
                     <h3 class="text-2xl font-bold"> Kapal 3 | Bot 7</h3>
                 </div>
                 <div class="p-3 bg-red-100 rounded-full">
@@ -71,7 +71,7 @@
         </div>
 
         <!-- Table Section -->
-        <div class="bg-white rounded-lg shadow p-6">
+        <div class="bg-bg-white rounded-lg shadow p-6">
             <rs-table
                 :data="tableData"
                 :field="['bil', 'lokasi', 'namaVesel', 'jenisVesel', 'categoriAset', 'tindakan']"
@@ -116,7 +116,7 @@
             <div class="space-y-4">
                 <div class="grid grid-cols-2 gap-4">
                     <div>
-                        <label class="block text-sm font-medium text-gray-700">Lokasi</label>
+                        <label class="block text-sm font-medium text-txt-black-700">Lokasi</label>
                         <FormKit
                             type="text"
                             v-model="formData.lokasi"
@@ -124,7 +124,7 @@
                         />
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700">Nama Vesel</label>
+                        <label class="block text-sm font-medium text-txt-black-700">Nama Vesel</label>
                         <FormKit
                             type="text"
                             v-model="formData.namaVesel"
@@ -132,7 +132,7 @@
                         />
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700">Jenis Vesel</label>
+                        <label class="block text-sm font-medium text-txt-black-700">Jenis Vesel</label>
                         <FormKit
                             type="select"
                             v-model="formData.jenisVesel"
@@ -140,7 +140,7 @@
                         />
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700">Kategori Aset</label>
+                        <label class="block text-sm font-medium text-txt-black-700">Kategori Aset</label>
                         <FormKit
                             type="select"
                             v-model="formData.categoriAset"
@@ -156,7 +156,7 @@
             <div class="space-y-4">
                 <div class="grid grid-cols-2 gap-4">
                     <div>
-                        <label class="block text-sm font-medium text-gray-700">Lokasi</label>
+                        <label class="block text-sm font-medium text-txt-black-700">Lokasi</label>
                         <FormKit
                             type="text"
                             v-model="editFormData.lokasi"
@@ -164,7 +164,7 @@
                         />
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700">Nama Vesel</label>
+                        <label class="block text-sm font-medium text-txt-black-700">Nama Vesel</label>
                         <FormKit
                             type="text"
                             v-model="editFormData.namaVesel"
@@ -172,7 +172,7 @@
                         />
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700">Jenis Vesel</label>
+                        <label class="block text-sm font-medium text-txt-black-700">Jenis Vesel</label>
                         <FormKit
                             type="select"
                             v-model="editFormData.jenisVesel"
@@ -180,7 +180,7 @@
                         />
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700">Kategori Aset</label>
+                        <label class="block text-sm font-medium text-txt-black-700">Kategori Aset</label>
                         <FormKit
                             type="select"
                             v-model="editFormData.categoriAset"

@@ -60,58 +60,58 @@
         <!-- View Mode -->
         <div v-if="isViewingRupacara" class="space-y-6">
         <div class="mb-4">
-            <h4 class="font-medium text-gray-700">Tarikh Kemaskini:</h4>
+            <h4 class="font-medium text-txt-black-700">Tarikh Kemaskini:</h4>
             <p>{{ rupacaraForm.tarikhKemaskini }}</p>
         </div>
         
         <div class="mb-4">
-            <h4 class="font-medium text-gray-700">Nama Kapal:</h4>
+            <h4 class="font-medium text-txt-black-700">Nama Kapal:</h4>
             <p>{{ rupacaraForm.namaKapal }}</p>
         </div>
         
         <div class="mb-4">
-            <h4 class="font-medium text-gray-700">Penerangan:</h4>
+            <h4 class="font-medium text-txt-black-700">Penerangan:</h4>
             <p>{{ rupacaraForm.penerangan }}</p>
         </div>
         
         <div class="grid grid-cols-2 gap-4">
             <div v-if="rupacaraForm.portView" class="mb-4 flex flex-col items-center">
-            <h4 class="font-medium text-gray-700">Port View:</h4>
+            <h4 class="font-medium text-txt-black-700">Port View:</h4>
             <div class="mt-2 flex justify-center w-full">
                 <img src="@/assets/img/vessels/port_view.png" alt="Port View" class="max-h-40 rounded" />
             </div>
             </div>
             
             <div v-if="rupacaraForm.starboardView" class="mb-4 flex flex-col items-center">
-            <h4 class="font-medium text-gray-700">Starboard View:</h4>
+            <h4 class="font-medium text-txt-black-700">Starboard View:</h4>
             <div class="mt-2 flex justify-center w-full">
                 <img src="@/assets/img/vessels/starboardView.png" alt="Starboard View" class="max-h-40 rounded" />
             </div>
             </div>
             
             <div v-if="rupacaraForm.forwardView" class="mb-4 flex flex-col items-center">
-            <h4 class="font-medium text-gray-700">Forward View:</h4>
+            <h4 class="font-medium text-txt-black-700">Forward View:</h4>
             <div class="mt-2 flex justify-center w-full">
                 <img src="@/assets/img/vessels/forwardView.png" alt="Forward View" class="max-h-40 rounded" />
             </div>
             </div>
             
             <div v-if="rupacaraForm.afterView" class="mb-4 flex flex-col items-center">
-            <h4 class="font-medium text-gray-700">After View:</h4>
+            <h4 class="font-medium text-txt-black-700">After View:</h4>
             <div class="mt-2 flex justify-center w-full">
                 <img src="@/assets/img/vessels/afterView.png" alt="After View" class="max-h-40 rounded" />
             </div>
             </div>
             
             <div v-if="rupacaraForm.engineRoom" class="mb-4 flex flex-col items-center">
-            <h4 class="font-medium text-gray-700">Engine Room:</h4>
+            <h4 class="font-medium text-txt-black-700">Engine Room:</h4>
             <div class="mt-2 flex justify-center w-full">
                 <img src="@/assets/img/vessels/engineRoom.png" alt="Engine Room" class="max-h-40 rounded" />
             </div>
             </div>
             
             <div v-if="rupacaraForm.closedBridge" class="mb-4 flex flex-col items-center">
-            <h4 class="font-medium text-gray-700">Closed Bridge:</h4>
+            <h4 class="font-medium text-txt-black-700">Closed Bridge:</h4>
             <div class="mt-2 flex justify-center w-full">
                 <img src="@/assets/img/vessels/closedBridge.png" alt="Closed Bridge" class="max-h-40 rounded" />
             </div>

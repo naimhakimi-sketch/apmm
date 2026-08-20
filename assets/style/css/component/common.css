@@ -1,47 +1,53 @@
+/* MYDS app shell metrics: masthead band + app header row */
+:root {
+  --masthead-height: 1.75rem; /* h-7 */
+  --app-header-height: 4rem; /* h-16 */
+  --shell-offset: calc(var(--masthead-height) + var(--app-header-height));
+  /* Must stay in rem: the sidebar is w-64 (rem), so the content offset has to
+     scale with it when the text-size control raises the root font size. */
+  --sidebar-width: 16rem;
+}
+
 body {
   color: rgb(var(--text-color));
   background-color: rgb(var(--bg-1));
 }
 
+/* Government masthead spans the full viewport width, above every other layer */
+.w-masthead {
+  @apply fixed left-0 right-0 top-0;
+  z-index: 60;
+}
+
 .w-header {
-  @apply z-20 fixed top-0 right-0 duration-300 border-b;
-  background-color: rgb(var(--bg-2));
-  border-color: rgb(var(--border-color));
-  box-shadow: var(--box-shadow);
-}
-
-.w-header .w-header-main {
-  @apply px-5 py-3;
-}
-
-.w-header-search {
-  @apply px-4 z-40 duration-300 shadow-md -top-20 focus-within:top-0 right-0;
+  @apply fixed right-0 z-20 border-b border-otl-divider duration-300;
+  top: var(--masthead-height);
   background-color: rgb(var(--bg-2));
 }
 
 .vertical-menu {
-  @apply text-base h-screen fixed w-64 top-0 z-50 duration-300 border-l-0 shadow-md;
-  background-color: rgb(var(--bg-2));
-  box-shadow: var(--box-shadow);
+  @apply fixed w-64 z-50 duration-300 border-l-0;
+  top: var(--masthead-height);
+  height: calc(100vh - var(--masthead-height));
 }
 
 .icon-btn {
-  @apply flex
-          items-center
-          justify-center
-          transition-colors
-          duration-300;
-  color: rgb(var(--text-color));
-}
-
-.icon-btn.profile {
-  @apply border;
-  border-radius: var(--rounded-box);
-  border: 1px solid rgb(var(--border-color));
-  color: rgb(var(--text-color));
+  @apply flex items-center justify-center transition-colors duration-200 text-txt-black-700;
 }
 
 .icon-btn:hover {
-  color: rgb(var(--text-color));
-  background-color: rgb(var(--bg-1));
+  @apply bg-bg-washed text-txt-black-900;
+}
+
+.icon-btn.profile {
+  @apply border border-otl-gray-200 rounded-md;
+}
+
+/* ApexCharts ships a hardcoded white toolbar menu; retint it for dark mode. */
+.dark .apexcharts-menu {
+  @apply border-otl-gray-200 bg-bg-white text-txt-black-900;
+}
+
+.dark .apexcharts-menu-item:hover {
+  @apply bg-bg-washed;
 }

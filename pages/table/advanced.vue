@@ -38,7 +38,6 @@ const showTooltip = (codeId, message) => {
 
 <template>
   <div>
-    <LayoutsBreadcrumb />
     <rs-card>
       <template #header> Advanced</template>
       <template #body>
